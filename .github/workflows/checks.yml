@@ -19,3 +19,6 @@ jobs:
       - run: python -m syracuse_model.download
       - run: syracuse-model train --database work/crime_data.db --output work/benchmark
       - run: syracuse-model predict --model work/benchmark/model.joblib --date 2023-07-15
+      - run: syracuse-forecast experiment --database work/crime_data.db --output work/forecasting
+      - run: syracuse-forecast predict --model work/forecasting/forecast.joblib --history reports/forecasting/example-history.json --period-start 2023-01-02
+      - run: syracuse-forecast predict --model reports/forecasting/forecast.joblib --history reports/forecasting/example-history.json --period-start 2023-01-02

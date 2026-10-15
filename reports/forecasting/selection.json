@@ -1,0 +1,146 @@
+{
+  "target": {
+    "name": "weekly_larceny",
+    "days": 7,
+    "category": "LARCENY"
+  },
+  "model": "poisson",
+  "baseline": "recent_mean",
+  "criterion": "Largest 2022 relative MAE reduction vs that target's best baseline",
+  "screening_window": [
+    "2022-01-01",
+    "2022-12-31"
+  ],
+  "test_window": [
+    "2023-01-01",
+    "2023-12-31"
+  ],
+  "validation": {
+    "daily_total": {
+      "target": {
+        "name": "daily_total",
+        "days": 1,
+        "category": null
+      },
+      "scores": {
+        "last_period": {
+          "mae": 7.695890410958904,
+          "rmse": 10.005614862022387,
+          "mean_actual": 33.794520547945204,
+          "periods": 365
+        },
+        "recent_mean": {
+          "mae": 5.835714285714285,
+          "rmse": 7.451668190428262,
+          "mean_actual": 33.794520547945204,
+          "periods": 365
+        },
+        "seasonal_naive": {
+          "mae": 7.920547945205479,
+          "rmse": 10.08199262757446,
+          "mean_actual": 33.794520547945204,
+          "periods": 365
+        },
+        "poisson": {
+          "mae": 5.792438688992581,
+          "rmse": 7.4037212054814505,
+          "mean_actual": 33.794520547945204,
+          "periods": 365
+        },
+        "boosted_poisson": {
+          "mae": 6.02535086209701,
+          "rmse": 7.655744585808709,
+          "mean_actual": 33.794520547945204,
+          "periods": 365
+        }
+      },
+      "best_baseline": "recent_mean",
+      "best_model": "poisson",
+      "mae_skill_vs_best_baseline": 0.00741564692905583
+    },
+    "weekly_total": {
+      "target": {
+        "name": "weekly_total",
+        "days": 7,
+        "category": null
+      },
+      "scores": {
+        "last_period": {
+          "mae": 23.274509803921568,
+          "rmse": 29.793077232477884,
+          "mean_actual": 237.19607843137254,
+          "periods": 51
+        },
+        "recent_mean": {
+          "mae": 20.16176470588235,
+          "rmse": 25.727812638023757,
+          "mean_actual": 237.19607843137254,
+          "periods": 51
+        },
+        "seasonal_naive": {
+          "mae": 26.862745098039216,
+          "rmse": 34.041497167600674,
+          "mean_actual": 237.19607843137254,
+          "periods": 51
+        },
+        "poisson": {
+          "mae": 19.958324639059242,
+          "rmse": 24.34801935562022,
+          "mean_actual": 237.19607843137254,
+          "periods": 51
+        },
+        "boosted_poisson": {
+          "mae": 21.082723471709986,
+          "rmse": 25.982794414418894,
+          "mean_actual": 237.19607843137254,
+          "periods": 51
+        }
+      },
+      "best_baseline": "recent_mean",
+      "best_model": "poisson",
+      "mae_skill_vs_best_baseline": 0.010090389893487539
+    },
+    "weekly_larceny": {
+      "target": {
+        "name": "weekly_larceny",
+        "days": 7,
+        "category": "LARCENY"
+      },
+      "scores": {
+        "last_period": {
+          "mae": 13.372549019607844,
+          "rmse": 16.183991121705763,
+          "mean_actual": 50.03921568627451,
+          "periods": 51
+        },
+        "recent_mean": {
+          "mae": 10.132352941176471,
+          "rmse": 12.575702139989064,
+          "mean_actual": 50.03921568627451,
+          "periods": 51
+        },
+        "seasonal_naive": {
+          "mae": 11.764705882352942,
+          "rmse": 14.646153212416174,
+          "mean_actual": 50.03921568627451,
+          "periods": 51
+        },
+        "poisson": {
+          "mae": 9.73602868201753,
+          "rmse": 12.254115098288267,
+          "mean_actual": 50.03921568627451,
+          "periods": 51
+        },
+        "boosted_poisson": {
+          "mae": 10.132640303959098,
+          "rmse": 12.95423336376292,
+          "mean_actual": 50.03921568627451,
+          "periods": 51
+        }
+      },
+      "best_baseline": "recent_mean",
+      "best_model": "poisson",
+      "mae_skill_vs_best_baseline": 0.039114730947471754
+    }
+  }
+}

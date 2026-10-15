@@ -5,15 +5,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "syracuse-temporal-model"
 version = "0.2.0"
-description = "Chronological benchmarks for calendar-only crime-record classification"
+description = "Retrospective Syracuse crime-record count forecasting and classification experiments"
 requires-python = ">=3.11"
-dependencies = ["syracuse-crime-analysis @ git+https://github.com/ichen27/Syracuse-Crime-Data-Analysis.git@1c628ed648bf475efd8758652f781e69b048d47c", "scikit-learn>=1.7,<1.10", "joblib>=1.4,<2"]
+dependencies = ["syracuse-crime-analysis @ git+https://github.com/ichen27/Syracuse-Crime-Data-Analysis.git@1c628ed648bf475efd8758652f781e69b048d47c", "scikit-learn>=1.7,<1.10", "joblib>=1.4,<2", "threadpoolctl>=3,<4"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9", "ruff>=0.11,<1"]
 
 [project.scripts]
 syracuse-model = "syracuse_model.cli:main"
+syracuse-forecast = "syracuse_model.forecast_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -24,3 +25,6 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]
 exclude = ["legacy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

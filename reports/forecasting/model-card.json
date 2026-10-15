@@ -1,0 +1,37 @@
+{
+  "target": {
+    "name": "weekly_larceny",
+    "days": 7,
+    "category": "LARCENY"
+  },
+  "model": "poisson",
+  "training_through": "2022-12-25",
+  "feature_columns": [
+    "lag_1",
+    "lag_2",
+    "lag_4",
+    "lag_8",
+    "lag_13",
+    "mean_4",
+    "std_4",
+    "mean_13",
+    "std_13",
+    "annual_sin",
+    "annual_cos"
+  ],
+  "data_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+  "python": "3.12.12",
+  "scikit_learn": "1.9.1",
+  "interpretation": "Expected source-record count for the next complete period, not individual risk.",
+  "evaluation": "One-period forecasts with observed history and monthly refitting; not a year-ahead forecast.",
+  "test_mae_skill_vs_selected_baseline": -0.0741725852733286,
+  "availability": "Retrospective DATEEND snapshot; historical report availability is unknown.",
+  "test_coverage": {
+    "last_observed_target_date_in_test": "2023-12-26",
+    "periods_ending_after_last_observed_record": [
+      "2023-12-25"
+    ],
+    "policy": "Flags are diagnostic only. Test scores retain the predefined calendar window; no post-result filtering.",
+    "interpretation": "Calendar-complete periods do not establish complete source coverage. No records after the final observed date may mean missing collection or zero events."
+  }
+}
