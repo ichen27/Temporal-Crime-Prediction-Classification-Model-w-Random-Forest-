@@ -1,0 +1,27 @@
+name: checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - run: pip install -r requirements-lock.txt
+      - run: pip install --no-deps -e .
+      - run: ruff check src tests
+      - run: pytest -q
+      - run: python -m syracuse_model.download
+      - run: syracuse-model train --database work/crime_data.db --output work/benchmark
+      - run: syracuse-model predict --model work/benchmark/model.joblib --date 2023-07-15
+      - run: syracuse-forecast experiment --database work/crime_data.db --output work/forecasting
+      - run: syracuse-forecast predict --model work/forecasting/forecast.joblib --history reports/forecasting/example-history.json --period-start 2023-01-02
+      - run: syracuse-forecast predict --model reports/forecasting/forecast.joblib --history reports/forecasting/example-history.json --period-start 2023-01-02
+      - run: syracuse-smooth experiment --database work/crime_data.db --output work/smoothing
+      - run: syracuse-smooth predict --model work/smoothing/model.json
+      - run: syracuse-smooth predict --model reports/smoothing/model.json --observations reports/smoothing/example-observations.json

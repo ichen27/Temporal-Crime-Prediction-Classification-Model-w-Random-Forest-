@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "method": "damped_holt",
+  "state": {
+    "level": 46.77289141771524,
+    "trend": -8.95557268120109e-15,
+    "alpha": 0.1617928200424486,
+    "beta": 0.0,
+    "phi": 0.8,
+    "optimizer": "L-BFGS-B"
+  },
+  "next_period_start": "2023-01-02",
+  "training_through": "2023-01-01",
+  "last_four_counts": [
+    65,
+    47,
+    29,
+    40
+  ],
+  "database_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+  "python": "3.12.12",
+  "statsmodels": "0.14.6"
+}

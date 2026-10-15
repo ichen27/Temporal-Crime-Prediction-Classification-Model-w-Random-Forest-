@@ -1,0 +1,1349 @@
+{
+  "selection": {
+    "target": {
+      "name": "weekly_larceny",
+      "days": 7,
+      "category": "LARCENY"
+    },
+    "candidates": [
+      "simple",
+      "damped_holt"
+    ],
+    "model": "damped_holt",
+    "criterion": "Minimum 2022 rolling MAE; first candidate wins ties",
+    "validation": {
+      "recent_mean": {
+        "mae": 10.132352941176471,
+        "rmse": 12.575702139989064,
+        "mean_actual": 50.03921568627451,
+        "periods": 51
+      },
+      "simple": {
+        "mae": 9.865406641248484,
+        "rmse": 12.233133427342345,
+        "mean_actual": 50.03921568627451,
+        "periods": 51
+      },
+      "damped_holt": {
+        "mae": 9.645974742214639,
+        "rmse": 12.034074694722355,
+        "mean_actual": 50.03921568627451,
+        "periods": 51
+      }
+    },
+    "seasonal": false,
+    "status": "Exploratory: 2023 outcomes were already examined in prior experiments",
+    "sensitivity": "Exclude the previously flagged December 25\u201331 week for both methods"
+  },
+  "model_card": {
+    "schema_version": 1,
+    "method": "damped_holt",
+    "state": {
+      "level": 46.77289141771524,
+      "trend": -8.95557268120109e-15,
+      "alpha": 0.1617928200424486,
+      "beta": 0.0,
+      "phi": 0.8,
+      "optimizer": "L-BFGS-B"
+    },
+    "next_period_start": "2023-01-02",
+    "training_through": "2023-01-01",
+    "last_four_counts": [
+      65,
+      47,
+      29,
+      40
+    ],
+    "database_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+    "python": "3.12.12",
+    "statsmodels": "0.14.6"
+  },
+  "data_audit": {
+    "database_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+    "requested_start": "2020-01-01",
+    "requested_end": "2024-12-31",
+    "raw_rows": 55851,
+    "retained_rows": 55779,
+    "excluded_rows": 72,
+    "tables": [
+      {
+        "table": "crime_2020_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5266,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5266,
+        "first_date": "2020-01-01",
+        "last_date": "2020-12-29"
+      },
+      {
+        "table": "crime_2020_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 8014,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 55,
+        "retained_rows": 7959,
+        "first_date": "2020-01-01",
+        "last_date": "2020-12-31"
+      },
+      {
+        "table": "crime_2021_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5129,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5129,
+        "first_date": "2021-01-01",
+        "last_date": "2021-12-31"
+      },
+      {
+        "table": "crime_2021_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6949,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 6,
+        "retained_rows": 6943,
+        "first_date": "2020-01-01",
+        "last_date": "2022-01-01"
+      },
+      {
+        "table": "crime_2022_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5660,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5660,
+        "first_date": "2022-01-01",
+        "last_date": "2022-12-31"
+      },
+      {
+        "table": "crime_2022_2",
+        "label_column": "CODE DEFINED",
+        "raw_rows": 6709,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 9,
+        "retained_rows": 6700,
+        "first_date": "2020-02-29",
+        "last_date": "2022-12-31"
+      },
+      {
+        "table": "crime_2023_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6633,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 6633,
+        "first_date": "2022-12-25",
+        "last_date": "2023-12-26"
+      },
+      {
+        "table": "crime_2023_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6693,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 2,
+        "retained_rows": 6691,
+        "first_date": "2020-03-19",
+        "last_date": "2023-12-31"
+      },
+      {
+        "table": "crime_2024_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 2358,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 2358,
+        "first_date": "2024-01-01",
+        "last_date": "2024-05-20"
+      },
+      {
+        "table": "crime_2024_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 2440,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 2440,
+        "first_date": "2021-01-22",
+        "last_date": "2024-05-27"
+      }
+    ],
+    "skipped_tables": [
+      "crime_2019_1"
+    ],
+    "date_policy": "Preserve the calendar date written in DATEEND; no timezone conversion.",
+    "unit": "Source records, not verified unique incidents or population-adjusted rates.",
+    "duplicate_policy": "Retain records; no stable cross-table incident identifier."
+  },
+  "weekly_observations": 208,
+  "primary": {
+    "recent_mean": {
+      "mae": 12.014423076923077,
+      "rmse": 16.681872070281283,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    },
+    "damped_holt": {
+      "mae": 12.398171932329417,
+      "rmse": 17.26000777374051,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    }
+  },
+  "sensitivity_through_2023_12_24": {
+    "recent_mean": {
+      "mae": 10.862745098039216,
+      "rmse": 13.623257218995095,
+      "mean_actual": 66.09803921568627,
+      "periods": 51
+    },
+    "damped_holt": {
+      "mae": 11.273359746788532,
+      "rmse": 14.433247423650057,
+      "mean_actual": 66.09803921568627,
+      "periods": 51
+    }
+  },
+  "validation_predictions": [
+    {
+      "period_start": "2022-01-03",
+      "actual": 38.0,
+      "recent_mean": 53.25,
+      "simple": 48.89472956869264,
+      "damped_holt": 49.54421936417934
+    },
+    {
+      "period_start": "2022-01-10",
+      "actual": 68.0,
+      "recent_mean": 46.0,
+      "simple": 45.84760441273946,
+      "damped_holt": 46.88279603199829
+    },
+    {
+      "period_start": "2022-01-17",
+      "actual": 40.0,
+      "recent_mean": 49.25,
+      "simple": 52.043363695516035,
+      "damped_holt": 51.10274991807385
+    },
+    {
+      "period_start": "2022-01-24",
+      "actual": 45.0,
+      "recent_mean": 46.25,
+      "simple": 48.674979354489764,
+      "damped_holt": 48.862416416115025
+    },
+    {
+      "period_start": "2022-01-31",
+      "actual": 44.0,
+      "recent_mean": 47.75,
+      "simple": 47.64713171788081,
+      "damped_holt": 47.909455757032546
+    },
+    {
+      "period_start": "2022-02-07",
+      "actual": 30.0,
+      "recent_mean": 49.25,
+      "simple": 46.72098011557192,
+      "damped_holt": 46.951348113991266
+    },
+    {
+      "period_start": "2022-02-14",
+      "actual": 49.0,
+      "recent_mean": 39.75,
+      "simple": 42.219473996782526,
+      "damped_holt": 43.13948313315427
+    },
+    {
+      "period_start": "2022-02-21",
+      "actual": 54.0,
+      "recent_mean": 42.0,
+      "simple": 44.0448801082143,
+      "damped_holt": 43.83282046816997
+    },
+    {
+      "period_start": "2022-02-28",
+      "actual": 70.0,
+      "recent_mean": 44.25,
+      "simple": 46.7249283348384,
+      "damped_holt": 45.675177374390955
+    },
+    {
+      "period_start": "2022-03-07",
+      "actual": 36.0,
+      "recent_mean": 50.75,
+      "simple": 52.95266850916913,
+      "damped_holt": 51.54276634757805
+    },
+    {
+      "period_start": "2022-03-14",
+      "actual": 50.0,
+      "recent_mean": 52.25,
+      "simple": 48.41468628503861,
+      "damped_holt": 48.33031682397755
+    },
+    {
+      "period_start": "2022-03-21",
+      "actual": 48.0,
+      "recent_mean": 52.5,
+      "simple": 48.839051655851705,
+      "damped_holt": 48.6754145242349
+    },
+    {
+      "period_start": "2022-03-28",
+      "actual": 49.0,
+      "recent_mean": 51.0,
+      "simple": 48.61444975926398,
+      "damped_holt": 48.53581678346773
+    },
+    {
+      "period_start": "2022-04-04",
+      "actual": 43.0,
+      "recent_mean": 45.75,
+      "simple": 48.70389659812024,
+      "damped_holt": 48.61901445048446
+    },
+    {
+      "period_start": "2022-04-11",
+      "actual": 45.0,
+      "recent_mean": 47.5,
+      "simple": 47.24164769554825,
+      "damped_holt": 47.506627368919965
+    },
+    {
+      "period_start": "2022-04-18",
+      "actual": 61.0,
+      "recent_mean": 46.25,
+      "simple": 46.666979689846904,
+      "damped_holt": 47.010394456881286
+    },
+    {
+      "period_start": "2022-04-25",
+      "actual": 50.0,
+      "recent_mean": 49.5,
+      "simple": 50.341387677181444,
+      "damped_holt": 49.77989373809395
+    },
+    {
+      "period_start": "2022-05-02",
+      "actual": 47.0,
+      "recent_mean": 49.75,
+      "simple": 50.23877540293762,
+      "damped_holt": 49.80776522440703
+    },
+    {
+      "period_start": "2022-05-09",
+      "actual": 61.0,
+      "recent_mean": 50.75,
+      "simple": 49.41533618237841,
+      "damped_holt": 49.257780679016825
+    },
+    {
+      "period_start": "2022-05-16",
+      "actual": 45.0,
+      "recent_mean": 54.75,
+      "simple": 52.36066747511657,
+      "damped_holt": 51.55784448021616
+    },
+    {
+      "period_start": "2022-05-23",
+      "actual": 46.0,
+      "recent_mean": 50.75,
+      "simple": 50.48926191763085,
+      "damped_holt": 50.27329508706466
+    },
+    {
+      "period_start": "2022-05-30",
+      "actual": 47.0,
+      "recent_mean": 49.75,
+      "simple": 49.34789400092159,
+      "damped_holt": 49.43624281670127
+    },
+    {
+      "period_start": "2022-06-06",
+      "actual": 60.0,
+      "recent_mean": 49.75,
+      "simple": 48.76182233297289,
+      "damped_holt": 48.965606355787116
+    },
+    {
+      "period_start": "2022-06-13",
+      "actual": 46.0,
+      "recent_mean": 49.5,
+      "simple": 51.59073320821701,
+      "damped_holt": 51.09921668851924
+    },
+    {
+      "period_start": "2022-06-20",
+      "actual": 48.0,
+      "recent_mean": 49.75,
+      "simple": 50.18341554142866,
+      "damped_holt": 50.11323215993254
+    },
+    {
+      "period_start": "2022-06-27",
+      "actual": 54.0,
+      "recent_mean": 50.25,
+      "simple": 49.63379903301137,
+      "damped_holt": 49.704617593757334
+    },
+    {
+      "period_start": "2022-07-04",
+      "actual": 34.0,
+      "recent_mean": 52.0,
+      "simple": 50.72541865606544,
+      "damped_holt": 50.52710256568987
+    },
+    {
+      "period_start": "2022-07-11",
+      "actual": 58.0,
+      "recent_mean": 45.5,
+      "simple": 46.557088233182014,
+      "damped_holt": 47.36471621642232
+    },
+    {
+      "period_start": "2022-07-18",
+      "actual": 45.0,
+      "recent_mean": 48.5,
+      "simple": 49.40890547165219,
+      "damped_holt": 49.39972968136862
+    },
+    {
+      "period_start": "2022-07-25",
+      "actual": 62.0,
+      "recent_mean": 47.75,
+      "simple": 48.310112359980785,
+      "damped_holt": 48.55786130005151
+    },
+    {
+      "period_start": "2022-08-01",
+      "actual": 43.0,
+      "recent_mean": 49.75,
+      "simple": 51.65307925009496,
+      "damped_holt": 51.06558699368188
+    },
+    {
+      "period_start": "2022-08-08",
+      "actual": 70.0,
+      "recent_mean": 52.0,
+      "simple": 49.55250996158132,
+      "damped_holt": 49.575292664851744
+    },
+    {
+      "period_start": "2022-08-15",
+      "actual": 56.0,
+      "recent_mean": 55.0,
+      "simple": 54.51621922165998,
+      "damped_holt": 53.349205900603806
+    },
+    {
+      "period_start": "2022-08-22",
+      "actual": 64.0,
+      "recent_mean": 57.75,
+      "simple": 54.87641288726563,
+      "damped_holt": 53.838998325670325
+    },
+    {
+      "period_start": "2022-08-29",
+      "actual": 40.0,
+      "recent_mean": 58.25,
+      "simple": 57.09119982451439,
+      "damped_holt": 55.71646653503165
+    },
+    {
+      "period_start": "2022-09-05",
+      "actual": 51.0,
+      "recent_mean": 57.5,
+      "simple": 52.94455861576374,
+      "damped_holt": 52.781196254853135
+    },
+    {
+      "period_start": "2022-09-12",
+      "actual": 77.0,
+      "recent_mean": 52.75,
+      "simple": 52.48527595667386,
+      "damped_holt": 52.46191897255051
+    },
+    {
+      "period_start": "2022-09-19",
+      "actual": 50.0,
+      "recent_mean": 58.0,
+      "simple": 58.275375341798956,
+      "damped_holt": 56.86034042780164
+    },
+    {
+      "period_start": "2022-09-26",
+      "actual": 57.0,
+      "recent_mean": 54.5,
+      "simple": 56.32082567631847,
+      "damped_holt": 55.6306326729768
+    },
+    {
+      "period_start": "2022-10-03",
+      "actual": 53.0,
+      "recent_mean": 58.75,
+      "simple": 56.44283432068691,
+      "damped_holt": 55.846286158480915
+    },
+    {
+      "period_start": "2022-10-10",
+      "actual": 42.0,
+      "recent_mean": 59.25,
+      "simple": 55.64623555124035,
+      "damped_holt": 55.34208750367417
+    },
+    {
+      "period_start": "2022-10-17",
+      "actual": 39.0,
+      "recent_mean": 50.5,
+      "simple": 52.488786358179254,
+      "damped_holt": 52.978634850953014
+    },
+    {
+      "period_start": "2022-10-24",
+      "actual": 29.0,
+      "recent_mean": 47.75,
+      "simple": 49.36776756570095,
+      "damped_holt": 50.50242251830215
+    },
+    {
+      "period_start": "2022-10-31",
+      "actual": 48.0,
+      "recent_mean": 40.75,
+      "simple": 44.65509856454677,
+      "damped_holt": 46.69342654770785
+    },
+    {
+      "period_start": "2022-11-07",
+      "actual": 68.0,
+      "recent_mean": 39.5,
+      "simple": 45.20680395306658,
+      "damped_holt": 46.73057240924126
+    },
+    {
+      "period_start": "2022-11-14",
+      "actual": 65.0,
+      "recent_mean": 46.0,
+      "simple": 50.68272119671476,
+      "damped_holt": 50.64050068310773
+    },
+    {
+      "period_start": "2022-11-21",
+      "actual": 33.0,
+      "recent_mean": 52.5,
+      "simple": 54.122354397762756,
+      "damped_holt": 53.28018678364376
+    },
+    {
+      "period_start": "2022-11-28",
+      "actual": 53.0,
+      "recent_mean": 53.5,
+      "simple": 49.04784600345978,
+      "damped_holt": 49.552109224136935
+    },
+    {
+      "period_start": "2022-12-05",
+      "actual": 65.0,
+      "recent_mean": 54.75,
+      "simple": 50.044055426747484,
+      "damped_holt": 50.30090363685383
+    },
+    {
+      "period_start": "2022-12-12",
+      "actual": 47.0,
+      "recent_mean": 54.0,
+      "simple": 53.35089185790289,
+      "damped_holt": 52.68911803507065
+    },
+    {
+      "period_start": "2022-12-19",
+      "actual": 29.0,
+      "recent_mean": 49.5,
+      "simple": 51.94667693431988,
+      "damped_holt": 51.76478681981471
+    }
+  ],
+  "test_predictions": [
+    {
+      "period_start": "2023-01-02",
+      "actual": 32.0,
+      "recent_mean": 45.25,
+      "damped_holt": 46.772891417715236
+    },
+    {
+      "period_start": "2023-01-09",
+      "actual": 50.0,
+      "recent_mean": 37.0,
+      "damped_holt": 44.38274365506219
+    },
+    {
+      "period_start": "2023-01-16",
+      "actual": 54.0,
+      "recent_mean": 37.75,
+      "damped_holt": 45.29157540001102
+    },
+    {
+      "period_start": "2023-01-23",
+      "actual": 47.0,
+      "recent_mean": 44.0,
+      "damped_holt": 46.70053597417026
+    },
+    {
+      "period_start": "2023-01-30",
+      "actual": 43.0,
+      "recent_mean": 45.75,
+      "damped_holt": 46.74898710341052
+    },
+    {
+      "period_start": "2023-02-06",
+      "actual": 52.0,
+      "recent_mean": 48.5,
+      "damped_holt": 46.14454120176473
+    },
+    {
+      "period_start": "2023-02-13",
+      "actual": 71.0,
+      "recent_mean": 49.0,
+      "damped_holt": 47.09087320667382
+    },
+    {
+      "period_start": "2023-02-20",
+      "actual": 51.0,
+      "recent_mean": 53.25,
+      "damped_holt": 50.954955027345676
+    },
+    {
+      "period_start": "2023-02-27",
+      "actual": 56.0,
+      "recent_mean": 54.25,
+      "damped_holt": 50.9622349862271
+    },
+    {
+      "period_start": "2023-03-06",
+      "actual": 50.0,
+      "recent_mean": 57.5,
+      "damped_holt": 51.74080840955401
+    },
+    {
+      "period_start": "2023-03-13",
+      "actual": 41.0,
+      "recent_mean": 57.0,
+      "damped_holt": 51.46266043536318
+    },
+    {
+      "period_start": "2023-03-20",
+      "actual": 36.0,
+      "recent_mean": 49.5,
+      "damped_holt": 49.79092689549111
+    },
+    {
+      "period_start": "2023-03-27",
+      "actual": 63.0,
+      "recent_mean": 45.75,
+      "damped_holt": 47.58739986911523
+    },
+    {
+      "period_start": "2023-04-03",
+      "actual": 49.0,
+      "recent_mean": 47.5,
+      "damped_holt": 50.005482175460024
+    },
+    {
+      "period_start": "2023-04-10",
+      "actual": 61.0,
+      "recent_mean": 47.25,
+      "damped_holt": 49.8536644423023
+    },
+    {
+      "period_start": "2023-04-17",
+      "actual": 54.0,
+      "recent_mean": 52.25,
+      "damped_holt": 51.53664942073881
+    },
+    {
+      "period_start": "2023-04-24",
+      "actual": 50.0,
+      "recent_mean": 56.75,
+      "damped_holt": 51.90859067444137
+    },
+    {
+      "period_start": "2023-05-01",
+      "actual": 59.0,
+      "recent_mean": 53.5,
+      "damped_holt": 51.62894442297003
+    },
+    {
+      "period_start": "2023-05-08",
+      "actual": 41.0,
+      "recent_mean": 56.0,
+      "damped_holt": 52.74806212160406
+    },
+    {
+      "period_start": "2023-05-15",
+      "actual": 56.0,
+      "recent_mean": 51.0,
+      "damped_holt": 50.964401137428354
+    },
+    {
+      "period_start": "2023-05-22",
+      "actual": 53.0,
+      "recent_mean": 51.5,
+      "damped_holt": 51.72893584367676
+    },
+    {
+      "period_start": "2023-05-29",
+      "actual": 52.0,
+      "recent_mean": 52.25,
+      "damped_holt": 51.92191639830362
+    },
+    {
+      "period_start": "2023-06-05",
+      "actual": 33.0,
+      "recent_mean": 50.5,
+      "damped_holt": 51.92165069972837
+    },
+    {
+      "period_start": "2023-06-12",
+      "actual": 58.0,
+      "recent_mean": 48.5,
+      "damped_holt": 49.087206176147525
+    },
+    {
+      "period_start": "2023-06-19",
+      "actual": 52.0,
+      "recent_mean": 49.0,
+      "damped_holt": 50.422333858437234
+    },
+    {
+      "period_start": "2023-06-26",
+      "actual": 82.0,
+      "recent_mean": 48.75,
+      "damped_holt": 50.658666682985974
+    },
+    {
+      "period_start": "2023-07-03",
+      "actual": 76.0,
+      "recent_mean": 56.25,
+      "damped_holt": 55.180587096067235
+    },
+    {
+      "period_start": "2023-07-10",
+      "actual": 48.0,
+      "recent_mean": 67.0,
+      "damped_holt": 58.18217561977622
+    },
+    {
+      "period_start": "2023-07-17",
+      "actual": 72.0,
+      "recent_mean": 64.5,
+      "damped_holt": 56.71418506558838
+    },
+    {
+      "period_start": "2023-07-24",
+      "actual": 89.0,
+      "recent_mean": 69.5,
+      "damped_holt": 58.91798047972334
+    },
+    {
+      "period_start": "2023-07-31",
+      "actual": 61.0,
+      "recent_mean": 71.25,
+      "damped_holt": 63.25498291964304
+    },
+    {
+      "period_start": "2023-08-07",
+      "actual": 71.0,
+      "recent_mean": 67.5,
+      "damped_holt": 64.2775266601498
+    },
+    {
+      "period_start": "2023-08-14",
+      "actual": 73.0,
+      "recent_mean": 73.25,
+      "damped_holt": 65.43135390486341
+    },
+    {
+      "period_start": "2023-08-21",
+      "actual": 100.0,
+      "recent_mean": 73.5,
+      "damped_holt": 66.73041596560762
+    },
+    {
+      "period_start": "2023-08-28",
+      "actual": 72.0,
+      "recent_mean": 76.25,
+      "damped_holt": 72.44071789445483
+    },
+    {
+      "period_start": "2023-09-04",
+      "actual": 91.0,
+      "recent_mean": 79.0,
+      "damped_holt": 76.1794371379591
+    },
+    {
+      "period_start": "2023-09-11",
+      "actual": 91.0,
+      "recent_mean": 84.0,
+      "damped_holt": 79.63091980246455
+    },
+    {
+      "period_start": "2023-09-18",
+      "actual": 113.0,
+      "recent_mean": 88.5,
+      "damped_holt": 82.55882913685157
+    },
+    {
+      "period_start": "2023-09-25",
+      "actual": 101.0,
+      "recent_mean": 91.75,
+      "damped_holt": 89.08063527507656
+    },
+    {
+      "period_start": "2023-10-02",
+      "actual": 80.0,
+      "recent_mean": 99.0,
+      "damped_holt": 96.14844283653865
+    },
+    {
+      "period_start": "2023-10-09",
+      "actual": 99.0,
+      "recent_mean": 96.25,
+      "damped_holt": 94.25264803838411
+    },
+    {
+      "period_start": "2023-10-16",
+      "actual": 92.0,
+      "recent_mean": 98.25,
+      "damped_holt": 96.27714546170779
+    },
+    {
+      "period_start": "2023-10-23",
+      "actual": 91.0,
+      "recent_mean": 93.0,
+      "damped_holt": 96.2873008471868
+    },
+    {
+      "period_start": "2023-10-30",
+      "actual": 81.0,
+      "recent_mean": 90.5,
+      "damped_holt": 95.81809170932056
+    },
+    {
+      "period_start": "2023-11-06",
+      "actual": 82.0,
+      "recent_mean": 90.75,
+      "damped_holt": 92.18901406299207
+    },
+    {
+      "period_start": "2023-11-13",
+      "actual": 80.0,
+      "recent_mean": 86.5,
+      "damped_holt": 90.02637146629648
+    },
+    {
+      "period_start": "2023-11-20",
+      "actual": 63.0,
+      "recent_mean": 83.5,
+      "damped_holt": 87.68033607834192
+    },
+    {
+      "period_start": "2023-11-27",
+      "actual": 65.0,
+      "recent_mean": 76.5,
+      "damped_holt": 82.08310430249517
+    },
+    {
+      "period_start": "2023-12-04",
+      "actual": 105.0,
+      "recent_mean": 72.5,
+      "damped_holt": 76.41187688238468
+    },
+    {
+      "period_start": "2023-12-11",
+      "actual": 71.0,
+      "recent_mean": 78.25,
+      "damped_holt": 81.71693710496587
+    },
+    {
+      "period_start": "2023-12-18",
+      "actual": 58.0,
+      "recent_mean": 76.0,
+      "damped_holt": 79.0206399982089
+    },
+    {
+      "period_start": "2023-12-25",
+      "actual": 4.0,
+      "recent_mean": 74.75,
+      "damped_holt": 73.76359339491452
+    }
+  ],
+  "validation_fits": [
+    {
+      "origin": "2022-01-03",
+      "training_weeks": 104,
+      "training_through": "2022-01-02",
+      "states": {
+        "simple": {
+          "level": 48.89472956869264,
+          "trend": 0.0,
+          "alpha": 0.2796880029688372,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 49.726705032817364,
+          "trend": -0.2281070857975261,
+          "alpha": 0.18924475486852071,
+          "beta": 0.18924475486852071,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-02-07",
+      "training_weeks": 109,
+      "training_through": "2022-02-06",
+      "states": {
+        "simple": {
+          "level": 46.72098011557192,
+          "trend": 0.0,
+          "alpha": 0.26921305376095944,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 47.22981115776843,
+          "trend": -0.3480788047214587,
+          "alpha": 0.18449764598076615,
+          "beta": 0.18449764598076615,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-03-07",
+      "training_weeks": 113,
+      "training_through": "2022-03-06",
+      "states": {
+        "simple": {
+          "level": 52.95266850916913,
+          "trend": 0.0,
+          "alpha": 0.26768542201341766,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 51.54276634768356,
+          "trend": -1.3188316205761245e-10,
+          "alpha": 0.20668454068452724,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-04-04",
+      "training_weeks": 117,
+      "training_through": "2022-04-03",
+      "states": {
+        "simple": {
+          "level": 48.70389659812024,
+          "trend": 0.0,
+          "alpha": 0.2563596442217903,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 48.61901445052767,
+          "trend": -5.401815511113283e-11,
+          "alpha": 0.1979683610591202,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-05-02",
+      "training_weeks": 121,
+      "training_through": "2022-05-01",
+      "states": {
+        "simple": {
+          "level": 50.23877540293762,
+          "trend": 0.0,
+          "alpha": 0.25424400216586157,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 49.80776522442473,
+          "trend": -2.2125423815669263e-11,
+          "alpha": 0.19587981950741484,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-06-06",
+      "training_weeks": 126,
+      "training_through": "2022-06-05",
+      "states": {
+        "simple": {
+          "level": 48.76182233297289,
+          "trend": 0.0,
+          "alpha": 0.251723273920483,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 48.965606355792914,
+          "trend": -7.2497560521375774e-12,
+          "alpha": 0.19335999797829986,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-07-04",
+      "training_weeks": 130,
+      "training_through": "2022-07-03",
+      "states": {
+        "simple": {
+          "level": 50.72541865606544,
+          "trend": 0.0,
+          "alpha": 0.24922129057569425,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 50.527102565692246,
+          "trend": -2.9694090768821257e-12,
+          "alpha": 0.19134547853722053,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-08-01",
+      "training_weeks": 134,
+      "training_through": "2022-07-31",
+      "states": {
+        "simple": {
+          "level": 51.65307925009496,
+          "trend": 0.0,
+          "alpha": 0.24275396397075472,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 51.06558699368286,
+          "trend": -1.2160389424599906e-12,
+          "alpha": 0.18477196142038607,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-09-05",
+      "training_weeks": 139,
+      "training_through": "2022-09-04",
+      "states": {
+        "simple": {
+          "level": 52.94455861576374,
+          "trend": 0.0,
+          "alpha": 0.23618864217651217,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 52.781196254853455,
+          "trend": -3.9837347892901434e-13,
+          "alpha": 0.1792487949783462,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-10-03",
+      "training_weeks": 143,
+      "training_through": "2022-10-02",
+      "states": {
+        "simple": {
+          "level": 56.44283432068691,
+          "trend": 0.0,
+          "alpha": 0.23137876971309584,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 55.84628615848104,
+          "trend": -1.6315330793305737e-13,
+          "alpha": 0.1771426436882705,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-11-07",
+      "training_weeks": 148,
+      "training_through": "2022-11-06",
+      "states": {
+        "simple": {
+          "level": 45.20680395306658,
+          "trend": 0.0,
+          "alpha": 0.24024350215620163,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 46.730572409241304,
+          "trend": -5.348022535095581e-14,
+          "alpha": 0.1838285613085945,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2022-12-05",
+      "training_weeks": 152,
+      "training_through": "2022-12-04",
+      "states": {
+        "simple": {
+          "level": 50.044055426747484,
+          "trend": 0.0,
+          "alpha": 0.2211051542053324,
+          "beta": 0.0,
+          "phi": 1.0,
+          "optimizer": "L-BFGS-B"
+        },
+        "damped_holt": {
+          "level": 50.300903636853846,
+          "trend": -2.186628207914221e-14,
+          "alpha": 0.16247355206164968,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    }
+  ],
+  "test_fits": [
+    {
+      "origin": "2023-01-02",
+      "training_weeks": 156,
+      "training_through": "2023-01-01",
+      "states": {
+        "damped_holt": {
+          "level": 46.77289141771524,
+          "trend": -8.95557268120109e-15,
+          "alpha": 0.1617928200424486,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-02-06",
+      "training_weeks": 161,
+      "training_through": "2023-02-05",
+      "states": {
+        "damped_holt": {
+          "level": 46.14454120176473,
+          "trend": -2.934494409568347e-15,
+          "alpha": 0.16161534689549778,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-03-06",
+      "training_weeks": 165,
+      "training_through": "2023-03-05",
+      "states": {
+        "damped_holt": {
+          "level": 51.74080840955401,
+          "trend": -1.201623702585494e-15,
+          "alpha": 0.1597809228541637,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-04-03",
+      "training_weeks": 169,
+      "training_through": "2023-04-02",
+      "states": {
+        "damped_holt": {
+          "level": 50.005482175460024,
+          "trend": -4.913597900275515e-16,
+          "alpha": 0.15098997959685811,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-05-01",
+      "training_weeks": 173,
+      "training_through": "2023-04-30",
+      "states": {
+        "damped_holt": {
+          "level": 51.62894442297003,
+          "trend": -2.0129999793506324e-16,
+          "alpha": 0.15182597484700455,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-06-05",
+      "training_weeks": 178,
+      "training_through": "2023-06-04",
+      "states": {
+        "damped_holt": {
+          "level": 51.92165069972837,
+          "trend": -6.593117191329966e-17,
+          "alpha": 0.14979900900620344,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-07-03",
+      "training_weeks": 182,
+      "training_through": "2023-07-02",
+      "states": {
+        "damped_holt": {
+          "level": 55.180587096067235,
+          "trend": -2.6965469185030507e-17,
+          "alpha": 0.14417258246230313,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-08-07",
+      "training_weeks": 187,
+      "training_through": "2023-08-06",
+      "states": {
+        "damped_holt": {
+          "level": 64.2775266601498,
+          "trend": -8.879243042658444e-18,
+          "alpha": 0.17163731061212553,
+          "beta": 0.0,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-09-04",
+      "training_weeks": 191,
+      "training_through": "2023-09-03",
+      "states": {
+        "damped_holt": {
+          "level": 75.32084789999938,
+          "trend": 1.0732365474496528,
+          "alpha": 0.16480922157473252,
+          "beta": 0.16480922157473252,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-10-02",
+      "training_weeks": 195,
+      "training_through": "2023-10-01",
+      "states": {
+        "damped_holt": {
+          "level": 94.19134645579176,
+          "trend": 2.3186911223216686,
+          "alpha": 0.18941062185144056,
+          "beta": 0.18941062185144056,
+          "phi": 0.8440522163155921,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-11-06",
+      "training_weeks": 200,
+      "training_through": "2023-11-05",
+      "states": {
+        "damped_holt": {
+          "level": 92.21566008359703,
+          "trend": -0.033077335606024605,
+          "alpha": 0.18312977428276767,
+          "beta": 0.18312977428276767,
+          "phi": 0.8055673202440446,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    },
+    {
+      "origin": "2023-12-04",
+      "training_weeks": 204,
+      "training_through": "2023-12-03",
+      "states": {
+        "damped_holt": {
+          "level": 77.9182712231407,
+          "trend": -1.8829929259450355,
+          "alpha": 0.1967535280231262,
+          "beta": 0.1967535280231262,
+          "phi": 0.8,
+          "optimizer": "L-BFGS-B"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4967 @@
+{
+  "selection": {
+    "target": {
+      "name": "weekly_larceny",
+      "days": 7,
+      "category": "LARCENY"
+    },
+    "model": "poisson",
+    "baseline": "recent_mean",
+    "criterion": "Largest 2022 relative MAE reduction vs that target's best baseline",
+    "screening_window": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "test_window": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "validation": {
+      "daily_total": {
+        "target": {
+          "name": "daily_total",
+          "days": 1,
+          "category": null
+        },
+        "scores": {
+          "last_period": {
+            "mae": 7.695890410958904,
+            "rmse": 10.005614862022387,
+            "mean_actual": 33.794520547945204,
+            "periods": 365
+          },
+          "recent_mean": {
+            "mae": 5.835714285714285,
+            "rmse": 7.451668190428262,
+            "mean_actual": 33.794520547945204,
+            "periods": 365
+          },
+          "seasonal_naive": {
+            "mae": 7.920547945205479,
+            "rmse": 10.08199262757446,
+            "mean_actual": 33.794520547945204,
+            "periods": 365
+          },
+          "poisson": {
+            "mae": 5.792438688992581,
+            "rmse": 7.4037212054814505,
+            "mean_actual": 33.794520547945204,
+            "periods": 365
+          },
+          "boosted_poisson": {
+            "mae": 6.02535086209701,
+            "rmse": 7.655744585808709,
+            "mean_actual": 33.794520547945204,
+            "periods": 365
+          }
+        },
+        "best_baseline": "recent_mean",
+        "best_model": "poisson",
+        "mae_skill_vs_best_baseline": 0.00741564692905583
+      },
+      "weekly_total": {
+        "target": {
+          "name": "weekly_total",
+          "days": 7,
+          "category": null
+        },
+        "scores": {
+          "last_period": {
+            "mae": 23.274509803921568,
+            "rmse": 29.793077232477884,
+            "mean_actual": 237.19607843137254,
+            "periods": 51
+          },
+          "recent_mean": {
+            "mae": 20.16176470588235,
+            "rmse": 25.727812638023757,
+            "mean_actual": 237.19607843137254,
+            "periods": 51
+          },
+          "seasonal_naive": {
+            "mae": 26.862745098039216,
+            "rmse": 34.041497167600674,
+            "mean_actual": 237.19607843137254,
+            "periods": 51
+          },
+          "poisson": {
+            "mae": 19.958324639059242,
+            "rmse": 24.34801935562022,
+            "mean_actual": 237.19607843137254,
+            "periods": 51
+          },
+          "boosted_poisson": {
+            "mae": 21.082723471709986,
+            "rmse": 25.982794414418894,
+            "mean_actual": 237.19607843137254,
+            "periods": 51
+          }
+        },
+        "best_baseline": "recent_mean",
+        "best_model": "poisson",
+        "mae_skill_vs_best_baseline": 0.010090389893487539
+      },
+      "weekly_larceny": {
+        "target": {
+          "name": "weekly_larceny",
+          "days": 7,
+          "category": "LARCENY"
+        },
+        "scores": {
+          "last_period": {
+            "mae": 13.372549019607844,
+            "rmse": 16.183991121705763,
+            "mean_actual": 50.03921568627451,
+            "periods": 51
+          },
+          "recent_mean": {
+            "mae": 10.132352941176471,
+            "rmse": 12.575702139989064,
+            "mean_actual": 50.03921568627451,
+            "periods": 51
+          },
+          "seasonal_naive": {
+            "mae": 11.764705882352942,
+            "rmse": 14.646153212416174,
+            "mean_actual": 50.03921568627451,
+            "periods": 51
+          },
+          "poisson": {
+            "mae": 9.73602868201753,
+            "rmse": 12.254115098288267,
+            "mean_actual": 50.03921568627451,
+            "periods": 51
+          },
+          "boosted_poisson": {
+            "mae": 10.132640303959098,
+            "rmse": 12.95423336376292,
+            "mean_actual": 50.03921568627451,
+            "periods": 51
+          }
+        },
+        "best_baseline": "recent_mean",
+        "best_model": "poisson",
+        "mae_skill_vs_best_baseline": 0.039114730947471754
+      }
+    }
+  },
+  "data_audit": {
+    "database_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+    "requested_start": "2020-01-01",
+    "requested_end": "2024-12-31",
+    "raw_rows": 55851,
+    "retained_rows": 55779,
+    "excluded_rows": 72,
+    "tables": [
+      {
+        "table": "crime_2020_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5266,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5266,
+        "first_date": "2020-01-01",
+        "last_date": "2020-12-29"
+      },
+      {
+        "table": "crime_2020_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 8014,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 55,
+        "retained_rows": 7959,
+        "first_date": "2020-01-01",
+        "last_date": "2020-12-31"
+      },
+      {
+        "table": "crime_2021_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5129,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5129,
+        "first_date": "2021-01-01",
+        "last_date": "2021-12-31"
+      },
+      {
+        "table": "crime_2021_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6949,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 6,
+        "retained_rows": 6943,
+        "first_date": "2020-01-01",
+        "last_date": "2022-01-01"
+      },
+      {
+        "table": "crime_2022_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 5660,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 5660,
+        "first_date": "2022-01-01",
+        "last_date": "2022-12-31"
+      },
+      {
+        "table": "crime_2022_2",
+        "label_column": "CODE DEFINED",
+        "raw_rows": 6709,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 9,
+        "retained_rows": 6700,
+        "first_date": "2020-02-29",
+        "last_date": "2022-12-31"
+      },
+      {
+        "table": "crime_2023_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6633,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 6633,
+        "first_date": "2022-12-25",
+        "last_date": "2023-12-26"
+      },
+      {
+        "table": "crime_2023_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 6693,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 2,
+        "retained_rows": 6691,
+        "first_date": "2020-03-19",
+        "last_date": "2023-12-31"
+      },
+      {
+        "table": "crime_2024_1",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 2358,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 2358,
+        "first_date": "2024-01-01",
+        "last_date": "2024-05-20"
+      },
+      {
+        "table": "crime_2024_2",
+        "label_column": "CODE_DEFINED",
+        "raw_rows": 2440,
+        "invalid_date": 0,
+        "missing_category": 0,
+        "outside_window": 0,
+        "retained_rows": 2440,
+        "first_date": "2021-01-22",
+        "last_date": "2024-05-27"
+      }
+    ],
+    "skipped_tables": [
+      "crime_2019_1"
+    ],
+    "date_policy": "Preserve the calendar date written in DATEEND; no timezone conversion.",
+    "unit": "Source records, not verified unique incidents or population-adjusted rates.",
+    "duplicate_policy": "Retain records; no stable cross-table incident identifier."
+  },
+  "metadata": {
+    "target": {
+      "name": "weekly_larceny",
+      "days": 7,
+      "category": "LARCENY"
+    },
+    "model": "poisson",
+    "training_through": "2022-12-25",
+    "feature_columns": [
+      "lag_1",
+      "lag_2",
+      "lag_4",
+      "lag_8",
+      "lag_13",
+      "mean_4",
+      "std_4",
+      "mean_13",
+      "std_13",
+      "annual_sin",
+      "annual_cos"
+    ],
+    "data_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+    "python": "3.12.12",
+    "scikit_learn": "1.9.1",
+    "interpretation": "Expected source-record count for the next complete period, not individual risk.",
+    "evaluation": "One-period forecasts with observed history and monthly refitting; not a year-ahead forecast.",
+    "test_mae_skill_vs_selected_baseline": -0.0741725852733286,
+    "availability": "Retrospective DATEEND snapshot; historical report availability is unknown.",
+    "test_coverage": {
+      "last_observed_target_date_in_test": "2023-12-26",
+      "periods_ending_after_last_observed_record": [
+        "2023-12-25"
+      ],
+      "policy": "Flags are diagnostic only. Test scores retain the predefined calendar window; no post-result filtering.",
+      "interpretation": "Calendar-complete periods do not establish complete source coverage. No records after the final observed date may mean missing collection or zero events."
+    }
+  },
+  "test": {
+    "last_period": {
+      "mae": 14.384615384615385,
+      "rmse": 18.26092928800554,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    },
+    "recent_mean": {
+      "mae": 12.014423076923077,
+      "rmse": 16.681872070281283,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    },
+    "seasonal_naive": {
+      "mae": 21.326923076923077,
+      "rmse": 26.51523509810336,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    },
+    "poisson": {
+      "mae": 12.905563897106001,
+      "rmse": 16.832276141709958,
+      "mean_actual": 64.90384615384616,
+      "periods": 52
+    }
+  },
+  "test_mae_skill_vs_selected_baseline": -0.0741725852733286,
+  "validation_predictions": {
+    "daily_total": [
+      {
+        "period_start": "2022-01-01",
+        "last_period": 25.0,
+        "recent_mean": 30.285714285714285,
+        "seasonal_naive": 26.0,
+        "actual": 40.0,
+        "poisson": 29.155600672400922,
+        "boosted_poisson": 26.456517080678495
+      },
+      {
+        "period_start": "2022-01-02",
+        "last_period": 40.0,
+        "recent_mean": 30.357142857142858,
+        "seasonal_naive": 27.0,
+        "actual": 27.0,
+        "poisson": 29.27278098032125,
+        "boosted_poisson": 23.51063582231732
+      },
+      {
+        "period_start": "2022-01-03",
+        "last_period": 27.0,
+        "recent_mean": 30.321428571428573,
+        "seasonal_naive": 24.0,
+        "actual": 29.0,
+        "poisson": 27.987359424201657,
+        "boosted_poisson": 26.458379047747624
+      },
+      {
+        "period_start": "2022-01-04",
+        "last_period": 29.0,
+        "recent_mean": 30.464285714285715,
+        "seasonal_naive": 22.0,
+        "actual": 23.0,
+        "poisson": 29.163531124671515,
+        "boosted_poisson": 25.584858019275156
+      },
+      {
+        "period_start": "2022-01-05",
+        "last_period": 23.0,
+        "recent_mean": 30.035714285714285,
+        "seasonal_naive": 25.0,
+        "actual": 28.0,
+        "poisson": 27.93612008453561,
+        "boosted_poisson": 24.395784938950637
+      },
+      {
+        "period_start": "2022-01-06",
+        "last_period": 28.0,
+        "recent_mean": 30.214285714285715,
+        "seasonal_naive": 20.0,
+        "actual": 23.0,
+        "poisson": 28.755112119615912,
+        "boosted_poisson": 27.776842761415498
+      },
+      {
+        "period_start": "2022-01-07",
+        "last_period": 23.0,
+        "recent_mean": 29.678571428571427,
+        "seasonal_naive": 25.0,
+        "actual": 18.0,
+        "poisson": 29.16795556362435,
+        "boosted_poisson": 26.994404448058557
+      },
+      {
+        "period_start": "2022-01-08",
+        "last_period": 18.0,
+        "recent_mean": 28.857142857142858,
+        "seasonal_naive": 40.0,
+        "actual": 17.0,
+        "poisson": 28.511422287686667,
+        "boosted_poisson": 29.4208605432011
+      },
+      {
+        "period_start": "2022-01-09",
+        "last_period": 17.0,
+        "recent_mean": 28.357142857142858,
+        "seasonal_naive": 27.0,
+        "actual": 24.0,
+        "poisson": 28.402374026153044,
+        "boosted_poisson": 33.61891528513993
+      },
+      {
+        "period_start": "2022-01-10",
+        "last_period": 24.0,
+        "recent_mean": 27.321428571428573,
+        "seasonal_naive": 29.0,
+        "actual": 32.0,
+        "poisson": 27.698080168478302,
+        "boosted_poisson": 29.746290059374875
+      },
+      {
+        "period_start": "2022-01-11",
+        "last_period": 32.0,
+        "recent_mean": 27.357142857142858,
+        "seasonal_naive": 23.0,
+        "actual": 11.0,
+        "poisson": 27.451800292129384,
+        "boosted_poisson": 29.955700995120296
+      },
+      {
+        "period_start": "2022-01-12",
+        "last_period": 11.0,
+        "recent_mean": 26.5,
+        "seasonal_naive": 28.0,
+        "actual": 21.0,
+        "poisson": 25.126701592322476,
+        "boosted_poisson": 29.987198638367932
+      },
+      {
+        "period_start": "2022-01-13",
+        "last_period": 21.0,
+        "recent_mean": 26.071428571428573,
+        "seasonal_naive": 23.0,
+        "actual": 41.0,
+        "poisson": 25.401178445681015,
+        "boosted_poisson": 31.12096081269787
+      },
+      {
+        "period_start": "2022-01-14",
+        "last_period": 41.0,
+        "recent_mean": 26.642857142857142,
+        "seasonal_naive": 18.0,
+        "actual": 34.0,
+        "poisson": 26.305794400732196,
+        "boosted_poisson": 29.01123104586444
+      },
+      {
+        "period_start": "2022-01-15",
+        "last_period": 34.0,
+        "recent_mean": 26.821428571428573,
+        "seasonal_naive": 17.0,
+        "actual": 25.0,
+        "poisson": 26.71169144872231,
+        "boosted_poisson": 27.379509409524783
+      },
+      {
+        "period_start": "2022-01-16",
+        "last_period": 25.0,
+        "recent_mean": 26.75,
+        "seasonal_naive": 24.0,
+        "actual": 27.0,
+        "poisson": 27.041418094408684,
+        "boosted_poisson": 30.220090204740202
+      },
+      {
+        "period_start": "2022-01-17",
+        "last_period": 27.0,
+        "recent_mean": 26.678571428571427,
+        "seasonal_naive": 32.0,
+        "actual": 31.0,
+        "poisson": 28.028097128692142,
+        "boosted_poisson": 29.040109197804775
+      },
+      {
+        "period_start": "2022-01-18",
+        "last_period": 31.0,
+        "recent_mean": 26.607142857142858,
+        "seasonal_naive": 11.0,
+        "actual": 29.0,
+        "poisson": 27.214942773825666,
+        "boosted_poisson": 32.329427188207376
+      },
+      {
+        "period_start": "2022-01-19",
+        "last_period": 29.0,
+        "recent_mean": 26.25,
+        "seasonal_naive": 21.0,
+        "actual": 26.0,
+        "poisson": 28.70618472611612,
+        "boosted_poisson": 32.71367596451307
+      },
+      {
+        "period_start": "2022-01-20",
+        "last_period": 26.0,
+        "recent_mean": 26.142857142857142,
+        "seasonal_naive": 41.0,
+        "actual": 27.0,
+        "poisson": 29.442258632786285,
+        "boosted_poisson": 33.56314582942465
+      },
+      {
+        "period_start": "2022-01-21",
+        "last_period": 27.0,
+        "recent_mean": 26.178571428571427,
+        "seasonal_naive": 34.0,
+        "actual": 33.0,
+        "poisson": 29.370895397005444,
+        "boosted_poisson": 29.595925942807288
+      },
+      {
+        "period_start": "2022-01-22",
+        "last_period": 33.0,
+        "recent_mean": 26.25,
+        "seasonal_naive": 25.0,
+        "actual": 37.0,
+        "poisson": 29.380728422397944,
+        "boosted_poisson": 31.19466104406616
+      },
+      {
+        "period_start": "2022-01-23",
+        "last_period": 37.0,
+        "recent_mean": 26.642857142857142,
+        "seasonal_naive": 27.0,
+        "actual": 32.0,
+        "poisson": 30.313508287944668,
+        "boosted_poisson": 33.03278021094807
+      },
+      {
+        "period_start": "2022-01-24",
+        "last_period": 32.0,
+        "recent_mean": 26.821428571428573,
+        "seasonal_naive": 31.0,
+        "actual": 29.0,
+        "poisson": 30.582688518668483,
+        "boosted_poisson": 32.73756426236385
+      },
+      {
+        "period_start": "2022-01-25",
+        "last_period": 29.0,
+        "recent_mean": 27.0,
+        "seasonal_naive": 29.0,
+        "actual": 43.0,
+        "poisson": 29.289755583946487,
+        "boosted_poisson": 32.25365756885857
+      },
+      {
+        "period_start": "2022-01-26",
+        "last_period": 43.0,
+        "recent_mean": 27.75,
+        "seasonal_naive": 26.0,
+        "actual": 26.0,
+        "poisson": 30.620419831342865,
+        "boosted_poisson": 36.42501373218281
+      },
+      {
+        "period_start": "2022-01-27",
+        "last_period": 26.0,
+        "recent_mean": 27.785714285714285,
+        "seasonal_naive": 27.0,
+        "actual": 19.0,
+        "poisson": 29.872226134498064,
+        "boosted_poisson": 32.93707327605344
+      },
+      {
+        "period_start": "2022-01-28",
+        "last_period": 19.0,
+        "recent_mean": 27.75,
+        "seasonal_naive": 33.0,
+        "actual": 24.0,
+        "poisson": 29.479031440738442,
+        "boosted_poisson": 33.400325495413114
+      },
+      {
+        "period_start": "2022-01-29",
+        "last_period": 24.0,
+        "recent_mean": 27.714285714285715,
+        "seasonal_naive": 37.0,
+        "actual": 22.0,
+        "poisson": 29.870350191392312,
+        "boosted_poisson": 35.17314805474809
+      },
+      {
+        "period_start": "2022-01-30",
+        "last_period": 22.0,
+        "recent_mean": 27.071428571428573,
+        "seasonal_naive": 32.0,
+        "actual": 22.0,
+        "poisson": 28.336842129555663,
+        "boosted_poisson": 31.501691830537915
+      },
+      {
+        "period_start": "2022-01-31",
+        "last_period": 22.0,
+        "recent_mean": 26.892857142857142,
+        "seasonal_naive": 29.0,
+        "actual": 35.0,
+        "poisson": 27.924380181352735,
+        "boosted_poisson": 30.591921420661844
+      },
+      {
+        "period_start": "2022-02-01",
+        "last_period": 35.0,
+        "recent_mean": 27.107142857142858,
+        "seasonal_naive": 43.0,
+        "actual": 36.0,
+        "poisson": 28.692733515684637,
+        "boosted_poisson": 30.188922910715764
+      },
+      {
+        "period_start": "2022-02-02",
+        "last_period": 36.0,
+        "recent_mean": 27.571428571428573,
+        "seasonal_naive": 26.0,
+        "actual": 26.0,
+        "poisson": 27.71238691393793,
+        "boosted_poisson": 25.936194751121235
+      },
+      {
+        "period_start": "2022-02-03",
+        "last_period": 26.0,
+        "recent_mean": 27.5,
+        "seasonal_naive": 19.0,
+        "actual": 24.0,
+        "poisson": 26.783779301995143,
+        "boosted_poisson": 29.21111050024924
+      },
+      {
+        "period_start": "2022-02-04",
+        "last_period": 24.0,
+        "recent_mean": 27.535714285714285,
+        "seasonal_naive": 24.0,
+        "actual": 16.0,
+        "poisson": 27.86923325036595,
+        "boosted_poisson": 29.900321109411568
+      },
+      {
+        "period_start": "2022-02-05",
+        "last_period": 16.0,
+        "recent_mean": 27.464285714285715,
+        "seasonal_naive": 22.0,
+        "actual": 28.0,
+        "poisson": 27.060062534449774,
+        "boosted_poisson": 28.582882077429222
+      },
+      {
+        "period_start": "2022-02-06",
+        "last_period": 28.0,
+        "recent_mean": 27.857142857142858,
+        "seasonal_naive": 22.0,
+        "actual": 26.0,
+        "poisson": 28.619250964000557,
+        "boosted_poisson": 28.40859687666593
+      },
+      {
+        "period_start": "2022-02-07",
+        "last_period": 26.0,
+        "recent_mean": 27.928571428571427,
+        "seasonal_naive": 35.0,
+        "actual": 35.0,
+        "poisson": 28.768111254045543,
+        "boosted_poisson": 27.2202828270992
+      },
+      {
+        "period_start": "2022-02-08",
+        "last_period": 35.0,
+        "recent_mean": 28.035714285714285,
+        "seasonal_naive": 36.0,
+        "actual": 34.0,
+        "poisson": 29.081937497065493,
+        "boosted_poisson": 27.709734520235013
+      },
+      {
+        "period_start": "2022-02-09",
+        "last_period": 34.0,
+        "recent_mean": 28.857142857142858,
+        "seasonal_naive": 26.0,
+        "actual": 28.0,
+        "poisson": 27.948897900839274,
+        "boosted_poisson": 28.672695964056828
+      },
+      {
+        "period_start": "2022-02-10",
+        "last_period": 28.0,
+        "recent_mean": 29.107142857142858,
+        "seasonal_naive": 24.0,
+        "actual": 33.0,
+        "poisson": 27.968956570920323,
+        "boosted_poisson": 28.704957216712486
+      },
+      {
+        "period_start": "2022-02-11",
+        "last_period": 33.0,
+        "recent_mean": 28.821428571428573,
+        "seasonal_naive": 16.0,
+        "actual": 34.0,
+        "poisson": 28.76517458358778,
+        "boosted_poisson": 27.25667810759264
+      },
+      {
+        "period_start": "2022-02-12",
+        "last_period": 34.0,
+        "recent_mean": 28.821428571428573,
+        "seasonal_naive": 28.0,
+        "actual": 27.0,
+        "poisson": 30.74947370427773,
+        "boosted_poisson": 27.981899498904827
+      },
+      {
+        "period_start": "2022-02-13",
+        "last_period": 27.0,
+        "recent_mean": 28.892857142857142,
+        "seasonal_naive": 26.0,
+        "actual": 33.0,
+        "poisson": 30.366528668438473,
+        "boosted_poisson": 28.696257497568382
+      },
+      {
+        "period_start": "2022-02-14",
+        "last_period": 33.0,
+        "recent_mean": 29.107142857142858,
+        "seasonal_naive": 35.0,
+        "actual": 31.0,
+        "poisson": 32.49817514814411,
+        "boosted_poisson": 31.49099836799384
+      },
+      {
+        "period_start": "2022-02-15",
+        "last_period": 31.0,
+        "recent_mean": 29.107142857142858,
+        "seasonal_naive": 34.0,
+        "actual": 37.0,
+        "poisson": 31.63969889219314,
+        "boosted_poisson": 30.545552904265385
+      },
+      {
+        "period_start": "2022-02-16",
+        "last_period": 37.0,
+        "recent_mean": 29.392857142857142,
+        "seasonal_naive": 28.0,
+        "actual": 24.0,
+        "poisson": 31.27091224470555,
+        "boosted_poisson": 27.357787450348486
+      },
+      {
+        "period_start": "2022-02-17",
+        "last_period": 24.0,
+        "recent_mean": 29.321428571428573,
+        "seasonal_naive": 33.0,
+        "actual": 29.0,
+        "poisson": 29.803661905120826,
+        "boosted_poisson": 28.340198507573728
+      },
+      {
+        "period_start": "2022-02-18",
+        "last_period": 29.0,
+        "recent_mean": 29.392857142857142,
+        "seasonal_naive": 34.0,
+        "actual": 26.0,
+        "poisson": 30.571520687219678,
+        "boosted_poisson": 29.877303170735168
+      },
+      {
+        "period_start": "2022-02-19",
+        "last_period": 26.0,
+        "recent_mean": 29.142857142857142,
+        "seasonal_naive": 27.0,
+        "actual": 37.0,
+        "poisson": 30.21262993193147,
+        "boosted_poisson": 31.09548238768372
+      },
+      {
+        "period_start": "2022-02-20",
+        "last_period": 37.0,
+        "recent_mean": 29.142857142857142,
+        "seasonal_naive": 33.0,
+        "actual": 27.0,
+        "poisson": 31.582330983652543,
+        "boosted_poisson": 27.745947239870073
+      },
+      {
+        "period_start": "2022-02-21",
+        "last_period": 27.0,
+        "recent_mean": 28.964285714285715,
+        "seasonal_naive": 31.0,
+        "actual": 35.0,
+        "poisson": 30.18590617948901,
+        "boosted_poisson": 32.09868959122542
+      },
+      {
+        "period_start": "2022-02-22",
+        "last_period": 35.0,
+        "recent_mean": 29.178571428571427,
+        "seasonal_naive": 37.0,
+        "actual": 39.0,
+        "poisson": 31.604941614904554,
+        "boosted_poisson": 32.417448129139544
+      },
+      {
+        "period_start": "2022-02-23",
+        "last_period": 39.0,
+        "recent_mean": 29.035714285714285,
+        "seasonal_naive": 24.0,
+        "actual": 32.0,
+        "poisson": 30.107960197940255,
+        "boosted_poisson": 29.503320268155218
+      },
+      {
+        "period_start": "2022-02-24",
+        "last_period": 32.0,
+        "recent_mean": 29.25,
+        "seasonal_naive": 29.0,
+        "actual": 34.0,
+        "poisson": 30.332996925256023,
+        "boosted_poisson": 34.33597882642887
+      },
+      {
+        "period_start": "2022-02-25",
+        "last_period": 34.0,
+        "recent_mean": 29.785714285714285,
+        "seasonal_naive": 26.0,
+        "actual": 25.0,
+        "poisson": 31.424117044799132,
+        "boosted_poisson": 31.46125873667199
+      },
+      {
+        "period_start": "2022-02-26",
+        "last_period": 25.0,
+        "recent_mean": 29.821428571428573,
+        "seasonal_naive": 37.0,
+        "actual": 35.0,
+        "poisson": 31.04351483757336,
+        "boosted_poisson": 31.631072536557248
+      },
+      {
+        "period_start": "2022-02-27",
+        "last_period": 35.0,
+        "recent_mean": 30.285714285714285,
+        "seasonal_naive": 27.0,
+        "actual": 23.0,
+        "poisson": 32.14170280197156,
+        "boosted_poisson": 36.33050860677106
+      },
+      {
+        "period_start": "2022-02-28",
+        "last_period": 23.0,
+        "recent_mean": 30.321428571428573,
+        "seasonal_naive": 35.0,
+        "actual": 23.0,
+        "poisson": 30.97682994996929,
+        "boosted_poisson": 32.78042641428204
+      },
+      {
+        "period_start": "2022-03-01",
+        "last_period": 23.0,
+        "recent_mean": 29.892857142857142,
+        "seasonal_naive": 39.0,
+        "actual": 36.0,
+        "poisson": 30.853369754918553,
+        "boosted_poisson": 32.926400880880806
+      },
+      {
+        "period_start": "2022-03-02",
+        "last_period": 36.0,
+        "recent_mean": 29.892857142857142,
+        "seasonal_naive": 32.0,
+        "actual": 35.0,
+        "poisson": 30.365970494268794,
+        "boosted_poisson": 31.50834346226066
+      },
+      {
+        "period_start": "2022-03-03",
+        "last_period": 35.0,
+        "recent_mean": 30.214285714285715,
+        "seasonal_naive": 34.0,
+        "actual": 36.0,
+        "poisson": 29.994908738580897,
+        "boosted_poisson": 29.908180723714047
+      },
+      {
+        "period_start": "2022-03-04",
+        "last_period": 36.0,
+        "recent_mean": 30.642857142857142,
+        "seasonal_naive": 25.0,
+        "actual": 32.0,
+        "poisson": 29.60378381766926,
+        "boosted_poisson": 31.20650328135722
+      },
+      {
+        "period_start": "2022-03-05",
+        "last_period": 32.0,
+        "recent_mean": 31.214285714285715,
+        "seasonal_naive": 35.0,
+        "actual": 36.0,
+        "poisson": 31.32484119833743,
+        "boosted_poisson": 34.30948292778401
+      },
+      {
+        "period_start": "2022-03-06",
+        "last_period": 36.0,
+        "recent_mean": 31.5,
+        "seasonal_naive": 23.0,
+        "actual": 38.0,
+        "poisson": 31.122608321764307,
+        "boosted_poisson": 32.48617796095775
+      },
+      {
+        "period_start": "2022-03-07",
+        "last_period": 38.0,
+        "recent_mean": 31.928571428571427,
+        "seasonal_naive": 23.0,
+        "actual": 29.0,
+        "poisson": 32.87777985108314,
+        "boosted_poisson": 35.13116229303204
+      },
+      {
+        "period_start": "2022-03-08",
+        "last_period": 29.0,
+        "recent_mean": 31.714285714285715,
+        "seasonal_naive": 36.0,
+        "actual": 25.0,
+        "poisson": 33.60365984698698,
+        "boosted_poisson": 36.04634230781214
+      },
+      {
+        "period_start": "2022-03-09",
+        "last_period": 25.0,
+        "recent_mean": 31.392857142857142,
+        "seasonal_naive": 35.0,
+        "actual": 25.0,
+        "poisson": 31.80612285643697,
+        "boosted_poisson": 34.45194988750899
+      },
+      {
+        "period_start": "2022-03-10",
+        "last_period": 25.0,
+        "recent_mean": 31.285714285714285,
+        "seasonal_naive": 36.0,
+        "actual": 32.0,
+        "poisson": 31.35333795935694,
+        "boosted_poisson": 33.745394031392756
+      },
+      {
+        "period_start": "2022-03-11",
+        "last_period": 32.0,
+        "recent_mean": 31.25,
+        "seasonal_naive": 32.0,
+        "actual": 37.0,
+        "poisson": 31.354740589116226,
+        "boosted_poisson": 31.61665436541064
+      },
+      {
+        "period_start": "2022-03-12",
+        "last_period": 37.0,
+        "recent_mean": 31.357142857142858,
+        "seasonal_naive": 36.0,
+        "actual": 20.0,
+        "poisson": 32.11320759572999,
+        "boosted_poisson": 34.141971412337064
+      },
+      {
+        "period_start": "2022-03-13",
+        "last_period": 20.0,
+        "recent_mean": 31.107142857142858,
+        "seasonal_naive": 38.0,
+        "actual": 20.0,
+        "poisson": 29.743964598217723,
+        "boosted_poisson": 30.366008953686205
+      },
+      {
+        "period_start": "2022-03-14",
+        "last_period": 20.0,
+        "recent_mean": 30.642857142857142,
+        "seasonal_naive": 29.0,
+        "actual": 26.0,
+        "poisson": 29.127803014023872,
+        "boosted_poisson": 31.440016578671692
+      },
+      {
+        "period_start": "2022-03-15",
+        "last_period": 26.0,
+        "recent_mean": 30.464285714285715,
+        "seasonal_naive": 25.0,
+        "actual": 37.0,
+        "poisson": 29.589985257564496,
+        "boosted_poisson": 31.16763677615852
+      },
+      {
+        "period_start": "2022-03-16",
+        "last_period": 37.0,
+        "recent_mean": 30.464285714285715,
+        "seasonal_naive": 25.0,
+        "actual": 52.0,
+        "poisson": 29.654115237803243,
+        "boosted_poisson": 27.884529366304427
+      },
+      {
+        "period_start": "2022-03-17",
+        "last_period": 52.0,
+        "recent_mean": 31.464285714285715,
+        "seasonal_naive": 32.0,
+        "actual": 44.0,
+        "poisson": 30.96019722215106,
+        "boosted_poisson": 31.27877634304338
+      },
+      {
+        "period_start": "2022-03-18",
+        "last_period": 44.0,
+        "recent_mean": 32.0,
+        "seasonal_naive": 37.0,
+        "actual": 35.0,
+        "poisson": 30.452694850859974,
+        "boosted_poisson": 31.476638731044005
+      },
+      {
+        "period_start": "2022-03-19",
+        "last_period": 35.0,
+        "recent_mean": 32.32142857142857,
+        "seasonal_naive": 20.0,
+        "actual": 49.0,
+        "poisson": 30.24882588983108,
+        "boosted_poisson": 28.344275702955795
+      },
+      {
+        "period_start": "2022-03-20",
+        "last_period": 49.0,
+        "recent_mean": 32.75,
+        "seasonal_naive": 20.0,
+        "actual": 30.0,
+        "poisson": 33.29321931210009,
+        "boosted_poisson": 35.59301916783314
+      },
+      {
+        "period_start": "2022-03-21",
+        "last_period": 30.0,
+        "recent_mean": 32.857142857142854,
+        "seasonal_naive": 26.0,
+        "actual": 41.0,
+        "poisson": 32.88825849548394,
+        "boosted_poisson": 32.658603621181776
+      },
+      {
+        "period_start": "2022-03-22",
+        "last_period": 41.0,
+        "recent_mean": 33.07142857142857,
+        "seasonal_naive": 37.0,
+        "actual": 41.0,
+        "poisson": 36.335749599537095,
+        "boosted_poisson": 31.93471639723506
+      },
+      {
+        "period_start": "2022-03-23",
+        "last_period": 41.0,
+        "recent_mean": 33.142857142857146,
+        "seasonal_naive": 52.0,
+        "actual": 37.0,
+        "poisson": 36.3259818720878,
+        "boosted_poisson": 33.01913294567967
+      },
+      {
+        "period_start": "2022-03-24",
+        "last_period": 37.0,
+        "recent_mean": 33.32142857142857,
+        "seasonal_naive": 44.0,
+        "actual": 31.0,
+        "poisson": 35.444204080117764,
+        "boosted_poisson": 34.26687645567706
+      },
+      {
+        "period_start": "2022-03-25",
+        "last_period": 31.0,
+        "recent_mean": 33.214285714285715,
+        "seasonal_naive": 35.0,
+        "actual": 35.0,
+        "poisson": 33.87975596934041,
+        "boosted_poisson": 34.15623812354354
+      },
+      {
+        "period_start": "2022-03-26",
+        "last_period": 35.0,
+        "recent_mean": 33.57142857142857,
+        "seasonal_naive": 49.0,
+        "actual": 34.0,
+        "poisson": 35.15740723006197,
+        "boosted_poisson": 35.43038672002051
+      },
+      {
+        "period_start": "2022-03-27",
+        "last_period": 34.0,
+        "recent_mean": 33.535714285714285,
+        "seasonal_naive": 30.0,
+        "actual": 35.0,
+        "poisson": 33.66229762572465,
+        "boosted_poisson": 33.494656813903134
+      },
+      {
+        "period_start": "2022-03-28",
+        "last_period": 35.0,
+        "recent_mean": 33.964285714285715,
+        "seasonal_naive": 41.0,
+        "actual": 20.0,
+        "poisson": 35.1279721842373,
+        "boosted_poisson": 32.63841626282924
+      },
+      {
+        "period_start": "2022-03-29",
+        "last_period": 20.0,
+        "recent_mean": 33.857142857142854,
+        "seasonal_naive": 41.0,
+        "actual": 22.0,
+        "poisson": 32.567363637958955,
+        "boosted_poisson": 33.12612365960242
+      },
+      {
+        "period_start": "2022-03-30",
+        "last_period": 22.0,
+        "recent_mean": 33.357142857142854,
+        "seasonal_naive": 37.0,
+        "actual": 28.0,
+        "poisson": 32.200880630604594,
+        "boosted_poisson": 33.49905754585659
+      },
+      {
+        "period_start": "2022-03-31",
+        "last_period": 28.0,
+        "recent_mean": 33.107142857142854,
+        "seasonal_naive": 31.0,
+        "actual": 32.0,
+        "poisson": 31.529016361737845,
+        "boosted_poisson": 33.000392476355444
+      },
+      {
+        "period_start": "2022-04-01",
+        "last_period": 32.0,
+        "recent_mean": 32.964285714285715,
+        "seasonal_naive": 35.0,
+        "actual": 27.0,
+        "poisson": 31.620752867548386,
+        "boosted_poisson": 29.372077651292315
+      },
+      {
+        "period_start": "2022-04-02",
+        "last_period": 27.0,
+        "recent_mean": 32.785714285714285,
+        "seasonal_naive": 34.0,
+        "actual": 40.0,
+        "poisson": 31.58646456303611,
+        "boosted_poisson": 27.85654095472413
+      },
+      {
+        "period_start": "2022-04-03",
+        "last_period": 40.0,
+        "recent_mean": 32.92857142857143,
+        "seasonal_naive": 35.0,
+        "actual": 37.0,
+        "poisson": 32.35377107066283,
+        "boosted_poisson": 27.76683937846052
+      },
+      {
+        "period_start": "2022-04-04",
+        "last_period": 37.0,
+        "recent_mean": 32.892857142857146,
+        "seasonal_naive": 20.0,
+        "actual": 34.0,
+        "poisson": 31.345005834795657,
+        "boosted_poisson": 29.158615876987884
+      },
+      {
+        "period_start": "2022-04-05",
+        "last_period": 34.0,
+        "recent_mean": 33.07142857142857,
+        "seasonal_naive": 22.0,
+        "actual": 28.0,
+        "poisson": 32.01145796713473,
+        "boosted_poisson": 30.83547304685056
+      },
+      {
+        "period_start": "2022-04-06",
+        "last_period": 28.0,
+        "recent_mean": 33.17857142857143,
+        "seasonal_naive": 28.0,
+        "actual": 29.0,
+        "poisson": 32.11671507986533,
+        "boosted_poisson": 31.059203863858535
+      },
+      {
+        "period_start": "2022-04-07",
+        "last_period": 29.0,
+        "recent_mean": 33.32142857142857,
+        "seasonal_naive": 32.0,
+        "actual": 36.0,
+        "poisson": 32.610694489904404,
+        "boosted_poisson": 30.340175991844536
+      },
+      {
+        "period_start": "2022-04-08",
+        "last_period": 36.0,
+        "recent_mean": 33.464285714285715,
+        "seasonal_naive": 27.0,
+        "actual": 36.0,
+        "poisson": 33.6511757309498,
+        "boosted_poisson": 37.719235550611174
+      },
+      {
+        "period_start": "2022-04-09",
+        "last_period": 36.0,
+        "recent_mean": 33.42857142857143,
+        "seasonal_naive": 40.0,
+        "actual": 34.0,
+        "poisson": 34.02518844399911,
+        "boosted_poisson": 35.43616883212799
+      },
+      {
+        "period_start": "2022-04-10",
+        "last_period": 34.0,
+        "recent_mean": 33.92857142857143,
+        "seasonal_naive": 37.0,
+        "actual": 33.0,
+        "poisson": 33.933670874527714,
+        "boosted_poisson": 33.72771539030497
+      },
+      {
+        "period_start": "2022-04-11",
+        "last_period": 33.0,
+        "recent_mean": 34.392857142857146,
+        "seasonal_naive": 34.0,
+        "actual": 36.0,
+        "poisson": 33.39158440100052,
+        "boosted_poisson": 32.50548488093064
+      },
+      {
+        "period_start": "2022-04-12",
+        "last_period": 36.0,
+        "recent_mean": 34.75,
+        "seasonal_naive": 28.0,
+        "actual": 37.0,
+        "poisson": 33.93328910459753,
+        "boosted_poisson": 32.72139340197064
+      },
+      {
+        "period_start": "2022-04-13",
+        "last_period": 37.0,
+        "recent_mean": 34.75,
+        "seasonal_naive": 29.0,
+        "actual": 38.0,
+        "poisson": 35.185127191558806,
+        "boosted_poisson": 35.1241760562481
+      },
+      {
+        "period_start": "2022-04-14",
+        "last_period": 38.0,
+        "recent_mean": 34.25,
+        "seasonal_naive": 36.0,
+        "actual": 27.0,
+        "poisson": 36.0275012684493,
+        "boosted_poisson": 35.8725273547294
+      },
+      {
+        "period_start": "2022-04-15",
+        "last_period": 27.0,
+        "recent_mean": 33.642857142857146,
+        "seasonal_naive": 36.0,
+        "actual": 40.0,
+        "poisson": 33.53683779868055,
+        "boosted_poisson": 33.147637621633464
+      },
+      {
+        "period_start": "2022-04-16",
+        "last_period": 40.0,
+        "recent_mean": 33.82142857142857,
+        "seasonal_naive": 34.0,
+        "actual": 37.0,
+        "poisson": 36.44768726617691,
+        "boosted_poisson": 35.20440165349119
+      },
+      {
+        "period_start": "2022-04-17",
+        "last_period": 37.0,
+        "recent_mean": 33.392857142857146,
+        "seasonal_naive": 33.0,
+        "actual": 33.0,
+        "poisson": 35.06245343415232,
+        "boosted_poisson": 35.65507550245293
+      },
+      {
+        "period_start": "2022-04-18",
+        "last_period": 33.0,
+        "recent_mean": 33.5,
+        "seasonal_naive": 36.0,
+        "actual": 41.0,
+        "poisson": 35.20263478363336,
+        "boosted_poisson": 37.76676891945902
+      },
+      {
+        "period_start": "2022-04-19",
+        "last_period": 41.0,
+        "recent_mean": 33.5,
+        "seasonal_naive": 37.0,
+        "actual": 27.0,
+        "poisson": 35.86394889208528,
+        "boosted_poisson": 35.91902818086808
+      },
+      {
+        "period_start": "2022-04-20",
+        "last_period": 27.0,
+        "recent_mean": 33.0,
+        "seasonal_naive": 38.0,
+        "actual": 22.0,
+        "poisson": 33.19634366045901,
+        "boosted_poisson": 33.23225328157411
+      },
+      {
+        "period_start": "2022-04-21",
+        "last_period": 22.0,
+        "recent_mean": 32.464285714285715,
+        "seasonal_naive": 27.0,
+        "actual": 40.0,
+        "poisson": 31.777493016725618,
+        "boosted_poisson": 34.15495864688663
+      },
+      {
+        "period_start": "2022-04-22",
+        "last_period": 40.0,
+        "recent_mean": 32.785714285714285,
+        "seasonal_naive": 40.0,
+        "actual": 50.0,
+        "poisson": 34.8755963147514,
+        "boosted_poisson": 37.26031752551691
+      },
+      {
+        "period_start": "2022-04-23",
+        "last_period": 50.0,
+        "recent_mean": 33.32142857142857,
+        "seasonal_naive": 37.0,
+        "actual": 35.0,
+        "poisson": 35.149230460589465,
+        "boosted_poisson": 37.666101536930626
+      },
+      {
+        "period_start": "2022-04-24",
+        "last_period": 35.0,
+        "recent_mean": 33.357142857142854,
+        "seasonal_naive": 33.0,
+        "actual": 50.0,
+        "poisson": 33.37491041860773,
+        "boosted_poisson": 35.61798769740931
+      },
+      {
+        "period_start": "2022-04-25",
+        "last_period": 50.0,
+        "recent_mean": 33.892857142857146,
+        "seasonal_naive": 41.0,
+        "actual": 44.0,
+        "poisson": 35.81674112749817,
+        "boosted_poisson": 36.49613203956008
+      },
+      {
+        "period_start": "2022-04-26",
+        "last_period": 44.0,
+        "recent_mean": 34.75,
+        "seasonal_naive": 27.0,
+        "actual": 48.0,
+        "poisson": 34.456661978439115,
+        "boosted_poisson": 40.7915585013208
+      },
+      {
+        "period_start": "2022-04-27",
+        "last_period": 48.0,
+        "recent_mean": 35.67857142857143,
+        "seasonal_naive": 22.0,
+        "actual": 29.0,
+        "poisson": 36.53363822260043,
+        "boosted_poisson": 37.22048247836335
+      },
+      {
+        "period_start": "2022-04-28",
+        "last_period": 29.0,
+        "recent_mean": 35.714285714285715,
+        "seasonal_naive": 40.0,
+        "actual": 43.0,
+        "poisson": 35.80328696282734,
+        "boosted_poisson": 36.48445606264297
+      },
+      {
+        "period_start": "2022-04-29",
+        "last_period": 43.0,
+        "recent_mean": 36.107142857142854,
+        "seasonal_naive": 50.0,
+        "actual": 29.0,
+        "poisson": 39.128996747593334,
+        "boosted_poisson": 38.08885119537556
+      },
+      {
+        "period_start": "2022-04-30",
+        "last_period": 29.0,
+        "recent_mean": 36.17857142857143,
+        "seasonal_naive": 35.0,
+        "actual": 34.0,
+        "poisson": 35.839138585053924,
+        "boosted_poisson": 35.01136536904211
+      },
+      {
+        "period_start": "2022-05-01",
+        "last_period": 34.0,
+        "recent_mean": 35.964285714285715,
+        "seasonal_naive": 50.0,
+        "actual": 45.0,
+        "poisson": 37.34199532056445,
+        "boosted_poisson": 36.598866393651186
+      },
+      {
+        "period_start": "2022-05-02",
+        "last_period": 45.0,
+        "recent_mean": 36.25,
+        "seasonal_naive": 44.0,
+        "actual": 36.0,
+        "poisson": 38.193930394952076,
+        "boosted_poisson": 36.590401460677214
+      },
+      {
+        "period_start": "2022-05-03",
+        "last_period": 36.0,
+        "recent_mean": 36.32142857142857,
+        "seasonal_naive": 48.0,
+        "actual": 35.0,
+        "poisson": 35.63566633344635,
+        "boosted_poisson": 31.800756460012288
+      },
+      {
+        "period_start": "2022-05-04",
+        "last_period": 35.0,
+        "recent_mean": 36.57142857142857,
+        "seasonal_naive": 29.0,
+        "actual": 36.0,
+        "poisson": 34.56977103655171,
+        "boosted_poisson": 32.16329236383714
+      },
+      {
+        "period_start": "2022-05-05",
+        "last_period": 36.0,
+        "recent_mean": 36.82142857142857,
+        "seasonal_naive": 43.0,
+        "actual": 39.0,
+        "poisson": 36.74939485273126,
+        "boosted_poisson": 33.83263171222173
+      },
+      {
+        "period_start": "2022-05-06",
+        "last_period": 39.0,
+        "recent_mean": 36.92857142857143,
+        "seasonal_naive": 29.0,
+        "actual": 33.0,
+        "poisson": 37.14802152956639,
+        "boosted_poisson": 35.29288473163397
+      },
+      {
+        "period_start": "2022-05-07",
+        "last_period": 33.0,
+        "recent_mean": 36.82142857142857,
+        "seasonal_naive": 34.0,
+        "actual": 23.0,
+        "poisson": 36.59228854180479,
+        "boosted_poisson": 34.663749260882845
+      },
+      {
+        "period_start": "2022-05-08",
+        "last_period": 23.0,
+        "recent_mean": 36.42857142857143,
+        "seasonal_naive": 45.0,
+        "actual": 43.0,
+        "poisson": 35.77305516525465,
+        "boosted_poisson": 33.21388192989406
+      },
+      {
+        "period_start": "2022-05-09",
+        "last_period": 43.0,
+        "recent_mean": 36.785714285714285,
+        "seasonal_naive": 36.0,
+        "actual": 35.0,
+        "poisson": 37.561601041948954,
+        "boosted_poisson": 36.543230218966585
+      },
+      {
+        "period_start": "2022-05-10",
+        "last_period": 35.0,
+        "recent_mean": 36.75,
+        "seasonal_naive": 35.0,
+        "actual": 35.0,
+        "poisson": 35.955443433410466,
+        "boosted_poisson": 34.43784241242188
+      },
+      {
+        "period_start": "2022-05-11",
+        "last_period": 35.0,
+        "recent_mean": 36.67857142857143,
+        "seasonal_naive": 36.0,
+        "actual": 38.0,
+        "poisson": 35.23464743114906,
+        "boosted_poisson": 31.13773607028171
+      },
+      {
+        "period_start": "2022-05-12",
+        "last_period": 38.0,
+        "recent_mean": 36.67857142857143,
+        "seasonal_naive": 39.0,
+        "actual": 35.0,
+        "poisson": 35.91886149415521,
+        "boosted_poisson": 32.65091449646324
+      },
+      {
+        "period_start": "2022-05-13",
+        "last_period": 35.0,
+        "recent_mean": 36.964285714285715,
+        "seasonal_naive": 33.0,
+        "actual": 44.0,
+        "poisson": 35.28640913306422,
+        "boosted_poisson": 33.023911617852995
+      },
+      {
+        "period_start": "2022-05-14",
+        "last_period": 44.0,
+        "recent_mean": 37.107142857142854,
+        "seasonal_naive": 23.0,
+        "actual": 46.0,
+        "poisson": 36.73437257860482,
+        "boosted_poisson": 36.992913783924195
+      },
+      {
+        "period_start": "2022-05-15",
+        "last_period": 46.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 43.0,
+        "actual": 47.0,
+        "poisson": 39.72775216558269,
+        "boosted_poisson": 38.07116771028197
+      },
+      {
+        "period_start": "2022-05-16",
+        "last_period": 47.0,
+        "recent_mean": 37.92857142857143,
+        "seasonal_naive": 35.0,
+        "actual": 39.0,
+        "poisson": 39.41637360963051,
+        "boosted_poisson": 44.488181631339316
+      },
+      {
+        "period_start": "2022-05-17",
+        "last_period": 39.0,
+        "recent_mean": 37.857142857142854,
+        "seasonal_naive": 35.0,
+        "actual": 24.0,
+        "poisson": 38.08797648861277,
+        "boosted_poisson": 40.69439557437559
+      },
+      {
+        "period_start": "2022-05-18",
+        "last_period": 24.0,
+        "recent_mean": 37.75,
+        "seasonal_naive": 38.0,
+        "actual": 42.0,
+        "poisson": 35.4076569174889,
+        "boosted_poisson": 37.445098789198084
+      },
+      {
+        "period_start": "2022-05-19",
+        "last_period": 42.0,
+        "recent_mean": 38.464285714285715,
+        "seasonal_naive": 35.0,
+        "actual": 39.0,
+        "poisson": 38.682481654541796,
+        "boosted_poisson": 39.73517773204364
+      },
+      {
+        "period_start": "2022-05-20",
+        "last_period": 39.0,
+        "recent_mean": 38.42857142857143,
+        "seasonal_naive": 44.0,
+        "actual": 43.0,
+        "poisson": 38.59272162878634,
+        "boosted_poisson": 38.39060524915742
+      },
+      {
+        "period_start": "2022-05-21",
+        "last_period": 43.0,
+        "recent_mean": 38.17857142857143,
+        "seasonal_naive": 46.0,
+        "actual": 37.0,
+        "poisson": 38.41497287961257,
+        "boosted_poisson": 41.39979068659581
+      },
+      {
+        "period_start": "2022-05-22",
+        "last_period": 37.0,
+        "recent_mean": 38.25,
+        "seasonal_naive": 47.0,
+        "actual": 27.0,
+        "poisson": 38.994333568102256,
+        "boosted_poisson": 37.24450681438425
+      },
+      {
+        "period_start": "2022-05-23",
+        "last_period": 27.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 39.0,
+        "actual": 45.0,
+        "poisson": 36.03514729781055,
+        "boosted_poisson": 35.26891173089874
+      },
+      {
+        "period_start": "2022-05-24",
+        "last_period": 45.0,
+        "recent_mean": 37.464285714285715,
+        "seasonal_naive": 24.0,
+        "actual": 33.0,
+        "poisson": 37.64791019972645,
+        "boosted_poisson": 38.33022737287086
+      },
+      {
+        "period_start": "2022-05-25",
+        "last_period": 33.0,
+        "recent_mean": 36.92857142857143,
+        "seasonal_naive": 42.0,
+        "actual": 40.0,
+        "poisson": 36.5260752055522,
+        "boosted_poisson": 34.01607953823617
+      },
+      {
+        "period_start": "2022-05-26",
+        "last_period": 40.0,
+        "recent_mean": 37.32142857142857,
+        "seasonal_naive": 39.0,
+        "actual": 47.0,
+        "poisson": 37.877904956997995,
+        "boosted_poisson": 35.464980546472134
+      },
+      {
+        "period_start": "2022-05-27",
+        "last_period": 47.0,
+        "recent_mean": 37.464285714285715,
+        "seasonal_naive": 43.0,
+        "actual": 38.0,
+        "poisson": 38.84006295136922,
+        "boosted_poisson": 36.751627422469085
+      },
+      {
+        "period_start": "2022-05-28",
+        "last_period": 38.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 37.0,
+        "actual": 25.0,
+        "poisson": 37.93182034868783,
+        "boosted_poisson": 37.46324703774247
+      },
+      {
+        "period_start": "2022-05-29",
+        "last_period": 25.0,
+        "recent_mean": 37.464285714285715,
+        "seasonal_naive": 27.0,
+        "actual": 41.0,
+        "poisson": 36.16918759369597,
+        "boosted_poisson": 36.278646393855574
+      },
+      {
+        "period_start": "2022-05-30",
+        "last_period": 41.0,
+        "recent_mean": 37.32142857142857,
+        "seasonal_naive": 45.0,
+        "actual": 31.0,
+        "poisson": 39.04886673371863,
+        "boosted_poisson": 37.89515498649318
+      },
+      {
+        "period_start": "2022-05-31",
+        "last_period": 31.0,
+        "recent_mean": 37.142857142857146,
+        "seasonal_naive": 33.0,
+        "actual": 48.0,
+        "poisson": 35.36134732625335,
+        "boosted_poisson": 34.92071337116219
+      },
+      {
+        "period_start": "2022-06-01",
+        "last_period": 48.0,
+        "recent_mean": 37.607142857142854,
+        "seasonal_naive": 40.0,
+        "actual": 31.0,
+        "poisson": 38.907338775177465,
+        "boosted_poisson": 38.067788268434626
+      },
+      {
+        "period_start": "2022-06-02",
+        "last_period": 31.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 47.0,
+        "actual": 40.0,
+        "poisson": 36.30473371791017,
+        "boosted_poisson": 36.592988529021035
+      },
+      {
+        "period_start": "2022-06-03",
+        "last_period": 40.0,
+        "recent_mean": 37.464285714285715,
+        "seasonal_naive": 38.0,
+        "actual": 32.0,
+        "poisson": 37.41258236475671,
+        "boosted_poisson": 37.2659707729497
+      },
+      {
+        "period_start": "2022-06-04",
+        "last_period": 32.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 25.0,
+        "actual": 33.0,
+        "poisson": 35.306139967064595,
+        "boosted_poisson": 39.762622705295094
+      },
+      {
+        "period_start": "2022-06-05",
+        "last_period": 33.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 41.0,
+        "actual": 43.0,
+        "poisson": 37.51693066875976,
+        "boosted_poisson": 37.22229569516303
+      },
+      {
+        "period_start": "2022-06-06",
+        "last_period": 43.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 31.0,
+        "actual": 45.0,
+        "poisson": 38.42313647110357,
+        "boosted_poisson": 38.60160921807964
+      },
+      {
+        "period_start": "2022-06-07",
+        "last_period": 45.0,
+        "recent_mean": 38.142857142857146,
+        "seasonal_naive": 48.0,
+        "actual": 36.0,
+        "poisson": 38.95018089984223,
+        "boosted_poisson": 44.05640902739783
+      },
+      {
+        "period_start": "2022-06-08",
+        "last_period": 36.0,
+        "recent_mean": 38.17857142857143,
+        "seasonal_naive": 31.0,
+        "actual": 27.0,
+        "poisson": 37.290533792418145,
+        "boosted_poisson": 38.485570324270206
+      },
+      {
+        "period_start": "2022-06-09",
+        "last_period": 27.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 40.0,
+        "actual": 35.0,
+        "poisson": 36.77737888510596,
+        "boosted_poisson": 38.55123059315221
+      },
+      {
+        "period_start": "2022-06-10",
+        "last_period": 35.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 32.0,
+        "actual": 36.0,
+        "poisson": 37.493255171423435,
+        "boosted_poisson": 37.26042507826833
+      },
+      {
+        "period_start": "2022-06-11",
+        "last_period": 36.0,
+        "recent_mean": 37.5,
+        "seasonal_naive": 33.0,
+        "actual": 44.0,
+        "poisson": 37.35083915154924,
+        "boosted_poisson": 38.58314557248328
+      },
+      {
+        "period_start": "2022-06-12",
+        "last_period": 44.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 43.0,
+        "actual": 39.0,
+        "poisson": 39.714483127361525,
+        "boosted_poisson": 40.892412385712724
+      },
+      {
+        "period_start": "2022-06-13",
+        "last_period": 39.0,
+        "recent_mean": 37.142857142857146,
+        "seasonal_naive": 45.0,
+        "actual": 37.0,
+        "poisson": 38.0554487554482,
+        "boosted_poisson": 36.33053188649882
+      },
+      {
+        "period_start": "2022-06-14",
+        "last_period": 37.0,
+        "recent_mean": 37.07142857142857,
+        "seasonal_naive": 36.0,
+        "actual": 34.0,
+        "poisson": 37.429433680423074,
+        "boosted_poisson": 37.28563141803068
+      },
+      {
+        "period_start": "2022-06-15",
+        "last_period": 34.0,
+        "recent_mean": 37.42857142857143,
+        "seasonal_naive": 27.0,
+        "actual": 33.0,
+        "poisson": 36.73107122002151,
+        "boosted_poisson": 36.23487356206416
+      },
+      {
+        "period_start": "2022-06-16",
+        "last_period": 33.0,
+        "recent_mean": 37.107142857142854,
+        "seasonal_naive": 35.0,
+        "actual": 45.0,
+        "poisson": 37.80107622046856,
+        "boosted_poisson": 36.89273319600701
+      },
+      {
+        "period_start": "2022-06-17",
+        "last_period": 45.0,
+        "recent_mean": 37.32142857142857,
+        "seasonal_naive": 36.0,
+        "actual": 43.0,
+        "poisson": 39.365759580376675,
+        "boosted_poisson": 40.401337352128245
+      },
+      {
+        "period_start": "2022-06-18",
+        "last_period": 43.0,
+        "recent_mean": 37.32142857142857,
+        "seasonal_naive": 44.0,
+        "actual": 36.0,
+        "poisson": 39.41296763885638,
+        "boosted_poisson": 39.64651006148984
+      },
+      {
+        "period_start": "2022-06-19",
+        "last_period": 36.0,
+        "recent_mean": 37.285714285714285,
+        "seasonal_naive": 39.0,
+        "actual": 37.0,
+        "poisson": 38.490479763310155,
+        "boosted_poisson": 34.04721336983053
+      },
+      {
+        "period_start": "2022-06-20",
+        "last_period": 37.0,
+        "recent_mean": 37.642857142857146,
+        "seasonal_naive": 37.0,
+        "actual": 47.0,
+        "poisson": 39.4800271813264,
+        "boosted_poisson": 36.82070744704976
+      },
+      {
+        "period_start": "2022-06-21",
+        "last_period": 47.0,
+        "recent_mean": 37.714285714285715,
+        "seasonal_naive": 34.0,
+        "actual": 47.0,
+        "poisson": 39.53856449196479,
+        "boosted_poisson": 40.5483327430824
+      },
+      {
+        "period_start": "2022-06-22",
+        "last_period": 47.0,
+        "recent_mean": 38.214285714285715,
+        "seasonal_naive": 33.0,
+        "actual": 44.0,
+        "poisson": 39.60208873602409,
+        "boosted_poisson": 41.85006613599268
+      },
+      {
+        "period_start": "2022-06-23",
+        "last_period": 44.0,
+        "recent_mean": 38.357142857142854,
+        "seasonal_naive": 45.0,
+        "actual": 31.0,
+        "poisson": 41.28262096663031,
+        "boosted_poisson": 45.23128714251395
+      },
+      {
+        "period_start": "2022-06-24",
+        "last_period": 31.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 43.0,
+        "actual": 33.0,
+        "poisson": 38.67418201053389,
+        "boosted_poisson": 39.0546003629241
+      },
+      {
+        "period_start": "2022-06-25",
+        "last_period": 33.0,
+        "recent_mean": 37.607142857142854,
+        "seasonal_naive": 36.0,
+        "actual": 43.0,
+        "poisson": 38.52200999370557,
+        "boosted_poisson": 35.737633019293874
+      },
+      {
+        "period_start": "2022-06-26",
+        "last_period": 43.0,
+        "recent_mean": 38.25,
+        "seasonal_naive": 37.0,
+        "actual": 44.0,
+        "poisson": 40.56355054054097,
+        "boosted_poisson": 39.40987742376058
+      },
+      {
+        "period_start": "2022-06-27",
+        "last_period": 44.0,
+        "recent_mean": 38.357142857142854,
+        "seasonal_naive": 47.0,
+        "actual": 46.0,
+        "poisson": 40.50611787299235,
+        "boosted_poisson": 41.918931368172615
+      },
+      {
+        "period_start": "2022-06-28",
+        "last_period": 46.0,
+        "recent_mean": 38.892857142857146,
+        "seasonal_naive": 47.0,
+        "actual": 48.0,
+        "poisson": 41.058633003310206,
+        "boosted_poisson": 43.634252689778826
+      },
+      {
+        "period_start": "2022-06-29",
+        "last_period": 48.0,
+        "recent_mean": 38.892857142857146,
+        "seasonal_naive": 44.0,
+        "actual": 36.0,
+        "poisson": 40.14909040310747,
+        "boosted_poisson": 44.02327109056541
+      },
+      {
+        "period_start": "2022-06-30",
+        "last_period": 36.0,
+        "recent_mean": 39.07142857142857,
+        "seasonal_naive": 31.0,
+        "actual": 44.0,
+        "poisson": 38.834850634842866,
+        "boosted_poisson": 36.523409627608544
+      },
+      {
+        "period_start": "2022-07-01",
+        "last_period": 44.0,
+        "recent_mean": 39.214285714285715,
+        "seasonal_naive": 33.0,
+        "actual": 41.0,
+        "poisson": 41.12680068595188,
+        "boosted_poisson": 46.36813001595813
+      },
+      {
+        "period_start": "2022-07-02",
+        "last_period": 41.0,
+        "recent_mean": 39.535714285714285,
+        "seasonal_naive": 43.0,
+        "actual": 39.0,
+        "poisson": 41.90409340235122,
+        "boosted_poisson": 35.785229337728445
+      },
+      {
+        "period_start": "2022-07-03",
+        "last_period": 39.0,
+        "recent_mean": 39.75,
+        "seasonal_naive": 44.0,
+        "actual": 42.0,
+        "poisson": 42.35226965847804,
+        "boosted_poisson": 38.877623896549956
+      },
+      {
+        "period_start": "2022-07-04",
+        "last_period": 42.0,
+        "recent_mean": 39.714285714285715,
+        "seasonal_naive": 46.0,
+        "actual": 38.0,
+        "poisson": 43.114128138815744,
+        "boosted_poisson": 45.05516893399749
+      },
+      {
+        "period_start": "2022-07-05",
+        "last_period": 38.0,
+        "recent_mean": 39.464285714285715,
+        "seasonal_naive": 48.0,
+        "actual": 41.0,
+        "poisson": 41.38056329122354,
+        "boosted_poisson": 42.457044383845556
+      },
+      {
+        "period_start": "2022-07-06",
+        "last_period": 41.0,
+        "recent_mean": 39.642857142857146,
+        "seasonal_naive": 36.0,
+        "actual": 49.0,
+        "poisson": 40.596885104679224,
+        "boosted_poisson": 41.44683629893261
+      },
+      {
+        "period_start": "2022-07-07",
+        "last_period": 49.0,
+        "recent_mean": 40.42857142857143,
+        "seasonal_naive": 44.0,
+        "actual": 39.0,
+        "poisson": 42.02474477383709,
+        "boosted_poisson": 42.97984854659993
+      },
+      {
+        "period_start": "2022-07-08",
+        "last_period": 39.0,
+        "recent_mean": 40.57142857142857,
+        "seasonal_naive": 41.0,
+        "actual": 29.0,
+        "poisson": 40.66485186573116,
+        "boosted_poisson": 38.32433627544934
+      },
+      {
+        "period_start": "2022-07-09",
+        "last_period": 29.0,
+        "recent_mean": 40.32142857142857,
+        "seasonal_naive": 39.0,
+        "actual": 40.0,
+        "poisson": 39.86922650279588,
+        "boosted_poisson": 36.34249635466099
+      },
+      {
+        "period_start": "2022-07-10",
+        "last_period": 40.0,
+        "recent_mean": 40.17857142857143,
+        "seasonal_naive": 42.0,
+        "actual": 40.0,
+        "poisson": 41.57522511374612,
+        "boosted_poisson": 39.63644843959186
+      },
+      {
+        "period_start": "2022-07-11",
+        "last_period": 40.0,
+        "recent_mean": 40.214285714285715,
+        "seasonal_naive": 38.0,
+        "actual": 36.0,
+        "poisson": 40.73431095002218,
+        "boosted_poisson": 39.31922711505917
+      },
+      {
+        "period_start": "2022-07-12",
+        "last_period": 36.0,
+        "recent_mean": 40.17857142857143,
+        "seasonal_naive": 41.0,
+        "actual": 41.0,
+        "poisson": 39.92667380733237,
+        "boosted_poisson": 41.105495676954945
+      },
+      {
+        "period_start": "2022-07-13",
+        "last_period": 41.0,
+        "recent_mean": 40.42857142857143,
+        "seasonal_naive": 49.0,
+        "actual": 45.0,
+        "poisson": 40.09211236685037,
+        "boosted_poisson": 38.963932670822324
+      },
+      {
+        "period_start": "2022-07-14",
+        "last_period": 45.0,
+        "recent_mean": 40.857142857142854,
+        "seasonal_naive": 39.0,
+        "actual": 36.0,
+        "poisson": 40.75213461266555,
+        "boosted_poisson": 42.038808633688845
+      },
+      {
+        "period_start": "2022-07-15",
+        "last_period": 36.0,
+        "recent_mean": 40.535714285714285,
+        "seasonal_naive": 29.0,
+        "actual": 39.0,
+        "poisson": 39.156223253264926,
+        "boosted_poisson": 34.53572240959301
+      },
+      {
+        "period_start": "2022-07-16",
+        "last_period": 39.0,
+        "recent_mean": 40.392857142857146,
+        "seasonal_naive": 40.0,
+        "actual": 54.0,
+        "poisson": 41.23619689100989,
+        "boosted_poisson": 38.30938517417597
+      },
+      {
+        "period_start": "2022-07-17",
+        "last_period": 54.0,
+        "recent_mean": 41.035714285714285,
+        "seasonal_naive": 40.0,
+        "actual": 40.0,
+        "poisson": 43.161223006732676,
+        "boosted_poisson": 38.20515357323299
+      },
+      {
+        "period_start": "2022-07-18",
+        "last_period": 40.0,
+        "recent_mean": 41.142857142857146,
+        "seasonal_naive": 36.0,
+        "actual": 59.0,
+        "poisson": 41.1359343000154,
+        "boosted_poisson": 35.93949695808969
+      },
+      {
+        "period_start": "2022-07-19",
+        "last_period": 59.0,
+        "recent_mean": 41.57142857142857,
+        "seasonal_naive": 41.0,
+        "actual": 29.0,
+        "poisson": 44.617156671965546,
+        "boosted_poisson": 36.01723113822341
+      },
+      {
+        "period_start": "2022-07-20",
+        "last_period": 29.0,
+        "recent_mean": 40.92857142857143,
+        "seasonal_naive": 45.0,
+        "actual": 39.0,
+        "poisson": 39.32751572028087,
+        "boosted_poisson": 40.211099984174574
+      },
+      {
+        "period_start": "2022-07-21",
+        "last_period": 39.0,
+        "recent_mean": 40.75,
+        "seasonal_naive": 36.0,
+        "actual": 39.0,
+        "poisson": 39.96522705688138,
+        "boosted_poisson": 37.58313344136205
+      },
+      {
+        "period_start": "2022-07-22",
+        "last_period": 39.0,
+        "recent_mean": 41.035714285714285,
+        "seasonal_naive": 39.0,
+        "actual": 37.0,
+        "poisson": 39.84028085993315,
+        "boosted_poisson": 35.77624328148029
+      },
+      {
+        "period_start": "2022-07-23",
+        "last_period": 37.0,
+        "recent_mean": 41.17857142857143,
+        "seasonal_naive": 54.0,
+        "actual": 44.0,
+        "poisson": 41.23045040709326,
+        "boosted_poisson": 38.27041595182087
+      },
+      {
+        "period_start": "2022-07-24",
+        "last_period": 44.0,
+        "recent_mean": 41.214285714285715,
+        "seasonal_naive": 40.0,
+        "actual": 43.0,
+        "poisson": 41.506480275633756,
+        "boosted_poisson": 40.819212127467786
+      },
+      {
+        "period_start": "2022-07-25",
+        "last_period": 43.0,
+        "recent_mean": 41.17857142857143,
+        "seasonal_naive": 59.0,
+        "actual": 38.0,
+        "poisson": 41.71015515205421,
+        "boosted_poisson": 40.061361209953134
+      },
+      {
+        "period_start": "2022-07-26",
+        "last_period": 38.0,
+        "recent_mean": 40.892857142857146,
+        "seasonal_naive": 29.0,
+        "actual": 48.0,
+        "poisson": 39.940109414986175,
+        "boosted_poisson": 37.761523885394304
+      },
+      {
+        "period_start": "2022-07-27",
+        "last_period": 48.0,
+        "recent_mean": 40.892857142857146,
+        "seasonal_naive": 39.0,
+        "actual": 25.0,
+        "poisson": 42.15268368778564,
+        "boosted_poisson": 44.9716473550408
+      },
+      {
+        "period_start": "2022-07-28",
+        "last_period": 25.0,
+        "recent_mean": 40.5,
+        "seasonal_naive": 39.0,
+        "actual": 51.0,
+        "poisson": 37.682653344347415,
+        "boosted_poisson": 38.342331238262894
+      },
+      {
+        "period_start": "2022-07-29",
+        "last_period": 51.0,
+        "recent_mean": 40.75,
+        "seasonal_naive": 37.0,
+        "actual": 32.0,
+        "poisson": 41.747720589545324,
+        "boosted_poisson": 37.45339996886037
+      },
+      {
+        "period_start": "2022-07-30",
+        "last_period": 32.0,
+        "recent_mean": 40.42857142857143,
+        "seasonal_naive": 44.0,
+        "actual": 47.0,
+        "poisson": 39.26212505557541,
+        "boosted_poisson": 39.44355653288481
+      },
+      {
+        "period_start": "2022-07-31",
+        "last_period": 47.0,
+        "recent_mean": 40.714285714285715,
+        "seasonal_naive": 43.0,
+        "actual": 28.0,
+        "poisson": 41.523848864620774,
+        "boosted_poisson": 39.924662578501334
+      },
+      {
+        "period_start": "2022-08-01",
+        "last_period": 28.0,
+        "recent_mean": 40.214285714285715,
+        "seasonal_naive": 38.0,
+        "actual": 37.0,
+        "poisson": 38.37458536528328,
+        "boosted_poisson": 37.273749622735416
+      },
+      {
+        "period_start": "2022-08-02",
+        "last_period": 37.0,
+        "recent_mean": 40.17857142857143,
+        "seasonal_naive": 48.0,
+        "actual": 38.0,
+        "poisson": 38.48242386477043,
+        "boosted_poisson": 39.13688183530263
+      },
+      {
+        "period_start": "2022-08-03",
+        "last_period": 38.0,
+        "recent_mean": 40.07142857142857,
+        "seasonal_naive": 25.0,
+        "actual": 30.0,
+        "poisson": 37.62695128169671,
+        "boosted_poisson": 37.96941209805598
+      },
+      {
+        "period_start": "2022-08-04",
+        "last_period": 30.0,
+        "recent_mean": 39.392857142857146,
+        "seasonal_naive": 51.0,
+        "actual": 31.0,
+        "poisson": 37.58643635802345,
+        "boosted_poisson": 36.7673861493711
+      },
+      {
+        "period_start": "2022-08-05",
+        "last_period": 31.0,
+        "recent_mean": 39.107142857142854,
+        "seasonal_naive": 32.0,
+        "actual": 26.0,
+        "poisson": 36.41723083821557,
+        "boosted_poisson": 37.39923738987008
+      },
+      {
+        "period_start": "2022-08-06",
+        "last_period": 26.0,
+        "recent_mean": 39.0,
+        "seasonal_naive": 47.0,
+        "actual": 38.0,
+        "poisson": 36.963058443993376,
+        "boosted_poisson": 38.67061474839107
+      },
+      {
+        "period_start": "2022-08-07",
+        "last_period": 38.0,
+        "recent_mean": 38.92857142857143,
+        "seasonal_naive": 28.0,
+        "actual": 31.0,
+        "poisson": 37.56673876557708,
+        "boosted_poisson": 40.31800709774855
+      },
+      {
+        "period_start": "2022-08-08",
+        "last_period": 31.0,
+        "recent_mean": 38.607142857142854,
+        "seasonal_naive": 37.0,
+        "actual": 34.0,
+        "poisson": 36.72449674623325,
+        "boosted_poisson": 37.403544398700426
+      },
+      {
+        "period_start": "2022-08-09",
+        "last_period": 34.0,
+        "recent_mean": 38.535714285714285,
+        "seasonal_naive": 38.0,
+        "actual": 37.0,
+        "poisson": 37.27181583509075,
+        "boosted_poisson": 42.75030922291569
+      },
+      {
+        "period_start": "2022-08-10",
+        "last_period": 37.0,
+        "recent_mean": 38.392857142857146,
+        "seasonal_naive": 30.0,
+        "actual": 42.0,
+        "poisson": 36.15815039628744,
+        "boosted_poisson": 40.27150979019118
+      },
+      {
+        "period_start": "2022-08-11",
+        "last_period": 42.0,
+        "recent_mean": 38.285714285714285,
+        "seasonal_naive": 31.0,
+        "actual": 42.0,
+        "poisson": 37.26348218940276,
+        "boosted_poisson": 42.48045007624146
+      },
+      {
+        "period_start": "2022-08-12",
+        "last_period": 42.0,
+        "recent_mean": 38.5,
+        "seasonal_naive": 26.0,
+        "actual": 39.0,
+        "poisson": 37.15546022152315,
+        "boosted_poisson": 38.373185315169046
+      },
+      {
+        "period_start": "2022-08-13",
+        "last_period": 39.0,
+        "recent_mean": 38.5,
+        "seasonal_naive": 38.0,
+        "actual": 42.0,
+        "poisson": 39.94362237327034,
+        "boosted_poisson": 40.01356241013687
+      },
+      {
+        "period_start": "2022-08-14",
+        "last_period": 42.0,
+        "recent_mean": 38.07142857142857,
+        "seasonal_naive": 31.0,
+        "actual": 78.0,
+        "poisson": 39.02443103162191,
+        "boosted_poisson": 39.86616474237158
+      },
+      {
+        "period_start": "2022-08-15",
+        "last_period": 78.0,
+        "recent_mean": 39.42857142857143,
+        "seasonal_naive": 34.0,
+        "actual": 30.0,
+        "poisson": 43.17288372865075,
+        "boosted_poisson": 33.85665842323254
+      },
+      {
+        "period_start": "2022-08-16",
+        "last_period": 30.0,
+        "recent_mean": 38.392857142857146,
+        "seasonal_naive": 37.0,
+        "actual": 40.0,
+        "poisson": 36.4927936453673,
+        "boosted_poisson": 36.97881017728076
+      },
+      {
+        "period_start": "2022-08-17",
+        "last_period": 40.0,
+        "recent_mean": 38.785714285714285,
+        "seasonal_naive": 42.0,
+        "actual": 34.0,
+        "poisson": 38.8066369490546,
+        "boosted_poisson": 35.643858894662834
+      },
+      {
+        "period_start": "2022-08-18",
+        "last_period": 34.0,
+        "recent_mean": 38.607142857142854,
+        "seasonal_naive": 42.0,
+        "actual": 27.0,
+        "poisson": 37.43406306916689,
+        "boosted_poisson": 36.65088677533891
+      },
+      {
+        "period_start": "2022-08-19",
+        "last_period": 27.0,
+        "recent_mean": 38.17857142857143,
+        "seasonal_naive": 39.0,
+        "actual": 33.0,
+        "poisson": 35.828146618600215,
+        "boosted_poisson": 35.56783542841958
+      },
+      {
+        "period_start": "2022-08-20",
+        "last_period": 33.0,
+        "recent_mean": 38.035714285714285,
+        "seasonal_naive": 42.0,
+        "actual": 44.0,
+        "poisson": 37.11182473939745,
+        "boosted_poisson": 37.609270337563856
+      },
+      {
+        "period_start": "2022-08-21",
+        "last_period": 44.0,
+        "recent_mean": 38.035714285714285,
+        "seasonal_naive": 78.0,
+        "actual": 43.0,
+        "poisson": 38.733677786013445,
+        "boosted_poisson": 42.02231050649653
+      },
+      {
+        "period_start": "2022-08-22",
+        "last_period": 43.0,
+        "recent_mean": 38.035714285714285,
+        "seasonal_naive": 30.0,
+        "actual": 25.0,
+        "poisson": 37.30333832688076,
+        "boosted_poisson": 36.95381876366028
+      },
+      {
+        "period_start": "2022-08-23",
+        "last_period": 25.0,
+        "recent_mean": 37.57142857142857,
+        "seasonal_naive": 40.0,
+        "actual": 36.0,
+        "poisson": 35.98033809757995,
+        "boosted_poisson": 35.85680636585445
+      },
+      {
+        "period_start": "2022-08-24",
+        "last_period": 36.0,
+        "recent_mean": 37.142857142857146,
+        "seasonal_naive": 34.0,
+        "actual": 36.0,
+        "poisson": 35.76439550520112,
+        "boosted_poisson": 33.558450547346126
+      },
+      {
+        "period_start": "2022-08-25",
+        "last_period": 36.0,
+        "recent_mean": 37.535714285714285,
+        "seasonal_naive": 27.0,
+        "actual": 35.0,
+        "poisson": 36.399214339281855,
+        "boosted_poisson": 36.89942687880027
+      },
+      {
+        "period_start": "2022-08-26",
+        "last_period": 35.0,
+        "recent_mean": 36.964285714285715,
+        "seasonal_naive": 33.0,
+        "actual": 46.0,
+        "poisson": 36.32950043494323,
+        "boosted_poisson": 35.87511993769237
+      },
+      {
+        "period_start": "2022-08-27",
+        "last_period": 46.0,
+        "recent_mean": 37.464285714285715,
+        "seasonal_naive": 44.0,
+        "actual": 33.0,
+        "poisson": 39.11571247755518,
+        "boosted_poisson": 43.835602151137905
+      },
+      {
+        "period_start": "2022-08-28",
+        "last_period": 33.0,
+        "recent_mean": 36.964285714285715,
+        "seasonal_naive": 43.0,
+        "actual": 49.0,
+        "poisson": 37.94615471431825,
+        "boosted_poisson": 34.11022364861339
+      },
+      {
+        "period_start": "2022-08-29",
+        "last_period": 49.0,
+        "recent_mean": 37.714285714285715,
+        "seasonal_naive": 25.0,
+        "actual": 40.0,
+        "poisson": 37.68571692161027,
+        "boosted_poisson": 37.00110945340568
+      },
+      {
+        "period_start": "2022-08-30",
+        "last_period": 40.0,
+        "recent_mean": 37.82142857142857,
+        "seasonal_naive": 36.0,
+        "actual": 41.0,
+        "poisson": 38.267524231031786,
+        "boosted_poisson": 37.36515131003064
+      },
+      {
+        "period_start": "2022-08-31",
+        "last_period": 41.0,
+        "recent_mean": 37.92857142857143,
+        "seasonal_naive": 36.0,
+        "actual": 26.0,
+        "poisson": 38.04537166225396,
+        "boosted_poisson": 35.88397328336279
+      },
+      {
+        "period_start": "2022-09-01",
+        "last_period": 26.0,
+        "recent_mean": 37.785714285714285,
+        "seasonal_naive": 35.0,
+        "actual": 37.0,
+        "poisson": 35.59765371146679,
+        "boosted_poisson": 35.439251560684625
+      },
+      {
+        "period_start": "2022-09-02",
+        "last_period": 37.0,
+        "recent_mean": 38.0,
+        "seasonal_naive": 46.0,
+        "actual": 30.0,
+        "poisson": 37.47201433575705,
+        "boosted_poisson": 40.596483804756176
+      },
+      {
+        "period_start": "2022-09-03",
+        "last_period": 30.0,
+        "recent_mean": 38.142857142857146,
+        "seasonal_naive": 33.0,
+        "actual": 36.0,
+        "poisson": 36.927948411169005,
+        "boosted_poisson": 38.18063463436314
+      },
+      {
+        "period_start": "2022-09-04",
+        "last_period": 36.0,
+        "recent_mean": 38.07142857142857,
+        "seasonal_naive": 49.0,
+        "actual": 44.0,
+        "poisson": 38.0599629611231,
+        "boosted_poisson": 39.107799086583114
+      },
+      {
+        "period_start": "2022-09-05",
+        "last_period": 44.0,
+        "recent_mean": 38.535714285714285,
+        "seasonal_naive": 40.0,
+        "actual": 28.0,
+        "poisson": 37.5187151635235,
+        "boosted_poisson": 44.649228484380274
+      },
+      {
+        "period_start": "2022-09-06",
+        "last_period": 28.0,
+        "recent_mean": 38.32142857142857,
+        "seasonal_naive": 41.0,
+        "actual": 44.0,
+        "poisson": 35.67599613545465,
+        "boosted_poisson": 37.01658905548478
+      },
+      {
+        "period_start": "2022-09-07",
+        "last_period": 44.0,
+        "recent_mean": 38.57142857142857,
+        "seasonal_naive": 26.0,
+        "actual": 34.0,
+        "poisson": 36.39255659248158,
+        "boosted_poisson": 39.524854329731454
+      },
+      {
+        "period_start": "2022-09-08",
+        "last_period": 34.0,
+        "recent_mean": 38.285714285714285,
+        "seasonal_naive": 37.0,
+        "actual": 32.0,
+        "poisson": 36.30620147231973,
+        "boosted_poisson": 40.00538320938778
+      },
+      {
+        "period_start": "2022-09-09",
+        "last_period": 32.0,
+        "recent_mean": 37.92857142857143,
+        "seasonal_naive": 30.0,
+        "actual": 29.0,
+        "poisson": 36.39799780066282,
+        "boosted_poisson": 38.17835162051829
+      },
+      {
+        "period_start": "2022-09-10",
+        "last_period": 29.0,
+        "recent_mean": 37.57142857142857,
+        "seasonal_naive": 36.0,
+        "actual": 35.0,
+        "poisson": 36.2957714804521,
+        "boosted_poisson": 38.92268051662143
+      },
+      {
+        "period_start": "2022-09-11",
+        "last_period": 35.0,
+        "recent_mean": 37.32142857142857,
+        "seasonal_naive": 44.0,
+        "actual": 40.0,
+        "poisson": 39.14101191862985,
+        "boosted_poisson": 38.27590499635873
+      },
+      {
+        "period_start": "2022-09-12",
+        "last_period": 40.0,
+        "recent_mean": 35.964285714285715,
+        "seasonal_naive": 28.0,
+        "actual": 33.0,
+        "poisson": 36.32721985719601,
+        "boosted_poisson": 35.14024407718252
+      },
+      {
+        "period_start": "2022-09-13",
+        "last_period": 33.0,
+        "recent_mean": 36.07142857142857,
+        "seasonal_naive": 44.0,
+        "actual": 34.0,
+        "poisson": 36.702966130512735,
+        "boosted_poisson": 35.27474080137286
+      },
+      {
+        "period_start": "2022-09-14",
+        "last_period": 34.0,
+        "recent_mean": 35.857142857142854,
+        "seasonal_naive": 34.0,
+        "actual": 23.0,
+        "poisson": 35.28253846230877,
+        "boosted_poisson": 32.9343024959352
+      },
+      {
+        "period_start": "2022-09-15",
+        "last_period": 23.0,
+        "recent_mean": 35.464285714285715,
+        "seasonal_naive": 32.0,
+        "actual": 39.0,
+        "poisson": 33.54637037338495,
+        "boosted_poisson": 32.348315888423556
+      },
+      {
+        "period_start": "2022-09-16",
+        "last_period": 39.0,
+        "recent_mean": 35.892857142857146,
+        "seasonal_naive": 29.0,
+        "actual": 37.0,
+        "poisson": 35.16617602467513,
+        "boosted_poisson": 36.968514879364314
+      },
+      {
+        "period_start": "2022-09-17",
+        "last_period": 37.0,
+        "recent_mean": 36.035714285714285,
+        "seasonal_naive": 35.0,
+        "actual": 54.0,
+        "poisson": 36.44199306899732,
+        "boosted_poisson": 36.77905822660654
+      },
+      {
+        "period_start": "2022-09-18",
+        "last_period": 54.0,
+        "recent_mean": 36.392857142857146,
+        "seasonal_naive": 40.0,
+        "actual": 55.0,
+        "poisson": 38.341950764887734,
+        "boosted_poisson": 39.74738497632119
+      },
+      {
+        "period_start": "2022-09-19",
+        "last_period": 55.0,
+        "recent_mean": 36.82142857142857,
+        "seasonal_naive": 33.0,
+        "actual": 27.0,
+        "poisson": 36.60486047406962,
+        "boosted_poisson": 39.196429034844215
+      },
+      {
+        "period_start": "2022-09-20",
+        "last_period": 27.0,
+        "recent_mean": 36.892857142857146,
+        "seasonal_naive": 34.0,
+        "actual": 34.0,
+        "poisson": 34.994315686054016,
+        "boosted_poisson": 37.75486439238279
+      },
+      {
+        "period_start": "2022-09-21",
+        "last_period": 34.0,
+        "recent_mean": 36.82142857142857,
+        "seasonal_naive": 23.0,
+        "actual": 30.0,
+        "poisson": 34.86351915329029,
+        "boosted_poisson": 36.86064841544701
+      },
+      {
+        "period_start": "2022-09-22",
+        "last_period": 30.0,
+        "recent_mean": 36.607142857142854,
+        "seasonal_naive": 39.0,
+        "actual": 41.0,
+        "poisson": 35.38565696877962,
+        "boosted_poisson": 36.75661032060119
+      },
+      {
+        "period_start": "2022-09-23",
+        "last_period": 41.0,
+        "recent_mean": 36.82142857142857,
+        "seasonal_naive": 37.0,
+        "actual": 31.0,
+        "poisson": 36.82251126899417,
+        "boosted_poisson": 36.711251156229906
+      },
+      {
+        "period_start": "2022-09-24",
+        "last_period": 31.0,
+        "recent_mean": 36.285714285714285,
+        "seasonal_naive": 54.0,
+        "actual": 37.0,
+        "poisson": 36.12692886697885,
+        "boosted_poisson": 34.23485577818607
+      },
+      {
+        "period_start": "2022-09-25",
+        "last_period": 37.0,
+        "recent_mean": 36.42857142857143,
+        "seasonal_naive": 55.0,
+        "actual": 31.0,
+        "poisson": 37.418036601224514,
+        "boosted_poisson": 32.86018961344579
+      },
+      {
+        "period_start": "2022-09-26",
+        "last_period": 31.0,
+        "recent_mean": 35.785714285714285,
+        "seasonal_naive": 27.0,
+        "actual": 48.0,
+        "poisson": 35.06269026065466,
+        "boosted_poisson": 35.62292293169906
+      },
+      {
+        "period_start": "2022-09-27",
+        "last_period": 48.0,
+        "recent_mean": 36.07142857142857,
+        "seasonal_naive": 34.0,
+        "actual": 32.0,
+        "poisson": 36.73948388420655,
+        "boosted_poisson": 34.35356697750243
+      },
+      {
+        "period_start": "2022-09-28",
+        "last_period": 32.0,
+        "recent_mean": 35.75,
+        "seasonal_naive": 30.0,
+        "actual": 35.0,
+        "poisson": 33.77543134696525,
+        "boosted_poisson": 30.260230108848262
+      },
+      {
+        "period_start": "2022-09-29",
+        "last_period": 35.0,
+        "recent_mean": 36.07142857142857,
+        "seasonal_naive": 41.0,
+        "actual": 29.0,
+        "poisson": 35.950897384051416,
+        "boosted_poisson": 33.99444459765044
+      },
+      {
+        "period_start": "2022-09-30",
+        "last_period": 29.0,
+        "recent_mean": 35.785714285714285,
+        "seasonal_naive": 31.0,
+        "actual": 23.0,
+        "poisson": 34.477716131596836,
+        "boosted_poisson": 33.02560957707099
+      },
+      {
+        "period_start": "2022-10-01",
+        "last_period": 23.0,
+        "recent_mean": 35.535714285714285,
+        "seasonal_naive": 37.0,
+        "actual": 43.0,
+        "poisson": 34.94205068106324,
+        "boosted_poisson": 33.57405240903847
+      },
+      {
+        "period_start": "2022-10-02",
+        "last_period": 43.0,
+        "recent_mean": 35.785714285714285,
+        "seasonal_naive": 31.0,
+        "actual": 29.0,
+        "poisson": 36.83135072736206,
+        "boosted_poisson": 35.533053071352185
+      },
+      {
+        "period_start": "2022-10-03",
+        "last_period": 29.0,
+        "recent_mean": 35.25,
+        "seasonal_naive": 48.0,
+        "actual": 29.0,
+        "poisson": 33.9332897403669,
+        "boosted_poisson": 31.507713446255178
+      },
+      {
+        "period_start": "2022-10-04",
+        "last_period": 29.0,
+        "recent_mean": 35.285714285714285,
+        "seasonal_naive": 32.0,
+        "actual": 32.0,
+        "poisson": 33.733948556936774,
+        "boosted_poisson": 32.31196222714811
+      },
+      {
+        "period_start": "2022-10-05",
+        "last_period": 32.0,
+        "recent_mean": 34.857142857142854,
+        "seasonal_naive": 35.0,
+        "actual": 38.0,
+        "poisson": 32.942246979287944,
+        "boosted_poisson": 29.20808207257553
+      },
+      {
+        "period_start": "2022-10-06",
+        "last_period": 38.0,
+        "recent_mean": 35.0,
+        "seasonal_naive": 29.0,
+        "actual": 45.0,
+        "poisson": 33.451911878753755,
+        "boosted_poisson": 31.129305984206926
+      },
+      {
+        "period_start": "2022-10-07",
+        "last_period": 45.0,
+        "recent_mean": 35.464285714285715,
+        "seasonal_naive": 23.0,
+        "actual": 40.0,
+        "poisson": 33.887973330617214,
+        "boosted_poisson": 35.43979281097664
+      },
+      {
+        "period_start": "2022-10-08",
+        "last_period": 40.0,
+        "recent_mean": 35.857142857142854,
+        "seasonal_naive": 43.0,
+        "actual": 25.0,
+        "poisson": 36.383314260308914,
+        "boosted_poisson": 32.80546265660732
+      },
+      {
+        "period_start": "2022-10-09",
+        "last_period": 25.0,
+        "recent_mean": 35.5,
+        "seasonal_naive": 29.0,
+        "actual": 39.0,
+        "poisson": 34.16594179179575,
+        "boosted_poisson": 32.83297206014434
+      },
+      {
+        "period_start": "2022-10-10",
+        "last_period": 39.0,
+        "recent_mean": 35.464285714285715,
+        "seasonal_naive": 29.0,
+        "actual": 32.0,
+        "poisson": 35.9267565715851,
+        "boosted_poisson": 33.191139580344206
+      },
+      {
+        "period_start": "2022-10-11",
+        "last_period": 32.0,
+        "recent_mean": 35.42857142857143,
+        "seasonal_naive": 32.0,
+        "actual": 22.0,
+        "poisson": 34.49763755652177,
+        "boosted_poisson": 33.627248492603286
+      },
+      {
+        "period_start": "2022-10-12",
+        "last_period": 22.0,
+        "recent_mean": 35.0,
+        "seasonal_naive": 38.0,
+        "actual": 30.0,
+        "poisson": 32.47405838127207,
+        "boosted_poisson": 33.23028980503537
+      },
+      {
+        "period_start": "2022-10-13",
+        "last_period": 30.0,
+        "recent_mean": 35.25,
+        "seasonal_naive": 45.0,
+        "actual": 30.0,
+        "poisson": 33.306846709935854,
+        "boosted_poisson": 35.587048414678755
+      },
+      {
+        "period_start": "2022-10-14",
+        "last_period": 30.0,
+        "recent_mean": 34.92857142857143,
+        "seasonal_naive": 40.0,
+        "actual": 17.0,
+        "poisson": 32.70353353483023,
+        "boosted_poisson": 32.641533101605056
+      },
+      {
+        "period_start": "2022-10-15",
+        "last_period": 17.0,
+        "recent_mean": 34.214285714285715,
+        "seasonal_naive": 25.0,
+        "actual": 35.0,
+        "poisson": 32.09519950773085,
+        "boosted_poisson": 31.92193551820721
+      },
+      {
+        "period_start": "2022-10-16",
+        "last_period": 35.0,
+        "recent_mean": 33.535714285714285,
+        "seasonal_naive": 39.0,
+        "actual": 38.0,
+        "poisson": 33.687206850850465,
+        "boosted_poisson": 33.00477389001024
+      },
+      {
+        "period_start": "2022-10-17",
+        "last_period": 38.0,
+        "recent_mean": 32.92857142857143,
+        "seasonal_naive": 32.0,
+        "actual": 30.0,
+        "poisson": 32.08106120339896,
+        "boosted_poisson": 30.26739592190573
+      },
+      {
+        "period_start": "2022-10-18",
+        "last_period": 30.0,
+        "recent_mean": 33.035714285714285,
+        "seasonal_naive": 22.0,
+        "actual": 28.0,
+        "poisson": 31.20679312336368,
+        "boosted_poisson": 30.707249433333633
+      },
+      {
+        "period_start": "2022-10-19",
+        "last_period": 28.0,
+        "recent_mean": 32.82142857142857,
+        "seasonal_naive": 30.0,
+        "actual": 37.0,
+        "poisson": 31.45008754536107,
+        "boosted_poisson": 30.863779608258042
+      },
+      {
+        "period_start": "2022-10-20",
+        "last_period": 37.0,
+        "recent_mean": 33.07142857142857,
+        "seasonal_naive": 30.0,
+        "actual": 20.0,
+        "poisson": 32.85158774714714,
+        "boosted_poisson": 32.08003728491507
+      },
+      {
+        "period_start": "2022-10-21",
+        "last_period": 20.0,
+        "recent_mean": 32.32142857142857,
+        "seasonal_naive": 17.0,
+        "actual": 21.0,
+        "poisson": 30.366503266197114,
+        "boosted_poisson": 33.12154394799165
+      },
+      {
+        "period_start": "2022-10-22",
+        "last_period": 21.0,
+        "recent_mean": 31.964285714285715,
+        "seasonal_naive": 35.0,
+        "actual": 44.0,
+        "poisson": 31.46455165525601,
+        "boosted_poisson": 31.73565179861222
+      },
+      {
+        "period_start": "2022-10-23",
+        "last_period": 44.0,
+        "recent_mean": 32.214285714285715,
+        "seasonal_naive": 38.0,
+        "actual": 24.0,
+        "poisson": 33.41173961257992,
+        "boosted_poisson": 32.35005910610746
+      },
+      {
+        "period_start": "2022-10-24",
+        "last_period": 24.0,
+        "recent_mean": 31.964285714285715,
+        "seasonal_naive": 30.0,
+        "actual": 31.0,
+        "poisson": 31.356565087049308,
+        "boosted_poisson": 31.63284645518725
+      },
+      {
+        "period_start": "2022-10-25",
+        "last_period": 31.0,
+        "recent_mean": 31.357142857142858,
+        "seasonal_naive": 28.0,
+        "actual": 24.0,
+        "poisson": 30.443667083798196,
+        "boosted_poisson": 31.298845046402473
+      },
+      {
+        "period_start": "2022-10-26",
+        "last_period": 24.0,
+        "recent_mean": 31.071428571428573,
+        "seasonal_naive": 37.0,
+        "actual": 24.0,
+        "poisson": 30.00999679118889,
+        "boosted_poisson": 29.564420557987408
+      },
+      {
+        "period_start": "2022-10-27",
+        "last_period": 24.0,
+        "recent_mean": 30.678571428571427,
+        "seasonal_naive": 20.0,
+        "actual": 33.0,
+        "poisson": 28.89311220899606,
+        "boosted_poisson": 28.627056256387142
+      },
+      {
+        "period_start": "2022-10-28",
+        "last_period": 33.0,
+        "recent_mean": 30.821428571428573,
+        "seasonal_naive": 21.0,
+        "actual": 31.0,
+        "poisson": 29.596428658467353,
+        "boosted_poisson": 31.271038233847616
+      },
+      {
+        "period_start": "2022-10-29",
+        "last_period": 31.0,
+        "recent_mean": 31.107142857142858,
+        "seasonal_naive": 44.0,
+        "actual": 22.0,
+        "poisson": 32.54024817174377,
+        "boosted_poisson": 32.427785251194436
+      },
+      {
+        "period_start": "2022-10-30",
+        "last_period": 22.0,
+        "recent_mean": 30.357142857142858,
+        "seasonal_naive": 24.0,
+        "actual": 31.0,
+        "poisson": 30.773878730888754,
+        "boosted_poisson": 28.460120969792758
+      },
+      {
+        "period_start": "2022-10-31",
+        "last_period": 31.0,
+        "recent_mean": 30.428571428571427,
+        "seasonal_naive": 31.0,
+        "actual": 28.0,
+        "poisson": 31.375804195359574,
+        "boosted_poisson": 30.51244879761231
+      },
+      {
+        "period_start": "2022-11-01",
+        "last_period": 28.0,
+        "recent_mean": 30.392857142857142,
+        "seasonal_naive": 24.0,
+        "actual": 43.0,
+        "poisson": 30.195955540308958,
+        "boosted_poisson": 27.69268872527797
+      },
+      {
+        "period_start": "2022-11-02",
+        "last_period": 43.0,
+        "recent_mean": 30.785714285714285,
+        "seasonal_naive": 24.0,
+        "actual": 23.0,
+        "poisson": 31.489782070641713,
+        "boosted_poisson": 28.935148276834873
+      },
+      {
+        "period_start": "2022-11-03",
+        "last_period": 23.0,
+        "recent_mean": 30.25,
+        "seasonal_naive": 33.0,
+        "actual": 30.0,
+        "poisson": 29.933116481254956,
+        "boosted_poisson": 30.295475366184444
+      },
+      {
+        "period_start": "2022-11-04",
+        "last_period": 30.0,
+        "recent_mean": 29.714285714285715,
+        "seasonal_naive": 31.0,
+        "actual": 22.0,
+        "poisson": 30.501716787488828,
+        "boosted_poisson": 31.021804828604786
+      },
+      {
+        "period_start": "2022-11-05",
+        "last_period": 22.0,
+        "recent_mean": 29.071428571428573,
+        "seasonal_naive": 22.0,
+        "actual": 19.0,
+        "poisson": 29.90016180989913,
+        "boosted_poisson": 31.34083620728121
+      },
+      {
+        "period_start": "2022-11-06",
+        "last_period": 19.0,
+        "recent_mean": 28.857142857142858,
+        "seasonal_naive": 31.0,
+        "actual": 45.0,
+        "poisson": 29.742284542835925,
+        "boosted_poisson": 31.186244827157857
+      },
+      {
+        "period_start": "2022-11-07",
+        "last_period": 45.0,
+        "recent_mean": 29.071428571428573,
+        "seasonal_naive": 28.0,
+        "actual": 27.0,
+        "poisson": 30.89495098414183,
+        "boosted_poisson": 31.307962976258114
+      },
+      {
+        "period_start": "2022-11-08",
+        "last_period": 27.0,
+        "recent_mean": 28.892857142857142,
+        "seasonal_naive": 43.0,
+        "actual": 41.0,
+        "poisson": 28.878689292157816,
+        "boosted_poisson": 29.523137897746793
+      },
+      {
+        "period_start": "2022-11-09",
+        "last_period": 41.0,
+        "recent_mean": 29.571428571428573,
+        "seasonal_naive": 23.0,
+        "actual": 26.0,
+        "poisson": 29.40490988678763,
+        "boosted_poisson": 28.361931170394545
+      },
+      {
+        "period_start": "2022-11-10",
+        "last_period": 26.0,
+        "recent_mean": 29.428571428571427,
+        "seasonal_naive": 30.0,
+        "actual": 32.0,
+        "poisson": 29.103423383411716,
+        "boosted_poisson": 30.741563331578877
+      },
+      {
+        "period_start": "2022-11-11",
+        "last_period": 32.0,
+        "recent_mean": 29.5,
+        "seasonal_naive": 22.0,
+        "actual": 26.0,
+        "poisson": 29.297677357789336,
+        "boosted_poisson": 29.145102655710975
+      },
+      {
+        "period_start": "2022-11-12",
+        "last_period": 26.0,
+        "recent_mean": 29.821428571428573,
+        "seasonal_naive": 19.0,
+        "actual": 37.0,
+        "poisson": 29.930362951338655,
+        "boosted_poisson": 29.94817072693848
+      },
+      {
+        "period_start": "2022-11-13",
+        "last_period": 37.0,
+        "recent_mean": 29.892857142857142,
+        "seasonal_naive": 45.0,
+        "actual": 42.0,
+        "poisson": 32.88137315803601,
+        "boosted_poisson": 30.644298856185973
+      },
+      {
+        "period_start": "2022-11-14",
+        "last_period": 42.0,
+        "recent_mean": 30.035714285714285,
+        "seasonal_naive": 27.0,
+        "actual": 30.0,
+        "poisson": 31.9510440568042,
+        "boosted_poisson": 31.960133188456805
+      },
+      {
+        "period_start": "2022-11-15",
+        "last_period": 30.0,
+        "recent_mean": 30.035714285714285,
+        "seasonal_naive": 41.0,
+        "actual": 37.0,
+        "poisson": 31.836073974284094,
+        "boosted_poisson": 30.210887629973225
+      },
+      {
+        "period_start": "2022-11-16",
+        "last_period": 37.0,
+        "recent_mean": 30.357142857142858,
+        "seasonal_naive": 26.0,
+        "actual": 34.0,
+        "poisson": 31.263703782547204,
+        "boosted_poisson": 29.26792916095442
+      },
+      {
+        "period_start": "2022-11-17",
+        "last_period": 34.0,
+        "recent_mean": 30.25,
+        "seasonal_naive": 32.0,
+        "actual": 31.0,
+        "poisson": 31.255926273171074,
+        "boosted_poisson": 29.49253832898508
+      },
+      {
+        "period_start": "2022-11-18",
+        "last_period": 31.0,
+        "recent_mean": 30.642857142857142,
+        "seasonal_naive": 26.0,
+        "actual": 30.0,
+        "poisson": 31.12550174756959,
+        "boosted_poisson": 28.640278961394845
+      },
+      {
+        "period_start": "2022-11-19",
+        "last_period": 30.0,
+        "recent_mean": 30.964285714285715,
+        "seasonal_naive": 37.0,
+        "actual": 34.0,
+        "poisson": 32.999552087284776,
+        "boosted_poisson": 34.08403365208663
+      },
+      {
+        "period_start": "2022-11-20",
+        "last_period": 34.0,
+        "recent_mean": 30.607142857142858,
+        "seasonal_naive": 42.0,
+        "actual": 30.0,
+        "poisson": 33.602858033045365,
+        "boosted_poisson": 30.39300160215592
+      },
+      {
+        "period_start": "2022-11-21",
+        "last_period": 30.0,
+        "recent_mean": 30.821428571428573,
+        "seasonal_naive": 30.0,
+        "actual": 30.0,
+        "poisson": 32.26787621862618,
+        "boosted_poisson": 30.621193225581134
+      },
+      {
+        "period_start": "2022-11-22",
+        "last_period": 30.0,
+        "recent_mean": 30.785714285714285,
+        "seasonal_naive": 37.0,
+        "actual": 26.0,
+        "poisson": 32.285138926873174,
+        "boosted_poisson": 32.258055802590505
+      },
+      {
+        "period_start": "2022-11-23",
+        "last_period": 26.0,
+        "recent_mean": 30.857142857142858,
+        "seasonal_naive": 34.0,
+        "actual": 29.0,
+        "poisson": 30.619456430811343,
+        "boosted_poisson": 29.259015058083836
+      },
+      {
+        "period_start": "2022-11-24",
+        "last_period": 29.0,
+        "recent_mean": 31.035714285714285,
+        "seasonal_naive": 31.0,
+        "actual": 31.0,
+        "poisson": 31.18013928602733,
+        "boosted_poisson": 29.399338594467434
+      },
+      {
+        "period_start": "2022-11-25",
+        "last_period": 31.0,
+        "recent_mean": 30.964285714285715,
+        "seasonal_naive": 30.0,
+        "actual": 22.0,
+        "poisson": 31.221939192675457,
+        "boosted_poisson": 29.796448176301784
+      },
+      {
+        "period_start": "2022-11-26",
+        "last_period": 22.0,
+        "recent_mean": 30.642857142857142,
+        "seasonal_naive": 34.0,
+        "actual": 29.0,
+        "poisson": 30.588551936085402,
+        "boosted_poisson": 32.10802520182924
+      },
+      {
+        "period_start": "2022-11-27",
+        "last_period": 29.0,
+        "recent_mean": 30.892857142857142,
+        "seasonal_naive": 30.0,
+        "actual": 33.0,
+        "poisson": 31.664780024619578,
+        "boosted_poisson": 32.812722323644365
+      },
+      {
+        "period_start": "2022-11-28",
+        "last_period": 33.0,
+        "recent_mean": 30.964285714285715,
+        "seasonal_naive": 30.0,
+        "actual": 41.0,
+        "poisson": 31.044989102461905,
+        "boosted_poisson": 30.221750200015272
+      },
+      {
+        "period_start": "2022-11-29",
+        "last_period": 41.0,
+        "recent_mean": 31.428571428571427,
+        "seasonal_naive": 26.0,
+        "actual": 32.0,
+        "poisson": 31.730122512242712,
+        "boosted_poisson": 30.702063078009278
+      },
+      {
+        "period_start": "2022-11-30",
+        "last_period": 32.0,
+        "recent_mean": 31.035714285714285,
+        "seasonal_naive": 29.0,
+        "actual": 35.0,
+        "poisson": 30.30581440885846,
+        "boosted_poisson": 29.882797286858853
+      },
+      {
+        "period_start": "2022-12-01",
+        "last_period": 35.0,
+        "recent_mean": 31.464285714285715,
+        "seasonal_naive": 31.0,
+        "actual": 16.0,
+        "poisson": 31.053251741124534,
+        "boosted_poisson": 29.821951239513893
+      },
+      {
+        "period_start": "2022-12-02",
+        "last_period": 16.0,
+        "recent_mean": 30.964285714285715,
+        "seasonal_naive": 22.0,
+        "actual": 40.0,
+        "poisson": 28.692660351626277,
+        "boosted_poisson": 30.78369486711826
+      },
+      {
+        "period_start": "2022-12-03",
+        "last_period": 40.0,
+        "recent_mean": 31.607142857142858,
+        "seasonal_naive": 29.0,
+        "actual": 35.0,
+        "poisson": 31.391438666869675,
+        "boosted_poisson": 30.865184931196296
+      },
+      {
+        "period_start": "2022-12-04",
+        "last_period": 35.0,
+        "recent_mean": 32.17857142857143,
+        "seasonal_naive": 33.0,
+        "actual": 24.0,
+        "poisson": 32.67239950395267,
+        "boosted_poisson": 31.208996851368475
+      },
+      {
+        "period_start": "2022-12-05",
+        "last_period": 24.0,
+        "recent_mean": 31.428571428571427,
+        "seasonal_naive": 41.0,
+        "actual": 29.0,
+        "poisson": 30.89718310075501,
+        "boosted_poisson": 31.16870504413181
+      },
+      {
+        "period_start": "2022-12-06",
+        "last_period": 29.0,
+        "recent_mean": 31.5,
+        "seasonal_naive": 32.0,
+        "actual": 25.0,
+        "poisson": 30.632894664523953,
+        "boosted_poisson": 30.300432735474743
+      },
+      {
+        "period_start": "2022-12-07",
+        "last_period": 25.0,
+        "recent_mean": 30.928571428571427,
+        "seasonal_naive": 35.0,
+        "actual": 40.0,
+        "poisson": 29.188545885575405,
+        "boosted_poisson": 29.65729514268351
+      },
+      {
+        "period_start": "2022-12-08",
+        "last_period": 40.0,
+        "recent_mean": 31.428571428571427,
+        "seasonal_naive": 16.0,
+        "actual": 21.0,
+        "poisson": 29.69927242300326,
+        "boosted_poisson": 29.18852405332342
+      },
+      {
+        "period_start": "2022-12-09",
+        "last_period": 21.0,
+        "recent_mean": 31.035714285714285,
+        "seasonal_naive": 40.0,
+        "actual": 34.0,
+        "poisson": 29.53337866049699,
+        "boosted_poisson": 30.605915964264856
+      },
+      {
+        "period_start": "2022-12-10",
+        "last_period": 34.0,
+        "recent_mean": 31.321428571428573,
+        "seasonal_naive": 35.0,
+        "actual": 36.0,
+        "poisson": 31.207066514660095,
+        "boosted_poisson": 34.945636390356285
+      },
+      {
+        "period_start": "2022-12-11",
+        "last_period": 36.0,
+        "recent_mean": 31.285714285714285,
+        "seasonal_naive": 24.0,
+        "actual": 35.0,
+        "poisson": 31.474958672415706,
+        "boosted_poisson": 31.83094231439559
+      },
+      {
+        "period_start": "2022-12-12",
+        "last_period": 35.0,
+        "recent_mean": 31.035714285714285,
+        "seasonal_naive": 29.0,
+        "actual": 35.0,
+        "poisson": 31.688903662392896,
+        "boosted_poisson": 32.30646401697277
+      },
+      {
+        "period_start": "2022-12-13",
+        "last_period": 35.0,
+        "recent_mean": 31.214285714285715,
+        "seasonal_naive": 25.0,
+        "actual": 31.0,
+        "poisson": 31.41251304531035,
+        "boosted_poisson": 31.42090068722531
+      },
+      {
+        "period_start": "2022-12-14",
+        "last_period": 31.0,
+        "recent_mean": 31.0,
+        "seasonal_naive": 40.0,
+        "actual": 23.0,
+        "poisson": 31.56644324319245,
+        "boosted_poisson": 30.7982402892832
+      },
+      {
+        "period_start": "2022-12-15",
+        "last_period": 23.0,
+        "recent_mean": 30.607142857142858,
+        "seasonal_naive": 21.0,
+        "actual": 13.0,
+        "poisson": 29.139952185452724,
+        "boosted_poisson": 30.40193852173987
+      },
+      {
+        "period_start": "2022-12-16",
+        "last_period": 13.0,
+        "recent_mean": 29.964285714285715,
+        "seasonal_naive": 34.0,
+        "actual": 26.0,
+        "poisson": 29.129891088561457,
+        "boosted_poisson": 31.52174649565298
+      },
+      {
+        "period_start": "2022-12-17",
+        "last_period": 26.0,
+        "recent_mean": 29.821428571428573,
+        "seasonal_naive": 36.0,
+        "actual": 28.0,
+        "poisson": 29.930764470486388,
+        "boosted_poisson": 30.42973374001661
+      },
+      {
+        "period_start": "2022-12-18",
+        "last_period": 28.0,
+        "recent_mean": 29.607142857142858,
+        "seasonal_naive": 35.0,
+        "actual": 23.0,
+        "poisson": 29.41956717889315,
+        "boosted_poisson": 27.54775634192803
+      },
+      {
+        "period_start": "2022-12-19",
+        "last_period": 23.0,
+        "recent_mean": 29.357142857142858,
+        "seasonal_naive": 35.0,
+        "actual": 23.0,
+        "poisson": 28.79920939761677,
+        "boosted_poisson": 27.813057512866592
+      },
+      {
+        "period_start": "2022-12-20",
+        "last_period": 23.0,
+        "recent_mean": 29.107142857142858,
+        "seasonal_naive": 31.0,
+        "actual": 22.0,
+        "poisson": 27.801229377717107,
+        "boosted_poisson": 28.22654027409143
+      },
+      {
+        "period_start": "2022-12-21",
+        "last_period": 22.0,
+        "recent_mean": 28.964285714285715,
+        "seasonal_naive": 23.0,
+        "actual": 24.0,
+        "poisson": 27.505005271369264,
+        "boosted_poisson": 24.1456357356773
+      },
+      {
+        "period_start": "2022-12-22",
+        "last_period": 24.0,
+        "recent_mean": 28.785714285714285,
+        "seasonal_naive": 13.0,
+        "actual": 19.0,
+        "poisson": 26.832376297042302,
+        "boosted_poisson": 26.761009798492953
+      },
+      {
+        "period_start": "2022-12-23",
+        "last_period": 19.0,
+        "recent_mean": 28.357142857142858,
+        "seasonal_naive": 26.0,
+        "actual": 17.0,
+        "poisson": 27.727282662587893,
+        "boosted_poisson": 26.59536578162138
+      },
+      {
+        "period_start": "2022-12-24",
+        "last_period": 17.0,
+        "recent_mean": 28.178571428571427,
+        "seasonal_naive": 28.0,
+        "actual": 20.0,
+        "poisson": 27.946140919115784,
+        "boosted_poisson": 27.03914373075921
+      },
+      {
+        "period_start": "2022-12-25",
+        "last_period": 20.0,
+        "recent_mean": 27.857142857142858,
+        "seasonal_naive": 23.0,
+        "actual": 19.0,
+        "poisson": 28.119403684479696,
+        "boosted_poisson": 25.33202831864054
+      },
+      {
+        "period_start": "2022-12-26",
+        "last_period": 19.0,
+        "recent_mean": 27.357142857142858,
+        "seasonal_naive": 23.0,
+        "actual": 22.0,
+        "poisson": 27.96498419474868,
+        "boosted_poisson": 29.297691222545552
+      },
+      {
+        "period_start": "2022-12-27",
+        "last_period": 22.0,
+        "recent_mean": 26.678571428571427,
+        "seasonal_naive": 22.0,
+        "actual": 23.0,
+        "poisson": 27.136553417337858,
+        "boosted_poisson": 25.93423463595579
+      },
+      {
+        "period_start": "2022-12-28",
+        "last_period": 23.0,
+        "recent_mean": 26.357142857142858,
+        "seasonal_naive": 24.0,
+        "actual": 33.0,
+        "poisson": 26.680916314050375,
+        "boosted_poisson": 26.821608546300368
+      },
+      {
+        "period_start": "2022-12-29",
+        "last_period": 33.0,
+        "recent_mean": 26.285714285714285,
+        "seasonal_naive": 19.0,
+        "actual": 38.0,
+        "poisson": 25.81358284506173,
+        "boosted_poisson": 28.17880474414213
+      },
+      {
+        "period_start": "2022-12-30",
+        "last_period": 38.0,
+        "recent_mean": 27.071428571428573,
+        "seasonal_naive": 17.0,
+        "actual": 29.0,
+        "poisson": 27.701673075073074,
+        "boosted_poisson": 26.141807578668484
+      },
+      {
+        "period_start": "2022-12-31",
+        "last_period": 29.0,
+        "recent_mean": 26.678571428571427,
+        "seasonal_naive": 20.0,
+        "actual": 26.0,
+        "poisson": 28.221782304599145,
+        "boosted_poisson": 26.95699712750706
+      }
+    ],
+    "weekly_total": [
+      {
+        "period_start": "2022-01-03",
+        "last_period": 183.0,
+        "recent_mean": 212.25,
+        "seasonal_naive": 226.0,
+        "actual": 162.0,
+        "poisson": 202.88071859843066,
+        "boosted_poisson": 210.2297580377187
+      },
+      {
+        "period_start": "2022-01-10",
+        "last_period": 162.0,
+        "recent_mean": 191.25,
+        "seasonal_naive": 225.0,
+        "actual": 191.0,
+        "poisson": 192.9434132261039,
+        "boosted_poisson": 213.74724402620396
+      },
+      {
+        "period_start": "2022-01-17",
+        "last_period": 191.0,
+        "recent_mean": 186.75,
+        "seasonal_naive": 205.0,
+        "actual": 215.0,
+        "poisson": 187.7019507096847,
+        "boosted_poisson": 212.30481032067178
+      },
+      {
+        "period_start": "2022-01-24",
+        "last_period": 215.0,
+        "recent_mean": 187.75,
+        "seasonal_naive": 222.0,
+        "actual": 185.0,
+        "poisson": 204.4650175661088,
+        "boosted_poisson": 213.97596546877597
+      },
+      {
+        "period_start": "2022-01-31",
+        "last_period": 185.0,
+        "recent_mean": 188.25,
+        "seasonal_naive": 184.0,
+        "actual": 191.0,
+        "poisson": 210.0787606760697,
+        "boosted_poisson": 208.8632361394208
+      },
+      {
+        "period_start": "2022-02-07",
+        "last_period": 191.0,
+        "recent_mean": 195.5,
+        "seasonal_naive": 207.0,
+        "actual": 224.0,
+        "poisson": 198.75214756183243,
+        "boosted_poisson": 212.22942760308047
+      },
+      {
+        "period_start": "2022-02-14",
+        "last_period": 224.0,
+        "recent_mean": 203.75,
+        "seasonal_naive": 210.0,
+        "actual": 211.0,
+        "poisson": 211.40158817208726,
+        "boosted_poisson": 207.67564894599946
+      },
+      {
+        "period_start": "2022-02-21",
+        "last_period": 211.0,
+        "recent_mean": 202.75,
+        "seasonal_naive": 226.0,
+        "actual": 223.0,
+        "poisson": 205.62132166301254,
+        "boosted_poisson": 214.5396732383673
+      },
+      {
+        "period_start": "2022-02-28",
+        "last_period": 223.0,
+        "recent_mean": 212.25,
+        "seasonal_naive": 230.0,
+        "actual": 236.0,
+        "poisson": 208.6493297607677,
+        "boosted_poisson": 213.12111994743205
+      },
+      {
+        "period_start": "2022-03-07",
+        "last_period": 236.0,
+        "recent_mean": 223.5,
+        "seasonal_naive": 246.0,
+        "actual": 188.0,
+        "poisson": 225.65187920846952,
+        "boosted_poisson": 244.00452326719898
+      },
+      {
+        "period_start": "2022-03-14",
+        "last_period": 188.0,
+        "recent_mean": 214.5,
+        "seasonal_naive": 226.0,
+        "actual": 273.0,
+        "poisson": 218.48235209171395,
+        "boosted_poisson": 221.56138376523086
+      },
+      {
+        "period_start": "2022-03-21",
+        "last_period": 273.0,
+        "recent_mean": 230.0,
+        "seasonal_naive": 273.0,
+        "actual": 254.0,
+        "poisson": 241.0777283354917,
+        "boosted_poisson": 235.42349873298875
+      },
+      {
+        "period_start": "2022-03-28",
+        "last_period": 254.0,
+        "recent_mean": 237.75,
+        "seasonal_naive": 233.0,
+        "actual": 206.0,
+        "poisson": 246.06904673767724,
+        "boosted_poisson": 251.93464981108275
+      },
+      {
+        "period_start": "2022-04-04",
+        "last_period": 206.0,
+        "recent_mean": 230.25,
+        "seasonal_naive": 260.0,
+        "actual": 230.0,
+        "poisson": 243.26324350603795,
+        "boosted_poisson": 236.51395377241025
+      },
+      {
+        "period_start": "2022-04-11",
+        "last_period": 230.0,
+        "recent_mean": 240.75,
+        "seasonal_naive": 224.0,
+        "actual": 248.0,
+        "poisson": 236.76380903018324,
+        "boosted_poisson": 235.12000249735152
+      },
+      {
+        "period_start": "2022-04-18",
+        "last_period": 248.0,
+        "recent_mean": 234.5,
+        "seasonal_naive": 237.0,
+        "actual": 265.0,
+        "poisson": 238.469346121682,
+        "boosted_poisson": 235.21984457506463
+      },
+      {
+        "period_start": "2022-04-25",
+        "last_period": 265.0,
+        "recent_mean": 237.25,
+        "seasonal_naive": 228.0,
+        "actual": 272.0,
+        "poisson": 253.19978786005973,
+        "boosted_poisson": 238.30150988794054
+      },
+      {
+        "period_start": "2022-05-02",
+        "last_period": 272.0,
+        "recent_mean": 253.75,
+        "seasonal_naive": 242.0,
+        "actual": 245.0,
+        "poisson": 251.80464515764803,
+        "boosted_poisson": 249.74543496911895
+      },
+      {
+        "period_start": "2022-05-09",
+        "last_period": 245.0,
+        "recent_mean": 257.5,
+        "seasonal_naive": 235.0,
+        "actual": 280.0,
+        "poisson": 266.19602939746363,
+        "boosted_poisson": 246.9069496459071
+      },
+      {
+        "period_start": "2022-05-16",
+        "last_period": 280.0,
+        "recent_mean": 265.5,
+        "seasonal_naive": 238.0,
+        "actual": 251.0,
+        "poisson": 272.36233658009706,
+        "boosted_poisson": 261.038440118235
+      },
+      {
+        "period_start": "2022-05-23",
+        "last_period": 251.0,
+        "recent_mean": 262.0,
+        "seasonal_naive": 239.0,
+        "actual": 269.0,
+        "poisson": 251.76275277832744,
+        "boosted_poisson": 254.04837629973508
+      },
+      {
+        "period_start": "2022-05-30",
+        "last_period": 269.0,
+        "recent_mean": 261.25,
+        "seasonal_naive": 252.0,
+        "actual": 258.0,
+        "poisson": 263.5210302983549,
+        "boosted_poisson": 260.8979908941832
+      },
+      {
+        "period_start": "2022-06-06",
+        "last_period": 258.0,
+        "recent_mean": 264.5,
+        "seasonal_naive": 271.0,
+        "actual": 262.0,
+        "poisson": 260.4516185750414,
+        "boosted_poisson": 268.01716709737656
+      },
+      {
+        "period_start": "2022-06-13",
+        "last_period": 262.0,
+        "recent_mean": 260.0,
+        "seasonal_naive": 250.0,
+        "actual": 265.0,
+        "poisson": 265.6634052706366,
+        "boosted_poisson": 268.3981043013592
+      },
+      {
+        "period_start": "2022-06-20",
+        "last_period": 265.0,
+        "recent_mean": 263.5,
+        "seasonal_naive": 261.0,
+        "actual": 289.0,
+        "poisson": 267.84899928185683,
+        "boosted_poisson": 264.49589879720816
+      },
+      {
+        "period_start": "2022-06-27",
+        "last_period": 289.0,
+        "recent_mean": 268.5,
+        "seasonal_naive": 268.0,
+        "actual": 296.0,
+        "poisson": 270.13820341871343,
+        "boosted_poisson": 271.08742221920005
+      },
+      {
+        "period_start": "2022-07-04",
+        "last_period": 296.0,
+        "recent_mean": 278.0,
+        "seasonal_naive": 232.0,
+        "actual": 276.0,
+        "poisson": 289.57243335254213,
+        "boosted_poisson": 268.7429413436034
+      },
+      {
+        "period_start": "2022-07-11",
+        "last_period": 276.0,
+        "recent_mean": 281.5,
+        "seasonal_naive": 199.0,
+        "actual": 291.0,
+        "poisson": 278.39897844079815,
+        "boosted_poisson": 260.484074316896
+      },
+      {
+        "period_start": "2022-07-18",
+        "last_period": 291.0,
+        "recent_mean": 288.0,
+        "seasonal_naive": 248.0,
+        "actual": 290.0,
+        "poisson": 285.55967156541385,
+        "boosted_poisson": 274.0568688889522
+      },
+      {
+        "period_start": "2022-07-25",
+        "last_period": 290.0,
+        "recent_mean": 288.25,
+        "seasonal_naive": 216.0,
+        "actual": 269.0,
+        "poisson": 281.4018941577194,
+        "boosted_poisson": 264.4497494767775
+      },
+      {
+        "period_start": "2022-08-01",
+        "last_period": 269.0,
+        "recent_mean": 281.5,
+        "seasonal_naive": 241.0,
+        "actual": 231.0,
+        "poisson": 273.05448532701035,
+        "boosted_poisson": 282.5922765097589
+      },
+      {
+        "period_start": "2022-08-08",
+        "last_period": 231.0,
+        "recent_mean": 270.25,
+        "seasonal_naive": 231.0,
+        "actual": 314.0,
+        "poisson": 260.14950148410054,
+        "boosted_poisson": 277.6726706750812
+      },
+      {
+        "period_start": "2022-08-15",
+        "last_period": 314.0,
+        "recent_mean": 276.0,
+        "seasonal_naive": 264.0,
+        "actual": 251.0,
+        "poisson": 284.62640064354525,
+        "boosted_poisson": 289.2583443747205
+      },
+      {
+        "period_start": "2022-08-22",
+        "last_period": 251.0,
+        "recent_mean": 266.25,
+        "seasonal_naive": 247.0,
+        "actual": 260.0,
+        "poisson": 270.1283084276521,
+        "boosted_poisson": 275.886565068549
+      },
+      {
+        "period_start": "2022-08-29",
+        "last_period": 260.0,
+        "recent_mean": 264.0,
+        "seasonal_naive": 233.0,
+        "actual": 254.0,
+        "poisson": 266.64433341632986,
+        "boosted_poisson": 262.4867605670191
+      },
+      {
+        "period_start": "2022-09-05",
+        "last_period": 254.0,
+        "recent_mean": 269.75,
+        "seasonal_naive": 246.0,
+        "actual": 242.0,
+        "poisson": 261.6631644633959,
+        "boosted_poisson": 271.53811009720056
+      },
+      {
+        "period_start": "2022-09-12",
+        "last_period": 242.0,
+        "recent_mean": 251.75,
+        "seasonal_naive": 237.0,
+        "actual": 275.0,
+        "poisson": 245.7071273946068,
+        "boosted_poisson": 243.31576375837741
+      },
+      {
+        "period_start": "2022-09-19",
+        "last_period": 275.0,
+        "recent_mean": 257.75,
+        "seasonal_naive": 227.0,
+        "actual": 231.0,
+        "poisson": 250.28136501114903,
+        "boosted_poisson": 258.6999851533365
+      },
+      {
+        "period_start": "2022-09-26",
+        "last_period": 231.0,
+        "recent_mean": 250.5,
+        "seasonal_naive": 233.0,
+        "actual": 239.0,
+        "poisson": 235.75385026865027,
+        "boosted_poisson": 234.25926560436892
+      },
+      {
+        "period_start": "2022-10-03",
+        "last_period": 239.0,
+        "recent_mean": 246.75,
+        "seasonal_naive": 242.0,
+        "actual": 248.0,
+        "poisson": 249.9836877236547,
+        "boosted_poisson": 233.24676278351694
+      },
+      {
+        "period_start": "2022-10-10",
+        "last_period": 248.0,
+        "recent_mean": 248.25,
+        "seasonal_naive": 249.0,
+        "actual": 204.0,
+        "poisson": 236.10614282015376,
+        "boosted_poisson": 232.40531799377197
+      },
+      {
+        "period_start": "2022-10-17",
+        "last_period": 204.0,
+        "recent_mean": 230.5,
+        "seasonal_naive": 222.0,
+        "actual": 204.0,
+        "poisson": 227.01115414090538,
+        "boosted_poisson": 221.2736859509511
+      },
+      {
+        "period_start": "2022-10-24",
+        "last_period": 204.0,
+        "recent_mean": 223.75,
+        "seasonal_naive": 241.0,
+        "actual": 196.0,
+        "poisson": 219.48757432768699,
+        "boosted_poisson": 196.17839513346917
+      },
+      {
+        "period_start": "2022-10-31",
+        "last_period": 196.0,
+        "recent_mean": 213.0,
+        "seasonal_naive": 229.0,
+        "actual": 210.0,
+        "poisson": 206.97513974794256,
+        "boosted_poisson": 200.57812838423774
+      },
+      {
+        "period_start": "2022-11-07",
+        "last_period": 210.0,
+        "recent_mean": 203.5,
+        "seasonal_naive": 205.0,
+        "actual": 231.0,
+        "poisson": 210.64530480562567,
+        "boosted_poisson": 220.73133416759663
+      },
+      {
+        "period_start": "2022-11-14",
+        "last_period": 231.0,
+        "recent_mean": 210.25,
+        "seasonal_naive": 217.0,
+        "actual": 226.0,
+        "poisson": 210.52336726661528,
+        "boosted_poisson": 219.92667277663406
+      },
+      {
+        "period_start": "2022-11-21",
+        "last_period": 226.0,
+        "recent_mean": 215.75,
+        "seasonal_naive": 186.0,
+        "actual": 200.0,
+        "poisson": 217.64094075565748,
+        "boosted_poisson": 216.251230873408
+      },
+      {
+        "period_start": "2022-11-28",
+        "last_period": 200.0,
+        "recent_mean": 216.75,
+        "seasonal_naive": 214.0,
+        "actual": 223.0,
+        "poisson": 216.0893905449395,
+        "boosted_poisson": 200.59932045428823
+      },
+      {
+        "period_start": "2022-12-05",
+        "last_period": 223.0,
+        "recent_mean": 220.0,
+        "seasonal_naive": 246.0,
+        "actual": 220.0,
+        "poisson": 209.8148136246033,
+        "boosted_poisson": 196.44139149934065
+      },
+      {
+        "period_start": "2022-12-12",
+        "last_period": 220.0,
+        "recent_mean": 217.25,
+        "seasonal_naive": 209.0,
+        "actual": 179.0,
+        "poisson": 210.73668543609773,
+        "boosted_poisson": 196.80221321019982
+      },
+      {
+        "period_start": "2022-12-19",
+        "last_period": 179.0,
+        "recent_mean": 205.5,
+        "seasonal_naive": 211.0,
+        "actual": 144.0,
+        "poisson": 201.1634233199262,
+        "boosted_poisson": 204.02005482758875
+      }
+    ],
+    "weekly_larceny": [
+      {
+        "period_start": "2022-01-03",
+        "last_period": 39.0,
+        "recent_mean": 53.25,
+        "seasonal_naive": 42.0,
+        "actual": 38.0,
+        "poisson": 45.776634358220235,
+        "boosted_poisson": 38.70481430336101
+      },
+      {
+        "period_start": "2022-01-10",
+        "last_period": 38.0,
+        "recent_mean": 46.0,
+        "seasonal_naive": 27.0,
+        "actual": 68.0,
+        "poisson": 42.06478395861344,
+        "boosted_poisson": 45.43068164897397
+      },
+      {
+        "period_start": "2022-01-17",
+        "last_period": 68.0,
+        "recent_mean": 49.25,
+        "seasonal_naive": 35.0,
+        "actual": 40.0,
+        "poisson": 47.847021828793785,
+        "boosted_poisson": 42.88420481071487
+      },
+      {
+        "period_start": "2022-01-24",
+        "last_period": 40.0,
+        "recent_mean": 46.25,
+        "seasonal_naive": 52.0,
+        "actual": 45.0,
+        "poisson": 34.85900668638785,
+        "boosted_poisson": 29.494351845569458
+      },
+      {
+        "period_start": "2022-01-31",
+        "last_period": 45.0,
+        "recent_mean": 47.75,
+        "seasonal_naive": 27.0,
+        "actual": 44.0,
+        "poisson": 38.92973969274185,
+        "boosted_poisson": 35.38156119040176
+      },
+      {
+        "period_start": "2022-02-07",
+        "last_period": 44.0,
+        "recent_mean": 49.25,
+        "seasonal_naive": 30.0,
+        "actual": 30.0,
+        "poisson": 45.048220029087695,
+        "boosted_poisson": 43.1137545746793
+      },
+      {
+        "period_start": "2022-02-14",
+        "last_period": 30.0,
+        "recent_mean": 39.75,
+        "seasonal_naive": 43.0,
+        "actual": 49.0,
+        "poisson": 39.58613609437419,
+        "boosted_poisson": 34.18409015930796
+      },
+      {
+        "period_start": "2022-02-21",
+        "last_period": 49.0,
+        "recent_mean": 42.0,
+        "seasonal_naive": 39.0,
+        "actual": 54.0,
+        "poisson": 45.9809208760956,
+        "boosted_poisson": 43.62049063155442
+      },
+      {
+        "period_start": "2022-02-28",
+        "last_period": 54.0,
+        "recent_mean": 44.25,
+        "seasonal_naive": 44.0,
+        "actual": 70.0,
+        "poisson": 40.49278778149198,
+        "boosted_poisson": 37.067369359324424
+      },
+      {
+        "period_start": "2022-03-07",
+        "last_period": 70.0,
+        "recent_mean": 50.75,
+        "seasonal_naive": 33.0,
+        "actual": 36.0,
+        "poisson": 36.86901068000117,
+        "boosted_poisson": 42.495027478712075
+      },
+      {
+        "period_start": "2022-03-14",
+        "last_period": 36.0,
+        "recent_mean": 52.25,
+        "seasonal_naive": 28.0,
+        "actual": 50.0,
+        "poisson": 36.52839701511367,
+        "boosted_poisson": 39.640475080959774
+      },
+      {
+        "period_start": "2022-03-21",
+        "last_period": 50.0,
+        "recent_mean": 52.5,
+        "seasonal_naive": 42.0,
+        "actual": 48.0,
+        "poisson": 43.611619291497945,
+        "boosted_poisson": 41.92476512675537
+      },
+      {
+        "period_start": "2022-03-28",
+        "last_period": 48.0,
+        "recent_mean": 51.0,
+        "seasonal_naive": 63.0,
+        "actual": 49.0,
+        "poisson": 46.365188149270146,
+        "boosted_poisson": 43.054728800268165
+      },
+      {
+        "period_start": "2022-04-04",
+        "last_period": 49.0,
+        "recent_mean": 45.75,
+        "seasonal_naive": 55.0,
+        "actual": 43.0,
+        "poisson": 45.673838448722385,
+        "boosted_poisson": 46.41334489215396
+      },
+      {
+        "period_start": "2022-04-11",
+        "last_period": 43.0,
+        "recent_mean": 47.5,
+        "seasonal_naive": 44.0,
+        "actual": 45.0,
+        "poisson": 39.84789593619019,
+        "boosted_poisson": 44.39682736446782
+      },
+      {
+        "period_start": "2022-04-18",
+        "last_period": 45.0,
+        "recent_mean": 46.25,
+        "seasonal_naive": 33.0,
+        "actual": 61.0,
+        "poisson": 46.968110621676,
+        "boosted_poisson": 51.71286312206627
+      },
+      {
+        "period_start": "2022-04-25",
+        "last_period": 61.0,
+        "recent_mean": 49.5,
+        "seasonal_naive": 45.0,
+        "actual": 50.0,
+        "poisson": 46.656623300500314,
+        "boosted_poisson": 48.36347339446427
+      },
+      {
+        "period_start": "2022-05-02",
+        "last_period": 50.0,
+        "recent_mean": 49.75,
+        "seasonal_naive": 58.0,
+        "actual": 47.0,
+        "poisson": 45.28740173672367,
+        "boosted_poisson": 40.09918180863767
+      },
+      {
+        "period_start": "2022-05-09",
+        "last_period": 47.0,
+        "recent_mean": 50.75,
+        "seasonal_naive": 41.0,
+        "actual": 61.0,
+        "poisson": 51.33318050965694,
+        "boosted_poisson": 45.117231024760784
+      },
+      {
+        "period_start": "2022-05-16",
+        "last_period": 61.0,
+        "recent_mean": 54.75,
+        "seasonal_naive": 35.0,
+        "actual": 45.0,
+        "poisson": 51.956436807441634,
+        "boosted_poisson": 45.87328512627718
+      },
+      {
+        "period_start": "2022-05-23",
+        "last_period": 45.0,
+        "recent_mean": 50.75,
+        "seasonal_naive": 58.0,
+        "actual": 46.0,
+        "poisson": 45.02980296329658,
+        "boosted_poisson": 43.665022675686394
+      },
+      {
+        "period_start": "2022-05-30",
+        "last_period": 46.0,
+        "recent_mean": 49.75,
+        "seasonal_naive": 38.0,
+        "actual": 47.0,
+        "poisson": 42.78813952729846,
+        "boosted_poisson": 42.63284584554505
+      },
+      {
+        "period_start": "2022-06-06",
+        "last_period": 47.0,
+        "recent_mean": 49.75,
+        "seasonal_naive": 44.0,
+        "actual": 60.0,
+        "poisson": 54.154576991639,
+        "boosted_poisson": 49.98703592593241
+      },
+      {
+        "period_start": "2022-06-13",
+        "last_period": 60.0,
+        "recent_mean": 49.5,
+        "seasonal_naive": 48.0,
+        "actual": 46.0,
+        "poisson": 49.73670823608678,
+        "boosted_poisson": 48.06694090256263
+      },
+      {
+        "period_start": "2022-06-20",
+        "last_period": 46.0,
+        "recent_mean": 49.75,
+        "seasonal_naive": 58.0,
+        "actual": 48.0,
+        "poisson": 47.803407894998614,
+        "boosted_poisson": 43.89393002536078
+      },
+      {
+        "period_start": "2022-06-27",
+        "last_period": 48.0,
+        "recent_mean": 50.25,
+        "seasonal_naive": 48.0,
+        "actual": 54.0,
+        "poisson": 50.5190292365282,
+        "boosted_poisson": 44.916096010986564
+      },
+      {
+        "period_start": "2022-07-04",
+        "last_period": 54.0,
+        "recent_mean": 52.0,
+        "seasonal_naive": 45.0,
+        "actual": 34.0,
+        "poisson": 54.94874803985528,
+        "boosted_poisson": 45.434114099610746
+      },
+      {
+        "period_start": "2022-07-11",
+        "last_period": 34.0,
+        "recent_mean": 45.5,
+        "seasonal_naive": 39.0,
+        "actual": 58.0,
+        "poisson": 48.230622148285704,
+        "boosted_poisson": 48.56142515192032
+      },
+      {
+        "period_start": "2022-07-18",
+        "last_period": 58.0,
+        "recent_mean": 48.5,
+        "seasonal_naive": 48.0,
+        "actual": 45.0,
+        "poisson": 49.34002418886329,
+        "boosted_poisson": 44.93812987474136
+      },
+      {
+        "period_start": "2022-07-25",
+        "last_period": 45.0,
+        "recent_mean": 47.75,
+        "seasonal_naive": 54.0,
+        "actual": 62.0,
+        "poisson": 48.026697775996624,
+        "boosted_poisson": 47.819772620366024
+      },
+      {
+        "period_start": "2022-08-01",
+        "last_period": 62.0,
+        "recent_mean": 49.75,
+        "seasonal_naive": 53.0,
+        "actual": 43.0,
+        "poisson": 49.60613080176643,
+        "boosted_poisson": 45.43067297289949
+      },
+      {
+        "period_start": "2022-08-08",
+        "last_period": 43.0,
+        "recent_mean": 52.0,
+        "seasonal_naive": 47.0,
+        "actual": 70.0,
+        "poisson": 46.95030638725461,
+        "boosted_poisson": 51.491949609737205
+      },
+      {
+        "period_start": "2022-08-15",
+        "last_period": 70.0,
+        "recent_mean": 55.0,
+        "seasonal_naive": 55.0,
+        "actual": 56.0,
+        "poisson": 53.87723276234548,
+        "boosted_poisson": 50.27681241988571
+      },
+      {
+        "period_start": "2022-08-22",
+        "last_period": 56.0,
+        "recent_mean": 57.75,
+        "seasonal_naive": 56.0,
+        "actual": 64.0,
+        "poisson": 52.30425899903542,
+        "boosted_poisson": 49.733089393689134
+      },
+      {
+        "period_start": "2022-08-29",
+        "last_period": 64.0,
+        "recent_mean": 58.25,
+        "seasonal_naive": 55.0,
+        "actual": 40.0,
+        "poisson": 53.608198395153664,
+        "boosted_poisson": 46.40742332466257
+      },
+      {
+        "period_start": "2022-09-05",
+        "last_period": 40.0,
+        "recent_mean": 57.5,
+        "seasonal_naive": 58.0,
+        "actual": 51.0,
+        "poisson": 51.45041404223159,
+        "boosted_poisson": 53.84828006694704
+      },
+      {
+        "period_start": "2022-09-12",
+        "last_period": 51.0,
+        "recent_mean": 52.75,
+        "seasonal_naive": 48.0,
+        "actual": 77.0,
+        "poisson": 54.52986339975175,
+        "boosted_poisson": 56.503464673436135
+      },
+      {
+        "period_start": "2022-09-19",
+        "last_period": 77.0,
+        "recent_mean": 58.0,
+        "seasonal_naive": 37.0,
+        "actual": 50.0,
+        "poisson": 55.619648574195814,
+        "boosted_poisson": 56.2943262881879
+      },
+      {
+        "period_start": "2022-09-26",
+        "last_period": 50.0,
+        "recent_mean": 54.5,
+        "seasonal_naive": 62.0,
+        "actual": 57.0,
+        "poisson": 46.67883551574811,
+        "boosted_poisson": 40.019473059176384
+      },
+      {
+        "period_start": "2022-10-03",
+        "last_period": 57.0,
+        "recent_mean": 58.75,
+        "seasonal_naive": 46.0,
+        "actual": 53.0,
+        "poisson": 56.818770444679224,
+        "boosted_poisson": 57.17216879955182
+      },
+      {
+        "period_start": "2022-10-10",
+        "last_period": 53.0,
+        "recent_mean": 59.25,
+        "seasonal_naive": 58.0,
+        "actual": 42.0,
+        "poisson": 55.864093487728745,
+        "boosted_poisson": 52.6543152213969
+      },
+      {
+        "period_start": "2022-10-17",
+        "last_period": 42.0,
+        "recent_mean": 50.5,
+        "seasonal_naive": 43.0,
+        "actual": 39.0,
+        "poisson": 52.9990279356424,
+        "boosted_poisson": 58.73599026653516
+      },
+      {
+        "period_start": "2022-10-24",
+        "last_period": 39.0,
+        "recent_mean": 47.75,
+        "seasonal_naive": 56.0,
+        "actual": 29.0,
+        "poisson": 50.628232967865955,
+        "boosted_poisson": 63.195424784499345
+      },
+      {
+        "period_start": "2022-10-31",
+        "last_period": 29.0,
+        "recent_mean": 40.75,
+        "seasonal_naive": 56.0,
+        "actual": 48.0,
+        "poisson": 51.487155586861185,
+        "boosted_poisson": 54.58411706549034
+      },
+      {
+        "period_start": "2022-11-07",
+        "last_period": 48.0,
+        "recent_mean": 39.5,
+        "seasonal_naive": 48.0,
+        "actual": 68.0,
+        "poisson": 41.40307459828367,
+        "boosted_poisson": 38.743367290912005
+      },
+      {
+        "period_start": "2022-11-14",
+        "last_period": 68.0,
+        "recent_mean": 46.0,
+        "seasonal_naive": 47.0,
+        "actual": 65.0,
+        "poisson": 44.43786590683663,
+        "boosted_poisson": 45.45507898635704
+      },
+      {
+        "period_start": "2022-11-21",
+        "last_period": 65.0,
+        "recent_mean": 52.5,
+        "seasonal_naive": 35.0,
+        "actual": 33.0,
+        "poisson": 40.448536604050204,
+        "boosted_poisson": 40.15075282253369
+      },
+      {
+        "period_start": "2022-11-28",
+        "last_period": 33.0,
+        "recent_mean": 53.5,
+        "seasonal_naive": 48.0,
+        "actual": 53.0,
+        "poisson": 46.39327421436765,
+        "boosted_poisson": 49.94227118261981
+      },
+      {
+        "period_start": "2022-12-05",
+        "last_period": 53.0,
+        "recent_mean": 54.75,
+        "seasonal_naive": 67.0,
+        "actual": 65.0,
+        "poisson": 50.39715266659533,
+        "boosted_poisson": 46.629995091930915
+      },
+      {
+        "period_start": "2022-12-12",
+        "last_period": 65.0,
+        "recent_mean": 54.0,
+        "seasonal_naive": 55.0,
+        "actual": 47.0,
+        "poisson": 43.62201610632685,
+        "boosted_poisson": 43.16222362243056
+      },
+      {
+        "period_start": "2022-12-19",
+        "last_period": 47.0,
+        "recent_mean": 49.5,
+        "seasonal_naive": 52.0,
+        "actual": 29.0,
+        "poisson": 42.46856007056905,
+        "boosted_poisson": 39.165771719363974
+      }
+    ]
+  },
+  "test_predictions": [
+    {
+      "period_start": "2023-01-02",
+      "last_period": 40.0,
+      "recent_mean": 45.25,
+      "seasonal_naive": 38.0,
+      "actual": 32.0,
+      "poisson": 46.96441016528834
+    },
+    {
+      "period_start": "2023-01-09",
+      "last_period": 32.0,
+      "recent_mean": 37.0,
+      "seasonal_naive": 68.0,
+      "actual": 50.0,
+      "poisson": 44.43174482217117
+    },
+    {
+      "period_start": "2023-01-16",
+      "last_period": 50.0,
+      "recent_mean": 37.75,
+      "seasonal_naive": 40.0,
+      "actual": 54.0,
+      "poisson": 44.040353383759346
+    },
+    {
+      "period_start": "2023-01-23",
+      "last_period": 54.0,
+      "recent_mean": 44.0,
+      "seasonal_naive": 45.0,
+      "actual": 47.0,
+      "poisson": 46.9260103060239
+    },
+    {
+      "period_start": "2023-01-30",
+      "last_period": 47.0,
+      "recent_mean": 45.75,
+      "seasonal_naive": 44.0,
+      "actual": 43.0,
+      "poisson": 41.15311612107326
+    },
+    {
+      "period_start": "2023-02-06",
+      "last_period": 43.0,
+      "recent_mean": 48.5,
+      "seasonal_naive": 30.0,
+      "actual": 52.0,
+      "poisson": 40.28980589975461
+    },
+    {
+      "period_start": "2023-02-13",
+      "last_period": 52.0,
+      "recent_mean": 49.0,
+      "seasonal_naive": 49.0,
+      "actual": 71.0,
+      "poisson": 42.25504531540475
+    },
+    {
+      "period_start": "2023-02-20",
+      "last_period": 71.0,
+      "recent_mean": 53.25,
+      "seasonal_naive": 54.0,
+      "actual": 51.0,
+      "poisson": 48.488757647399524
+    },
+    {
+      "period_start": "2023-02-27",
+      "last_period": 51.0,
+      "recent_mean": 54.25,
+      "seasonal_naive": 70.0,
+      "actual": 56.0,
+      "poisson": 40.63323665466179
+    },
+    {
+      "period_start": "2023-03-06",
+      "last_period": 56.0,
+      "recent_mean": 57.5,
+      "seasonal_naive": 36.0,
+      "actual": 50.0,
+      "poisson": 44.67072173757975
+    },
+    {
+      "period_start": "2023-03-13",
+      "last_period": 50.0,
+      "recent_mean": 57.0,
+      "seasonal_naive": 50.0,
+      "actual": 41.0,
+      "poisson": 49.31889086080074
+    },
+    {
+      "period_start": "2023-03-20",
+      "last_period": 41.0,
+      "recent_mean": 49.5,
+      "seasonal_naive": 48.0,
+      "actual": 36.0,
+      "poisson": 49.80643917635544
+    },
+    {
+      "period_start": "2023-03-27",
+      "last_period": 36.0,
+      "recent_mean": 45.75,
+      "seasonal_naive": 49.0,
+      "actual": 63.0,
+      "poisson": 47.77905082305375
+    },
+    {
+      "period_start": "2023-04-03",
+      "last_period": 63.0,
+      "recent_mean": 47.5,
+      "seasonal_naive": 43.0,
+      "actual": 49.0,
+      "poisson": 51.117275151336784
+    },
+    {
+      "period_start": "2023-04-10",
+      "last_period": 49.0,
+      "recent_mean": 47.25,
+      "seasonal_naive": 45.0,
+      "actual": 61.0,
+      "poisson": 41.73404437285408
+    },
+    {
+      "period_start": "2023-04-17",
+      "last_period": 61.0,
+      "recent_mean": 52.25,
+      "seasonal_naive": 61.0,
+      "actual": 54.0,
+      "poisson": 44.891151968116525
+    },
+    {
+      "period_start": "2023-04-24",
+      "last_period": 54.0,
+      "recent_mean": 56.75,
+      "seasonal_naive": 50.0,
+      "actual": 50.0,
+      "poisson": 50.36340281458408
+    },
+    {
+      "period_start": "2023-05-01",
+      "last_period": 50.0,
+      "recent_mean": 53.5,
+      "seasonal_naive": 47.0,
+      "actual": 59.0,
+      "poisson": 50.66875230971212
+    },
+    {
+      "period_start": "2023-05-08",
+      "last_period": 59.0,
+      "recent_mean": 56.0,
+      "seasonal_naive": 61.0,
+      "actual": 41.0,
+      "poisson": 53.60358851830486
+    },
+    {
+      "period_start": "2023-05-15",
+      "last_period": 41.0,
+      "recent_mean": 51.0,
+      "seasonal_naive": 45.0,
+      "actual": 56.0,
+      "poisson": 45.47739167117386
+    },
+    {
+      "period_start": "2023-05-22",
+      "last_period": 56.0,
+      "recent_mean": 51.5,
+      "seasonal_naive": 46.0,
+      "actual": 53.0,
+      "poisson": 50.16249512012206
+    },
+    {
+      "period_start": "2023-05-29",
+      "last_period": 53.0,
+      "recent_mean": 52.25,
+      "seasonal_naive": 47.0,
+      "actual": 52.0,
+      "poisson": 50.1029339931823
+    },
+    {
+      "period_start": "2023-06-05",
+      "last_period": 52.0,
+      "recent_mean": 50.5,
+      "seasonal_naive": 60.0,
+      "actual": 33.0,
+      "poisson": 48.80344599038595
+    },
+    {
+      "period_start": "2023-06-12",
+      "last_period": 33.0,
+      "recent_mean": 48.5,
+      "seasonal_naive": 46.0,
+      "actual": 58.0,
+      "poisson": 49.86052882292457
+    },
+    {
+      "period_start": "2023-06-19",
+      "last_period": 58.0,
+      "recent_mean": 49.0,
+      "seasonal_naive": 48.0,
+      "actual": 52.0,
+      "poisson": 55.341245808193925
+    },
+    {
+      "period_start": "2023-06-26",
+      "last_period": 52.0,
+      "recent_mean": 48.75,
+      "seasonal_naive": 54.0,
+      "actual": 82.0,
+      "poisson": 47.903993605533174
+    },
+    {
+      "period_start": "2023-07-03",
+      "last_period": 82.0,
+      "recent_mean": 56.25,
+      "seasonal_naive": 34.0,
+      "actual": 76.0,
+      "poisson": 52.023152550201985
+    },
+    {
+      "period_start": "2023-07-10",
+      "last_period": 76.0,
+      "recent_mean": 67.0,
+      "seasonal_naive": 58.0,
+      "actual": 48.0,
+      "poisson": 53.45623989010814
+    },
+    {
+      "period_start": "2023-07-17",
+      "last_period": 48.0,
+      "recent_mean": 64.5,
+      "seasonal_naive": 45.0,
+      "actual": 72.0,
+      "poisson": 50.25362741522356
+    },
+    {
+      "period_start": "2023-07-24",
+      "last_period": 72.0,
+      "recent_mean": 69.5,
+      "seasonal_naive": 62.0,
+      "actual": 89.0,
+      "poisson": 61.35698791089436
+    },
+    {
+      "period_start": "2023-07-31",
+      "last_period": 89.0,
+      "recent_mean": 71.25,
+      "seasonal_naive": 43.0,
+      "actual": 61.0,
+      "poisson": 61.43060288733428
+    },
+    {
+      "period_start": "2023-08-07",
+      "last_period": 61.0,
+      "recent_mean": 67.5,
+      "seasonal_naive": 70.0,
+      "actual": 71.0,
+      "poisson": 58.52714035695379
+    },
+    {
+      "period_start": "2023-08-14",
+      "last_period": 71.0,
+      "recent_mean": 73.25,
+      "seasonal_naive": 56.0,
+      "actual": 73.0,
+      "poisson": 66.1080733662405
+    },
+    {
+      "period_start": "2023-08-21",
+      "last_period": 73.0,
+      "recent_mean": 73.5,
+      "seasonal_naive": 64.0,
+      "actual": 100.0,
+      "poisson": 66.877137611143
+    },
+    {
+      "period_start": "2023-08-28",
+      "last_period": 100.0,
+      "recent_mean": 76.25,
+      "seasonal_naive": 40.0,
+      "actual": 72.0,
+      "poisson": 68.19513243090022
+    },
+    {
+      "period_start": "2023-09-04",
+      "last_period": 72.0,
+      "recent_mean": 79.0,
+      "seasonal_naive": 51.0,
+      "actual": 91.0,
+      "poisson": 78.71218160126631
+    },
+    {
+      "period_start": "2023-09-11",
+      "last_period": 91.0,
+      "recent_mean": 84.0,
+      "seasonal_naive": 77.0,
+      "actual": 91.0,
+      "poisson": 80.35982040731966
+    },
+    {
+      "period_start": "2023-09-18",
+      "last_period": 91.0,
+      "recent_mean": 88.5,
+      "seasonal_naive": 50.0,
+      "actual": 113.0,
+      "poisson": 89.28703680788851
+    },
+    {
+      "period_start": "2023-09-25",
+      "last_period": 113.0,
+      "recent_mean": 91.75,
+      "seasonal_naive": 57.0,
+      "actual": 101.0,
+      "poisson": 81.85516118957297
+    },
+    {
+      "period_start": "2023-10-02",
+      "last_period": 101.0,
+      "recent_mean": 99.0,
+      "seasonal_naive": 53.0,
+      "actual": 80.0,
+      "poisson": 99.95404325092078
+    },
+    {
+      "period_start": "2023-10-09",
+      "last_period": 80.0,
+      "recent_mean": 96.25,
+      "seasonal_naive": 42.0,
+      "actual": 99.0,
+      "poisson": 105.23361987166656
+    },
+    {
+      "period_start": "2023-10-16",
+      "last_period": 99.0,
+      "recent_mean": 98.25,
+      "seasonal_naive": 39.0,
+      "actual": 92.0,
+      "poisson": 111.05099444746797
+    },
+    {
+      "period_start": "2023-10-23",
+      "last_period": 92.0,
+      "recent_mean": 93.0,
+      "seasonal_naive": 29.0,
+      "actual": 91.0,
+      "poisson": 98.20906556564744
+    },
+    {
+      "period_start": "2023-10-30",
+      "last_period": 91.0,
+      "recent_mean": 90.5,
+      "seasonal_naive": 48.0,
+      "actual": 81.0,
+      "poisson": 100.06935462630015
+    },
+    {
+      "period_start": "2023-11-06",
+      "last_period": 81.0,
+      "recent_mean": 90.75,
+      "seasonal_naive": 68.0,
+      "actual": 82.0,
+      "poisson": 90.71593615026174
+    },
+    {
+      "period_start": "2023-11-13",
+      "last_period": 82.0,
+      "recent_mean": 86.5,
+      "seasonal_naive": 65.0,
+      "actual": 80.0,
+      "poisson": 86.32338882722377
+    },
+    {
+      "period_start": "2023-11-20",
+      "last_period": 80.0,
+      "recent_mean": 83.5,
+      "seasonal_naive": 33.0,
+      "actual": 63.0,
+      "poisson": 77.00575911854632
+    },
+    {
+      "period_start": "2023-11-27",
+      "last_period": 63.0,
+      "recent_mean": 76.5,
+      "seasonal_naive": 53.0,
+      "actual": 65.0,
+      "poisson": 76.83721418315216
+    },
+    {
+      "period_start": "2023-12-04",
+      "last_period": 65.0,
+      "recent_mean": 72.5,
+      "seasonal_naive": 65.0,
+      "actual": 105.0,
+      "poisson": 66.47403809316954
+    },
+    {
+      "period_start": "2023-12-11",
+      "last_period": 105.0,
+      "recent_mean": 78.25,
+      "seasonal_naive": 47.0,
+      "actual": 71.0,
+      "poisson": 73.55771115315774
+    },
+    {
+      "period_start": "2023-12-18",
+      "last_period": 71.0,
+      "recent_mean": 76.0,
+      "seasonal_naive": 29.0,
+      "actual": 58.0,
+      "poisson": 56.876459568083824
+    },
+    {
+      "period_start": "2023-12-25",
+      "last_period": 58.0,
+      "recent_mean": 74.75,
+      "seasonal_naive": 40.0,
+      "actual": 4.0,
+      "poisson": 57.30177807583366
+    }
+  ]
+}

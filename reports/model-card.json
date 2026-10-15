@@ -1,0 +1,25 @@
+{
+  "selected_candidate": "forest_regularized",
+  "selection_metric": "2022 macro F1",
+  "seed": 42,
+  "feature_columns": [
+    "month",
+    "day_of_week",
+    "day",
+    "month_sin",
+    "month_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "day_sin",
+    "day_cos"
+  ],
+  "training_start": "2020-01-01",
+  "training_end": "2022-12-31",
+  "python": "3.12.12",
+  "scikit_learn": "1.9.1",
+  "pandas": "2.3.3",
+  "numpy": "2.5.4",
+  "data_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+  "interpretation": "Category distribution conditional on a recorded incident; not occurrence risk.",
+  "probabilities": "Uncalibrated scores; no individual or location prediction."
+}

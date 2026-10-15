@@ -1,0 +1,15 @@
+{
+  "target": {
+    "name": "weekly_larceny",
+    "days": 7,
+    "category": "LARCENY"
+  },
+  "period_start": "2023-01-02",
+  "period_end": "2023-01-08",
+  "model_expected_count": 47.06843374157777,
+  "recent_mean_baseline": 45.25,
+  "model_training_through": "2022-12-25",
+  "interpretation": "Expected source-record count for the next complete period, not individual risk.",
+  "test_mae_skill_vs_selected_baseline": -0.0741725852733286,
+  "limitation": "Historical point estimate only; no calibrated uncertainty interval or guaranteed predictive advantage."
+}
