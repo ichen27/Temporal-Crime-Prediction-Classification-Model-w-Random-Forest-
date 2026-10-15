@@ -13,7 +13,7 @@ Read the [benchmark](../reports/benchmark.md), [full metrics](../reports/metrics
 Requires Git and Python 3.12 (recommended). The dependency lock installs the shared analysis package at an immutable Git commit.
 
 ```bash
-git clone https://github.com/ichen27/Temporal-Crime-Prediction-Classification-Model-w-Random-Forest-.git
+git clone --branch feat/temporal-model-evaluation https://github.com/ichen27/Temporal-Crime-Prediction-Classification-Model-w-Random-Forest-.git
 cd Temporal-Crime-Prediction-Classification-Model-w-Random-Forest-
 python3 -m venv .venv
 source .venv/bin/activate
@@ -48,7 +48,7 @@ Selection prioritizes macro F1, not probability calibration. Class balancing did
 
 The shared loader fixes the 2022 Part 2 column-name mismatch (`CODE DEFINED`) and parses its US-style dates. It audits 55,851 rows from the 2020–2024 source tables and retains 55,779. The 2019 source table is excluded. It preserves the calendar day written in `DATEEND`, rather than shifting mixed midnight conventions across dates. See the companion analysis for provenance details and source terms.
 
-Records are not verified unique incidents. Later source tables can contain older end dates. Splits use `DATEEND`, not report-availability timestamps; this retrospective snapshot cannot establish what was actually available at each historical training cutoff. Reporting practices, coverage, and category definitions may change. A single validation/test pair does not establish future robustness. Scores are uncalibrated, and date-only features provide limited information. Dates outside the fitted interval are explicitly flagged by the prediction command.
+Records are not verified unique incidents. Later source tables can contain older DATEEND values. The city’s 2023 metadata defines `DATEEND` as the date reported; this corrects the earlier incident-end-date assumption. Historical publication/revision timestamps remain unavailable, so this retrospective snapshot cannot establish what was actually available at each historical training cutoff. Reporting practices, coverage, and category definitions may change. A single validation/test pair does not establish future robustness. Scores are uncalibrated, and date-only features provide limited information. Dates outside the fitted interval are explicitly flagged by the prediction command.
 
 The [original scripts](../legacy/) remain available for historical context. Their random split and original preprocessing are outside the maintained workflow. No new live-data acquisition or operational deployment is included.
 

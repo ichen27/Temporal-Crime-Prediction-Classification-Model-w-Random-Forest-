@@ -1,0 +1,36 @@
+{
+  "target": {
+    "name": "weekly_larceny",
+    "days": 7,
+    "category": "LARCENY"
+  },
+  "candidates": [
+    "simple",
+    "damped_holt"
+  ],
+  "model": "damped_holt",
+  "criterion": "Minimum 2022 rolling MAE; first candidate wins ties",
+  "validation": {
+    "recent_mean": {
+      "mae": 10.132352941176471,
+      "rmse": 12.575702139989064,
+      "mean_actual": 50.03921568627451,
+      "periods": 51
+    },
+    "simple": {
+      "mae": 9.865406641248484,
+      "rmse": 12.233133427342345,
+      "mean_actual": 50.03921568627451,
+      "periods": 51
+    },
+    "damped_holt": {
+      "mae": 9.645974742214639,
+      "rmse": 12.034074694722355,
+      "mean_actual": 50.03921568627451,
+      "periods": 51
+    }
+  },
+  "seasonal": false,
+  "status": "Exploratory: 2023 outcomes were already examined in prior experiments",
+  "sensitivity": "Exclude the previously flagged December 25\u201331 week for both methods"
+}

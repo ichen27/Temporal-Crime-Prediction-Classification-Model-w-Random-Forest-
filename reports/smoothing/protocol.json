@@ -1,0 +1,10 @@
+{
+  "target": "weekly_larceny",
+  "candidates": ["simple", "damped_holt"],
+  "selection": "Minimum 2022 rolling MAE; first candidate wins ties",
+  "protocol": "One week ahead; fit all completed history at first origin each month; update level/trend after every observation",
+  "primary": "2023-01-02 through 2023-12-31, 52 weeks, same original source snapshot",
+  "sensitivity": "Same predictions excluding December 25–31, flagged before any smoothing results were computed",
+  "status": "Exploratory: 2023 outcomes already examined in prior experiments",
+  "seasonality": "None: limited annual repetitions, no new seasonal search"
+}

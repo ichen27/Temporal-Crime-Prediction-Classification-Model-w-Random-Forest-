@@ -10,6 +10,7 @@ narwhals==2.27.1
 numpy==2.5.4
 packaging==26.3
 pandas==2.3.3
+patsy==1.0.3
 pillow==12.3.0
 pluggy==1.7.0
 pygments==2.21.0
@@ -21,6 +22,7 @@ ruff==0.17.0
 scikit-learn==1.9.1
 scipy==1.18.1
 six==1.17.0
+statsmodels==0.14.6
 threadpoolctl==3.7.0
 tzdata==2026.5
 syracuse-crime-analysis @ git+https://github.com/ichen27/Syracuse-Crime-Data-Analysis.git@1c628ed648bf475efd8758652f781e69b048d47c

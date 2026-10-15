@@ -2,6 +2,26 @@
 
 Source hash, runtime versions, and fitted dates are recorded in each experiment’s metadata. All linked artifacts are committed; environments, downloaded duplicate inputs, caches, and scratch runs are excluded.
 
+## Exponential-smoothing follow-up (package 0.3)
+
+| Artifact | Purpose and use |
+|---|---|
+| [findings.md](reports/smoothing/findings.md) | Exploratory comparison, matching-window sensitivity, limitations and reproduction. |
+| [protocol.json](reports/smoothing/protocol.json) | Candidate and evaluation choices recorded before smoothing results. |
+| [selection.json](reports/smoothing/selection.json) | 2022-only method selection and all candidate scores. |
+| [metrics.json](reports/smoothing/metrics.json) | Every prediction, monthly fitted state/solver, errors and source hash. |
+| [forecast.png](reports/smoothing/forecast.png) | Finished observed/model/baseline chart; open in any image viewer. |
+| [model.json](reports/smoothing/model.json) | Inspectable historical state and metadata; use `syracuse-smooth predict`. |
+| [example-forecast.json](reports/smoothing/example-forecast.json) | Initial January 2–8, 2023 forecast. |
+| [example-observations.json](reports/smoothing/example-observations.json) | Editable one-week observed-count input. |
+| [example-updated-forecast.json](reports/smoothing/example-updated-forecast.json) | January 9–15 forecast after applying that observation. |
+| [source-audit.json](reports/smoothing/source-audit.json) | Dated city query, daily aggregates and original-database comparison; no individual records. |
+| [smoothing.py](src/syracuse_model/smoothing.py) | Editable model fitting, evaluation and JSON state inference. |
+| [smoothing_report.py](src/syracuse_model/smoothing_report.py) | Editable report/figure generator. |
+| [audit_tail.py](src/syracuse_model/audit_tail.py) | Reproduce the public-source comparison without replacing the dataset. |
+
+The README quickstart regenerates trained results and the initial sample forecast. The observation fixture, protocol, and dated source audit are preserved inputs/evidence; refresh the audit explicitly with the documented command. Redirect the updated prediction command to regenerate its saved output. The historical models are demonstrations, not a live service.
+
 ## Count-forecasting experiment
 
 | Artifact | Purpose and use |

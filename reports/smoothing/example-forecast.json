@@ -1,0 +1,8 @@
+{
+  "period_start": "2023-01-02",
+  "period_end": "2023-01-08",
+  "method": "damped_holt",
+  "model_expected_count": 46.772891417715236,
+  "recent_mean_baseline": 45.25,
+  "limitation": "Historical source-record forecast; fixed parameters between updates. No calibrated interval or validated current deployment."
+}

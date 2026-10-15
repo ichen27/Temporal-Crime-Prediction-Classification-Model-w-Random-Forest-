@@ -1,0 +1,702 @@
+{
+  "retrieved_utc": "2026-10-15T16:18:03.808633+00:00",
+  "database_sha256": "1ca006988625cddc35f03c0c64154a817e357d9edcee6792a4eea2e8507046d9",
+  "query_url": "https://services6.arcgis.com/bdPqSfflsdgFRVVM/arcgis/rest/services/crime_data_1_auto_update/FeatureServer/0/query?f=json&where=DATEEND+%3E%3D+TIMESTAMP+%272023-12-01+00%3A00%3A00%27+AND+DATEEND+%3C+TIMESTAMP+%272024-01-01+00%3A00%3A00%27&groupByFieldsForStatistics=DATEEND%2CCODE_DEFINED&outStatistics=%5B%7B%22statisticType%22%3A+%22count%22%2C+%22onStatisticField%22%3A+%22ObjectId%22%2C+%22outStatisticFieldName%22%3A+%22records%22%7D%5D&orderByFields=DATEEND%2CCODE_DEFINED",
+  "metadata_url": "https://www.arcgis.com/sharing/rest/content/items/94bc33f1a2c646b995d1ab356edf0730/info/metadata/metadata.xml?format=default&output=html",
+  "date_definition": "City 2023 metadata defines DATEEND as date reported; historical publication/revision timing is unavailable.",
+  "all_december_larceny_daily_counts_match": true,
+  "last_remote_record_date_in_december": "2023-12-26",
+  "last_remote_larceny_date_in_december": "2023-12-26",
+  "final_week_local_larceny": 4,
+  "final_week_remote_larceny": 4,
+  "conclusion": "Agreement alone cannot establish coverage; missing collection versus zero records requires independent verification.",
+  "comparison": [
+    {
+      "date": "2023-12-01",
+      "local_larceny": 14,
+      "remote_larceny": 14
+    },
+    {
+      "date": "2023-12-02",
+      "local_larceny": 3,
+      "remote_larceny": 3
+    },
+    {
+      "date": "2023-12-03",
+      "local_larceny": 6,
+      "remote_larceny": 6
+    },
+    {
+      "date": "2023-12-04",
+      "local_larceny": 12,
+      "remote_larceny": 12
+    },
+    {
+      "date": "2023-12-05",
+      "local_larceny": 7,
+      "remote_larceny": 7
+    },
+    {
+      "date": "2023-12-06",
+      "local_larceny": 49,
+      "remote_larceny": 49
+    },
+    {
+      "date": "2023-12-07",
+      "local_larceny": 9,
+      "remote_larceny": 9
+    },
+    {
+      "date": "2023-12-08",
+      "local_larceny": 8,
+      "remote_larceny": 8
+    },
+    {
+      "date": "2023-12-09",
+      "local_larceny": 14,
+      "remote_larceny": 14
+    },
+    {
+      "date": "2023-12-10",
+      "local_larceny": 6,
+      "remote_larceny": 6
+    },
+    {
+      "date": "2023-12-11",
+      "local_larceny": 8,
+      "remote_larceny": 8
+    },
+    {
+      "date": "2023-12-12",
+      "local_larceny": 14,
+      "remote_larceny": 14
+    },
+    {
+      "date": "2023-12-13",
+      "local_larceny": 12,
+      "remote_larceny": 12
+    },
+    {
+      "date": "2023-12-14",
+      "local_larceny": 11,
+      "remote_larceny": 11
+    },
+    {
+      "date": "2023-12-15",
+      "local_larceny": 10,
+      "remote_larceny": 10
+    },
+    {
+      "date": "2023-12-16",
+      "local_larceny": 12,
+      "remote_larceny": 12
+    },
+    {
+      "date": "2023-12-17",
+      "local_larceny": 4,
+      "remote_larceny": 4
+    },
+    {
+      "date": "2023-12-18",
+      "local_larceny": 6,
+      "remote_larceny": 6
+    },
+    {
+      "date": "2023-12-19",
+      "local_larceny": 4,
+      "remote_larceny": 4
+    },
+    {
+      "date": "2023-12-20",
+      "local_larceny": 29,
+      "remote_larceny": 29
+    },
+    {
+      "date": "2023-12-21",
+      "local_larceny": 3,
+      "remote_larceny": 3
+    },
+    {
+      "date": "2023-12-22",
+      "local_larceny": 8,
+      "remote_larceny": 8
+    },
+    {
+      "date": "2023-12-23",
+      "local_larceny": 4,
+      "remote_larceny": 4
+    },
+    {
+      "date": "2023-12-24",
+      "local_larceny": 4,
+      "remote_larceny": 4
+    },
+    {
+      "date": "2023-12-25",
+      "local_larceny": 3,
+      "remote_larceny": 3
+    },
+    {
+      "date": "2023-12-26",
+      "local_larceny": 1,
+      "remote_larceny": 1
+    },
+    {
+      "date": "2023-12-27",
+      "local_larceny": 0,
+      "remote_larceny": 0
+    },
+    {
+      "date": "2023-12-28",
+      "local_larceny": 0,
+      "remote_larceny": 0
+    },
+    {
+      "date": "2023-12-29",
+      "local_larceny": 0,
+      "remote_larceny": 0
+    },
+    {
+      "date": "2023-12-30",
+      "local_larceny": 0,
+      "remote_larceny": 0
+    },
+    {
+      "date": "2023-12-31",
+      "local_larceny": 0,
+      "remote_larceny": 0
+    }
+  ],
+  "remote_daily_aggregates": [
+    {
+      "date": "2023-12-01",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-01",
+      "category": "BURGLARY",
+      "records": 5
+    },
+    {
+      "date": "2023-12-01",
+      "category": "LARCENY",
+      "records": 14
+    },
+    {
+      "date": "2023-12-01",
+      "category": "MV THEFT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-02",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-02",
+      "category": "BURGLARY",
+      "records": 6
+    },
+    {
+      "date": "2023-12-02",
+      "category": "LARCENY",
+      "records": 3
+    },
+    {
+      "date": "2023-12-02",
+      "category": "MV THEFT",
+      "records": 6
+    },
+    {
+      "date": "2023-12-02",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-03",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-03",
+      "category": "BURGLARY",
+      "records": 5
+    },
+    {
+      "date": "2023-12-03",
+      "category": "LARCENY",
+      "records": 6
+    },
+    {
+      "date": "2023-12-03",
+      "category": "MV THEFT",
+      "records": 5
+    },
+    {
+      "date": "2023-12-03",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-04",
+      "category": "BURGLARY",
+      "records": 5
+    },
+    {
+      "date": "2023-12-04",
+      "category": "LARCENY",
+      "records": 12
+    },
+    {
+      "date": "2023-12-04",
+      "category": "MV THEFT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-04",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-05",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-05",
+      "category": "BURGLARY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-05",
+      "category": "LARCENY",
+      "records": 7
+    },
+    {
+      "date": "2023-12-05",
+      "category": "MV THEFT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-05",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-06",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-06",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-06",
+      "category": "LARCENY",
+      "records": 49
+    },
+    {
+      "date": "2023-12-07",
+      "category": "BURGLARY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-07",
+      "category": "LARCENY",
+      "records": 9
+    },
+    {
+      "date": "2023-12-07",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-08",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-08",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-08",
+      "category": "LARCENY",
+      "records": 8
+    },
+    {
+      "date": "2023-12-08",
+      "category": "MV THEFT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-09",
+      "category": "BURGLARY",
+      "records": 5
+    },
+    {
+      "date": "2023-12-09",
+      "category": "LARCENY",
+      "records": 14
+    },
+    {
+      "date": "2023-12-09",
+      "category": "MV THEFT",
+      "records": 12
+    },
+    {
+      "date": "2023-12-09",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-10",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 5
+    },
+    {
+      "date": "2023-12-10",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-10",
+      "category": "LARCENY",
+      "records": 6
+    },
+    {
+      "date": "2023-12-10",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-10",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-11",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-11",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-11",
+      "category": "LARCENY",
+      "records": 8
+    },
+    {
+      "date": "2023-12-11",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-12",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-12",
+      "category": "BURGLARY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-12",
+      "category": "LARCENY",
+      "records": 14
+    },
+    {
+      "date": "2023-12-12",
+      "category": "MURDER",
+      "records": 1
+    },
+    {
+      "date": "2023-12-12",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-13",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-13",
+      "category": "LARCENY",
+      "records": 12
+    },
+    {
+      "date": "2023-12-13",
+      "category": "MV THEFT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-14",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-14",
+      "category": "BURGLARY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-14",
+      "category": "LARCENY",
+      "records": 11
+    },
+    {
+      "date": "2023-12-14",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-15",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-15",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-15",
+      "category": "LARCENY",
+      "records": 10
+    },
+    {
+      "date": "2023-12-15",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-16",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-16",
+      "category": "BURGLARY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-16",
+      "category": "LARCENY",
+      "records": 12
+    },
+    {
+      "date": "2023-12-16",
+      "category": "MURDER",
+      "records": 1
+    },
+    {
+      "date": "2023-12-16",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-16",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-17",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-17",
+      "category": "BURGLARY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-17",
+      "category": "LARCENY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-17",
+      "category": "MV THEFT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-17",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-18",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-18",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-18",
+      "category": "LARCENY",
+      "records": 6
+    },
+    {
+      "date": "2023-12-18",
+      "category": "MV THEFT",
+      "records": 5
+    },
+    {
+      "date": "2023-12-18",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-19",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-19",
+      "category": "LARCENY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-19",
+      "category": "MV THEFT",
+      "records": 5
+    },
+    {
+      "date": "2023-12-20",
+      "category": "BURGLARY",
+      "records": 3
+    },
+    {
+      "date": "2023-12-20",
+      "category": "LARCENY",
+      "records": 29
+    },
+    {
+      "date": "2023-12-20",
+      "category": "MV THEFT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-21",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 1
+    },
+    {
+      "date": "2023-12-21",
+      "category": "BURGLARY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-21",
+      "category": "LARCENY",
+      "records": 3
+    },
+    {
+      "date": "2023-12-21",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-21",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-22",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-22",
+      "category": "LARCENY",
+      "records": 8
+    },
+    {
+      "date": "2023-12-22",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-22",
+      "category": "ROBBERY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-23",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-23",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-23",
+      "category": "LARCENY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-23",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-23",
+      "category": "ROBBERY",
+      "records": 2
+    },
+    {
+      "date": "2023-12-24",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-24",
+      "category": "LARCENY",
+      "records": 4
+    },
+    {
+      "date": "2023-12-24",
+      "category": "MV THEFT",
+      "records": 4
+    },
+    {
+      "date": "2023-12-25",
+      "category": "AGGRAVATED ASSAULT",
+      "records": 3
+    },
+    {
+      "date": "2023-12-25",
+      "category": "BURGLARY",
+      "records": 1
+    },
+    {
+      "date": "2023-12-25",
+      "category": "LARCENY",
+      "records": 3
+    },
+    {
+      "date": "2023-12-25",
+      "category": "MV THEFT",
+      "records": 2
+    },
+    {
+      "date": "2023-12-26",
+      "category": "LARCENY",
+      "records": 1
+    }
+  ]
+}
