@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syracuse-temporal-model"
+version = "0.2.0"
+description = "Chronological benchmarks for calendar-only crime-record classification"
+requires-python = ">=3.11"
+dependencies = ["syracuse-crime-analysis @ git+https://github.com/ichen27/Syracuse-Crime-Data-Analysis.git@1c628ed648bf475efd8758652f781e69b048d47c", "scikit-learn>=1.7,<1.10", "joblib>=1.4,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.11,<1"]
+
+[project.scripts]
+syracuse-model = "syracuse_model.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+exclude = ["legacy"]
